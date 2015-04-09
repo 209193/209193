@@ -48,27 +48,8 @@ algorytmów. Dane zapisywane są odpowiednio:
 Wczytywanie w przypadku stosu oraz kolejki opartej na
 tablicy dynamicznej miało złożoność obliczeniową
 \begin{math}
- n^{2}.
-\end{math}
-przy powiększaniu tablicy o 1 element. Wynika to stąd,
-że po każdym wczytaniu elementu cała stara tablica musiała
-być przepisana do nowej, powiększonej. Czyli n-tego
-elementu była uruchamiana pętla o długości n.
-Dopiero po zamianie z inkrementacji na podwajanie
-wielkości tablicy złożoność spadła do
-\begin{math}
- n*log{n}.
-\end{math}
-Wczytywanie do listy wskaźnikowej ma złożoność
-\begin{math}
- n
-\end{math}
-z racji tego, że w implementacji zastosowałem wskaźnik
-na koniec listy.
-Wszystkie powyższe złożoności obliczeniowe zgadzają się
-z teorią przedstawioną na wykładzie.
-
-Do wygenerowania wykresów zastosowałem narzędzie quickplot.
+ n^{2}
+\end{math}.
 
 \pagebreak
 
