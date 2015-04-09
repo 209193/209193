@@ -4,14 +4,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumerate}
-\usepackage{pdflscape}
 
-\title{Laboratorium 3}
+\title{Laboratorium 2}
 \author{Filip Malinowski}
 \date{\today}
 
 \pdfinfo{%
-  /Title    (Laboratorium 3)
+  /Title    (Laboratorium 2)
   /Author   (Filip Malinowski)
 }
 
@@ -65,7 +64,7 @@ obliczeniowa powinna być zbliżona do
 Przy dodawaniu elementów do listy tablicowej powiększanej dwukrotnie,
 złożoność obliczeniowa powinna być zbliżona do
 \begin{math}
- n*log{n}
+ n*log{2}
 \end{math}.
 Z otrzymanych danych można wywnioskować, że czas jest zbliżony do
 powyższych przewidywań. Czas dodawania elementów do listy jest wolniejszy
@@ -77,25 +76,16 @@ i przepisywanie elementu. W tym przypadku dla większych rozmiarów listy
 tablicowej metoda powiększania nie jest uruchamiana z powodu alokowania
 odpowiednich zapasów pamięci co przekłada się na szybkość działania.
 
-Do wygenerowania wykresów zastosowałem tym razem pakiet libreoffice
-co dało tym razem lepsze wykresy czasu działania niż quickplot.
-
-\pagebreak
-
-\begin{landscape}
 \begin{figure}
  \centering
-  \includegraphics[scale=0.9]{wykres1}
+  \includegraphics[scale=0.6]{wykres1}
  \caption{Wykres przedstawiający czas wczytywania elementów w programie}
 \end{figure}
 
-\pagebreak
-
 \begin{figure}
  \centering
-  \includegraphics[scale=1]{tabela}
+  \includegraphics[scale=0.7]{tabela}
  \caption{Tabela z wartościami wypisanymi na wykresie}
 \end{figure}
-\end{landscape}
 
 \end{document}
