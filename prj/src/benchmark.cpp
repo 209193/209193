@@ -7,6 +7,7 @@
 #define LENGTH 8//"ile razy pomnozymy przez 10 - patrz linijka 19 i 35"
 #define REPEATS 3//ilosc powtorzen dla obliczenia sredniej - patrz linijka 20"
 
+
 /* Funkcja testowania szybkosci dzialania algorytmu */
 void Benchmark::testAlgorithm(Benchmark *_algorithm, int _n) const{
 

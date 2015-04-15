@@ -9,6 +9,8 @@
 #include "algorithm_kolejka.hh"
 #include "algorithm_lista.hh"
 #include "algorithm2.hh"
+#include "asocjacyjna.hh"
+#include "mieszajaca.hh"
 
 /*!
  *\brief Funkcja tworzaca i testujaca algorytm.
@@ -35,6 +37,18 @@ int main() {
   //bench -> testAlgorithm(kolejka,1);
   //bench -> testAlgorithm(lista,2);
   //bench -> testAlgorithm(tablista,3);
+
+  /*
+  Asocjacyjna tab1;
+  tab1["Kot"] = 15;
+  tab1["Cycek"] = 12;
+  std::cout << tab1["Kot"] << tab1["Cycek"];
+  */
+
+  /*
+  Mieszajaca *miesz = new Mieszajaca(100);
+  delete miesz;
+  */
 
   return 0;
 }

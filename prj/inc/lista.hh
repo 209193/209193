@@ -30,6 +30,7 @@ class Lista {
       elem = _elem;
       next = nullptr;
     }
+    ~Komorka() {};
   };
 
   /*!

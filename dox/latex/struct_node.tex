@@ -1,0 +1,137 @@
+\hypertarget{struct_node}{\section{Dokumentacja struktury Node}
+\label{struct_node}\index{Node@{Node}}
+}
+
+
+Struktura \hyperlink{struct_node}{Node}. Obiekt tego typu reprezentuje pojedyncza komorke wraz ze wskaznikiem na nastepna komorke listy.  
+
+
+
+
+{\ttfamily \#include $<$asocjacyjna.\-hh$>$}
+
+
+
+Diagram współpracy dla Node\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{struct_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_node_ac43f5fef98396587efbea0705d1c7f29}{Node} (const char $\ast$k)
+\begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny struktury \hyperlink{struct_node}{Node}. \end{DoxyCompactList}\item 
+\hyperlink{struct_node_a89c6f1320c2e41800646aa3bdaadad56}{Node} (const \hyperlink{struct_node}{Node} \&s)
+\begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny struktury \hyperlink{struct_node}{Node}. \end{DoxyCompactList}\item 
+\hyperlink{struct_node_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\-Node} ()
+\begin{DoxyCompactList}\small\item\em Destruktor struktury node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_node}{Node} $\ast$ \hyperlink{struct_node_a2559a716f69ccaa76d648d9f1b83065e}{next}
+\begin{DoxyCompactList}\small\item\em Wskaznik na nastepna komorke. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{struct_node_ad88c9a757bfafd5ff265e0837b150056}{key}
+\begin{DoxyCompactList}\small\item\em Wskaznik na klucz. \end{DoxyCompactList}\item 
+int \hyperlink{struct_node_ab1d228a881cf7465b2d42ea135781427}{val}
+\begin{DoxyCompactList}\small\item\em Wartosc klucza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_node}{Node} \& \hyperlink{struct_node_a90ff04ae049a62fa2c39771ef89398a5}{operator=} (const \hyperlink{struct_node}{Node} \&)
+\begin{DoxyCompactList}\small\item\em Przeladowanie operatora przypisania. Zabezpieczenie przed automatycznym operatorem przypisania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 11 pliku asocjacyjna.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_node_ac43f5fef98396587efbea0705d1c7f29}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}Node\-::\-Node (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_node_ac43f5fef98396587efbea0705d1c7f29}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em k} & -\/ wskaznik na klucz. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 30 pliku asocjacyjna.\-hh.
+
+\hypertarget{struct_node_a89c6f1320c2e41800646aa3bdaadad56}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}Node\-::\-Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_node_a89c6f1320c2e41800646aa3bdaadad56}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em s} & -\/ referencja do wartosci klucza. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 39 pliku asocjacyjna.\-hh.
+
+\hypertarget{struct_node_aa0840c3cb5c7159be6d992adecd2097c}{\index{Node@{Node}!$\sim$\-Node@{$\sim$\-Node}}
+\index{$\sim$\-Node@{$\sim$\-Node}!Node@{Node}}
+\subsubsection[{$\sim$\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Node\-::$\sim$\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_node_aa0840c3cb5c7159be6d992adecd2097c}
+
+
+Definicja w linii 54 pliku asocjacyjna.\-hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{struct_node_a90ff04ae049a62fa2c39771ef89398a5}{\index{Node@{Node}!operator=@{operator=}}
+\index{operator=@{operator=}!Node@{Node}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}\& Node\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_node_a90ff04ae049a62fa2c39771ef89398a5}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{struct_node_ad88c9a757bfafd5ff265e0837b150056}{\index{Node@{Node}!key@{key}}
+\index{key@{key}!Node@{Node}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Node\-::key}}\label{struct_node_ad88c9a757bfafd5ff265e0837b150056}
+
+
+Definicja w linii 20 pliku asocjacyjna.\-hh.
+
+\hypertarget{struct_node_a2559a716f69ccaa76d648d9f1b83065e}{\index{Node@{Node}!next@{next}}
+\index{next@{next}!Node@{Node}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Node\-::next}}\label{struct_node_a2559a716f69ccaa76d648d9f1b83065e}
+
+
+Definicja w linii 16 pliku asocjacyjna.\-hh.
+
+\hypertarget{struct_node_ab1d228a881cf7465b2d42ea135781427}{\index{Node@{Node}!val@{val}}
+\index{val@{val}!Node@{Node}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}int Node\-::val}}\label{struct_node_ab1d228a881cf7465b2d42ea135781427}
+
+
+Definicja w linii 24 pliku asocjacyjna.\-hh.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{asocjacyjna_8hh}{asocjacyjna.\-hh}\end{DoxyCompactItemize}

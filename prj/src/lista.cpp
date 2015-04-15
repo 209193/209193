@@ -2,7 +2,9 @@
 
 #include "lista.hh"
 
+
 void Lista::insert(int _elem) {
+
   if (head != nullptr) {
     Komorka* temp = new Komorka(_elem);
     if (temp == nullptr)
@@ -16,7 +18,9 @@ void Lista::insert(int _elem) {
   }
 }
 
+
 int Lista::remove(int _f) {
+
   Komorka* temp = head;
   Komorka* prev = nullptr;
   for (int i=0; i<_f; ++i){//przesuwamy sie do wskazanej komorki

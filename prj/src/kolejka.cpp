@@ -2,7 +2,9 @@
 
 #include "kolejka.hh"
 
+
 Kolejka::Kolejka() {
+
   size = 8;//poczatkowy rozmiar kolejki
   f = -1;//-1 bo tablica pusta, indeks pierwszego zapisanego miejsca
   r = 0;//indeks nastepnego pustego miejsca
@@ -11,7 +13,9 @@ Kolejka::Kolejka() {
   if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
+
 Kolejka::Kolejka(long _size) {
+
   size = _size;
   f = -1;
   r = 0;
@@ -20,11 +24,15 @@ Kolejka::Kolejka(long _size) {
   if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
+
 Kolejka::~Kolejka() {
+
   delete []tab;
 }
 
+
 void Kolejka::increase() {
+
   int *nowa = new int[size + 8];//nowa lista przechowujaca kolejke, wieksza o 8
 
   for(int i=0; i<r; ++i) nowa[i] = tab[i];//przepisujemy w taki sposob, zeby rozszerzyc tablice pomiedzy
@@ -37,13 +45,16 @@ void Kolejka::increase() {
   size +=8;//zwiekszamy rozmiar
 }
 
+
 void Kolejka::enqueue(int _elem) {
+
   if(r == f) increase();//przy zapelnieniu powiekszamy kolejke
   
   tab[r] = _elem;
   if(f == -1) ++f;//sprawdzamy czy kolejka byla inicjalizowana
   ++r;//przesuwamy wolne miejsce o 1 dalej
 }
+
 
 int Kolejka::dequeue() {
 

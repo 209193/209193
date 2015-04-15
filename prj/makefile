@@ -3,11 +3,17 @@ __start__: program
 	$(MAKE) -C generate
 	./program < generate/data.txt
 
-program: obj/main.o obj/benchmark.o obj/stos.o obj/kolejka.o obj/lista.o obj/tab_lista.o obj/algorithm_stos.o obj/algorithm_kolejka.o obj/algorithm_lista.o obj/algorithm2.o
-	g++ -Wall -pedantic -o program obj/main.o obj/benchmark.o obj/stos.o obj/kolejka.o obj/lista.o obj/tab_lista.o obj/algorithm_stos.o obj/algorithm_kolejka.o obj/algorithm_lista.o obj/algorithm2.o
+program: obj/main.o obj/benchmark.o obj/stos.o obj/kolejka.o obj/lista.o obj/tab_lista.o obj/algorithm_stos.o obj/algorithm_kolejka.o obj/algorithm_lista.o obj/algorithm2.o obj/asocjacyjna.o obj/mieszajaca.o
+	g++ -Wall -pedantic -o program obj/main.o obj/benchmark.o obj/stos.o obj/kolejka.o obj/lista.o obj/tab_lista.o obj/algorithm_stos.o obj/algorithm_kolejka.o obj/algorithm_lista.o obj/algorithm2.o obj/asocjacyjna.o obj/mieszajaca.o
 
-obj/main.o: src/main.cpp inc/benchmark.hh inc/stos.hh inc/kolejka.hh inc/lista.hh inc/tab_lista.hh inc/algorithm_stos.hh inc/algorithm_kolejka.hh inc/algorithm_lista.hh inc/algorithm2.hh
+obj/main.o: src/main.cpp inc/benchmark.hh inc/stos.hh inc/kolejka.hh inc/lista.hh inc/tab_lista.hh inc/algorithm_stos.hh inc/algorithm_kolejka.hh inc/algorithm_lista.hh inc/algorithm2.hh inc/asocjacyjna.hh inc/mieszajaca.hh
 	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
+
+obj/mieszajaca.o: src/mieszajaca.cpp inc/mieszajaca.hh
+	g++ ${CPPFLAGS} -o obj/mieszajaca.o src/mieszajaca.cpp
+
+obj/asocjacyjna.o: src/asocjacyjna.cpp inc/asocjacyjna.hh
+	g++ ${CPPFLAGS} -o obj/asocjacyjna.o src/asocjacyjna.cpp
 
 obj/algorithm2.o: src/algorithm2.cpp inc/algorithm2.hh
 	g++ ${CPPFLAGS} -o obj/algorithm2.o src/algorithm2.cpp

@@ -2,7 +2,9 @@
 
 #include "tab_lista.hh"
 
+
 TabLista::TabLista() {
+
   last = 0;
   size = 8;
 
@@ -10,7 +12,9 @@ TabLista::TabLista() {
   if (tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
+
 TabLista::TabLista(long _size) {
+
   last = 0;
   size = _size;
 
@@ -18,11 +22,15 @@ TabLista::TabLista(long _size) {
   if (tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
+
 TabLista::~TabLista() {
+
   delete []tab;
 }
 
+
 void TabLista::increase() {
+
   int *nowa = new int[size * 2];
 
   for (int i=0; i<size; ++i) nowa[i] = tab[i];
@@ -32,14 +40,18 @@ void TabLista::increase() {
   size *= 2;
 }
 
+
 void TabLista::insert(int _elem) {
+
   if (last == size) increase();
 
   tab[last] = _elem;
   ++last;
 }
 
+
 int TabLista::remove(int _f) {
+
   int temp = tab[_f];//zapisujemy wartosc usuwanego elementu
   --size;//zmniejszamy rozmiar o 1
   int *nowa = new int[size];//tworzymy nowa liste mniejsza o 1

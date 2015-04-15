@@ -1,8 +1,8 @@
 /*!
-  \mainpage Laboratorium 3
+  \mainpage Laboratorium 5
   \author Filip Malinowski
-  \date 25.03.2015
-  \version 0.0003
+  \date 15.04.2015
+  \version 0.0005
 
   Program sluzacy do uruchamiania algorytmow i badania ich szybkosci dzialania.\n
   W programie zaimplementowane sa algorytmy:\n
@@ -13,7 +13,7 @@
   *
 
   Do wykonania podanych powyzej trzech ostatnich algorytmow zostaly
-  zaimplementowane potrzebne struktury danych (stos, kolejka, lista oraz lista tablicowa).\n\n
+  zaimplementowane potrzebne struktury danych (stos, kolejka, lista oraz lista tablicowa, lista asocjacyjna, tablica z haszowaniem).\n\n
   Ciala klas znajduja sie w folderze ./prj/inc\n
   Definicje metod znajduja sie w folderze ./prj/src\n
   Sprawozdanie znajduje sie w folderze ./prj/doc/sprawozdanie\n\n

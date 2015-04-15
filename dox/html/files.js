@@ -16,6 +16,11 @@ var files =
     [ "algorithm_stos.hh", "algorithm__stos_8hh.html", [
       [ "AlgorithmStos", "class_algorithm_stos.html", "class_algorithm_stos" ]
     ] ],
+    [ "asocjacyjna.cpp", "asocjacyjna_8cpp.html", null ],
+    [ "asocjacyjna.hh", "asocjacyjna_8hh.html", [
+      [ "ANode", "struct_a_node.html", "struct_a_node" ],
+      [ "Asocjacyjna", "class_asocjacyjna.html", "class_asocjacyjna" ]
+    ] ],
     [ "benchmark.cpp", "benchmark_8cpp.html", "benchmark_8cpp" ],
     [ "benchmark.hh", "benchmark_8hh.html", "benchmark_8hh" ],
     [ "generate.cpp", "generate_8cpp.html", "generate_8cpp" ],
@@ -29,6 +34,11 @@ var files =
       [ "Komorka", "struct_lista_1_1_komorka.html", "struct_lista_1_1_komorka" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "mieszajaca.cpp", "mieszajaca_8cpp.html", null ],
+    [ "mieszajaca.hh", "mieszajaca_8hh.html", [
+      [ "MNode", "struct_m_node.html", "struct_m_node" ],
+      [ "Mieszajaca", "class_mieszajaca.html", "class_mieszajaca" ]
+    ] ],
     [ "stos.cpp", "stos_8cpp.html", null ],
     [ "stos.hh", "stos_8hh.html", [
       [ "Stos", "class_stos.html", "class_stos" ]

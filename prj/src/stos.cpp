@@ -2,7 +2,9 @@
 
 #include "stos.hh"
 
+
 Stos::Stos() {
+
   last = 0;
   size = 8;
 
@@ -11,7 +13,9 @@ Stos::Stos() {
   if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
+
 Stos::Stos(long _size) {
+
   last = 0;
   size = _size;
 
@@ -20,17 +24,21 @@ Stos::Stos(long _size) {
   if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
+
 Stos::~Stos() {
+
   delete []tab;
 }
 
+
 void Stos::push(int _elem) {
+
   if(last == size) increase();
 
   tab[last] = _elem;
   ++last;
-  
 }
+
 
 int Stos::pop() {
 
@@ -38,6 +46,7 @@ int Stos::pop() {
   --last;
   return temp;
 }
+
 
 void Stos::increase() {
 
@@ -50,7 +59,9 @@ void Stos::increase() {
   size += 8;//powiekszamy zmienna przechowujaca informacje o rozmiarze o 8
 }
 
+
 int Stos::decrease() {
+
   int temp = tab[size-1];//zmienna tymczasowa przechowujaca usuwany element
   --size;//pomniejszamy zmienna przechowujaca informacje o rozmiarze o 1
   int *nowa = new int[size];//tworzymy zastepczy stos o 1 mniejszy

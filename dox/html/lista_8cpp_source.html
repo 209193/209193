@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>lab3: Plik źródłowy lista.cpp</title>
+<title>lab5: Plik źródłowy lista.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,8 +24,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">lab3
-   &#160;<span id="projectnumber">0.0003</span>
+   <div id="projectname">lab5
+   &#160;<span id="projectnumber">0.0005</span>
    </div>
   </td>
  </tr>
@@ -71,53 +71,57 @@ $(document).ready(function(){initNavTree('lista_8cpp_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lista_8hh.html">lista.hh</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_lista.html#acec8ac807da644d8250c3c6043a208e1">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lista.html#acec8ac807da644d8250c3c6043a208e1">Lista::insert</a>(<span class="keywordtype">int</span> _elem) {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>* temp = <span class="keyword">new</span> <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>(_elem);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">if</span> (temp == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Blad alokacji&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">tail</a>-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a> = temp;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">tail</a> = temp;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a> = <span class="keyword">new</span> <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>(_elem);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">tail</a> = <a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_lista.html#a18ce18bccb1af9b8d818f103021d7b4a">   19</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_lista.html#a18ce18bccb1af9b8d818f103021d7b4a">Lista::remove</a>(<span class="keywordtype">int</span> _f) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>* temp = <a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>* prev = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;_f; ++i){<span class="comment">//przesuwamy sie do wskazanej komorki</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (temp != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      prev = temp;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      temp = temp-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Przekroczenie zakresu listy&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">int</span> val = temp-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aeb683e1dce8a8c096cc54a6645137411">elem</a>;<span class="comment">//przepisujemy wartosc z komorki do usuniecia</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  prev-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a> = temp-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">delete</span> temp;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">return</span> val;<span class="comment">//zwracamy usuwany element</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_lista.html#acec8ac807da644d8250c3c6043a208e1">    6</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lista.html#acec8ac807da644d8250c3c6043a208e1">Lista::insert</a>(<span class="keywordtype">int</span> _elem) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>* temp = <span class="keyword">new</span> <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>(_elem);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">if</span> (temp == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Blad alokacji&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">tail</a>-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a> = temp;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">tail</a> = temp;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a> = <span class="keyword">new</span> <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>(_elem);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">tail</a> = <a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_lista.html#a18ce18bccb1af9b8d818f103021d7b4a">   22</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_lista.html#a18ce18bccb1af9b8d818f103021d7b4a">Lista::remove</a>(<span class="keywordtype">int</span> _f) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>* temp = <a class="code" href="class_lista.html#aeba20505030183d334971bd44c3c8b95">head</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="struct_lista_1_1_komorka.html">Komorka</a>* prev = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;_f; ++i){<span class="comment">//przesuwamy sie do wskazanej komorki</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (temp != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      prev = temp;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      temp = temp-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Przekroczenie zakresu listy&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> val = temp-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aeb683e1dce8a8c096cc54a6645137411">elem</a>;<span class="comment">//przepisujemy wartosc z komorki do usuniecia</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  prev-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a> = temp-&gt;<a class="code" href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">next</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">delete</span> temp;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> val;<span class="comment">//zwracamy usuwany element</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="struct_lista_1_1_komorka_html"><div class="ttname"><a href="struct_lista_1_1_komorka.html">Lista::Komorka</a></div><div class="ttdoc">Struktura Komorka. Obiekt tego typu reprezentuje pojedyncza komorke wraz ze wskaznikiem na nastepna k...</div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00016">lista.hh:16</a></div></div>
-<div class="ttc" id="class_lista_html_a7d42e5f99e945d97c29d6f764f71f4e7"><div class="ttname"><a href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">Lista::tail</a></div><div class="ttdeci">Komorka * tail</div><div class="ttdoc">Wskaznik na koniec listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00042">lista.hh:42</a></div></div>
-<div class="ttc" id="class_lista_html_a18ce18bccb1af9b8d818f103021d7b4a"><div class="ttname"><a href="class_lista.html#a18ce18bccb1af9b8d818f103021d7b4a">Lista::remove</a></div><div class="ttdeci">int remove(int _f)</div><div class="ttdoc">Metoda usuwania elementu. Metoda sluzy do usuwania elementu o wskazanym indeksie. ...</div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00019">lista.cpp:19</a></div></div>
+<div class="ttc" id="class_lista_html_a7d42e5f99e945d97c29d6f764f71f4e7"><div class="ttname"><a href="class_lista.html#a7d42e5f99e945d97c29d6f764f71f4e7">Lista::tail</a></div><div class="ttdeci">Komorka * tail</div><div class="ttdoc">Wskaznik na koniec listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00043">lista.hh:43</a></div></div>
+<div class="ttc" id="class_lista_html_a18ce18bccb1af9b8d818f103021d7b4a"><div class="ttname"><a href="class_lista.html#a18ce18bccb1af9b8d818f103021d7b4a">Lista::remove</a></div><div class="ttdeci">int remove(int _f)</div><div class="ttdoc">Metoda usuwania elementu. Metoda sluzy do usuwania elementu o wskazanym indeksie. ...</div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00022">lista.cpp:22</a></div></div>
 <div class="ttc" id="struct_lista_1_1_komorka_html_aa04e9d2ed0260f2adbff6855f7bcd77e"><div class="ttname"><a href="struct_lista_1_1_komorka.html#aa04e9d2ed0260f2adbff6855f7bcd77e">Lista::Komorka::next</a></div><div class="ttdeci">Komorka * next</div><div class="ttdoc">Wskaznik na nastepna komorke listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00024">lista.hh:24</a></div></div>
-<div class="ttc" id="class_lista_html_acec8ac807da644d8250c3c6043a208e1"><div class="ttname"><a href="class_lista.html#acec8ac807da644d8250c3c6043a208e1">Lista::insert</a></div><div class="ttdeci">void insert(int _elem)</div><div class="ttdoc">Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do konca listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00005">lista.cpp:5</a></div></div>
+<div class="ttc" id="class_lista_html_acec8ac807da644d8250c3c6043a208e1"><div class="ttname"><a href="class_lista.html#acec8ac807da644d8250c3c6043a208e1">Lista::insert</a></div><div class="ttdeci">void insert(int _elem)</div><div class="ttdoc">Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do konca listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00006">lista.cpp:6</a></div></div>
 <div class="ttc" id="struct_lista_1_1_komorka_html_aeb683e1dce8a8c096cc54a6645137411"><div class="ttname"><a href="struct_lista_1_1_komorka.html#aeb683e1dce8a8c096cc54a6645137411">Lista::Komorka::elem</a></div><div class="ttdeci">int elem</div><div class="ttdoc">Wartosc elementu w pojedynczej komorce. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00020">lista.hh:20</a></div></div>
 <div class="ttc" id="lista_8hh_html"><div class="ttname"><a href="lista_8hh.html">lista.hh</a></div></div>
-<div class="ttc" id="class_lista_html_aeba20505030183d334971bd44c3c8b95"><div class="ttname"><a href="class_lista.html#aeba20505030183d334971bd44c3c8b95">Lista::head</a></div><div class="ttdeci">Komorka * head</div><div class="ttdoc">Wskaznik na poczatek listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00038">lista.hh:38</a></div></div>
+<div class="ttc" id="class_lista_html_aeba20505030183d334971bd44c3c8b95"><div class="ttname"><a href="class_lista.html#aeba20505030183d334971bd44c3c8b95">Lista::head</a></div><div class="ttdeci">Komorka * head</div><div class="ttdoc">Wskaznik na poczatek listy. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8hh_source.html#l00039">lista.hh:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="lista_8cpp.html">lista.cpp</a></li>
-    <li class="footer">Wygenerowano Śr, 25 mar 2015 23:23:29 dla lab3 programem
+    <li class="footer">Wygenerowano Śr, 15 kwi 2015 23:30:52 dla lab5 programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
