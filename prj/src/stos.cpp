@@ -73,13 +73,3 @@ int Stos::decrease() {
 
   return temp;//zwracamy usuwany element
 }
-
-
-void Stos::mergesort(int poczatek, int koniec) {
-  ip = poczatek;
-  ik = koniec;
-  is = (ip + ik + 1)/2;
-
-  if(is-ip > 1) mergesort(ip, is-1);
-  if(ik-is > 0) mergesort(is, ik);
-}
