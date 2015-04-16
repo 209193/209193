@@ -64,6 +64,13 @@ public:
    *\return - usuwany element.
    */
   int pop();
+
+  /*!
+   *\brief Sortowanie przez scalanie.
+   *\param[in] poczatek - poczatek tablicy.
+   *\param[in] koniec - koniec tablicy.
+   */
+  void Stos::mergesort(int poczatek, int koniec);
 };
 
 #endif
