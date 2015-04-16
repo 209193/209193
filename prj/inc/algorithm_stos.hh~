@@ -49,13 +49,6 @@ public:
    *\param[in] _border - ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie.
    */
   virtual void runAlgorithm(int _border);
-
-  /*!
-   *\brief Metoda sortowania.
-   *Sortuje stos korzytajac z mergesort.
-   *\param[in] _border - ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie.
-   */
-  virtual void sort(int _border);
 };
 
 #endif

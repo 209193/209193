@@ -1,7 +1,7 @@
 #ifndef BENCHMARK_HH
 #define BENCHMARK_HH
 
-#define SIZE 5000
+#define SIZE 100
 
 /*!
  *\brief Klasa Benchmark modelujaca program benchmarkujacy.

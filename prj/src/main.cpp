@@ -27,13 +27,13 @@ int main() {
   for(int i=0; i<SIZE; ++i)
     std::cin >> data[i];
 
-  //Benchmark *bench = new Benchmark();//klasa testujaca czas
-  //AlgorithmStos *stos = new AlgorithmStos(data);
+  Benchmark *bench = new Benchmark();//klasa testujaca czas
+  AlgorithmStos *stos = new AlgorithmStos(data);
   //AlgorithmKolejka *kolejka = new AlgorithmKolejka(data);
   //AlgorithmLista *lista = new AlgorithmLista(data);
   //Algorithm2 *tablista = new Algorithm2(data);
 
-  //bench -> testAlgorithm(stos,0);
+  bench -> testAlgorithm(stos,0);
   //bench -> testAlgorithm(kolejka,1);
   //bench -> testAlgorithm(lista,2);
   //bench -> testAlgorithm(tablista,3);

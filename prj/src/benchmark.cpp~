@@ -11,7 +11,7 @@
 /* Funkcja testowania szybkosci dzialania algorytmu */
 void Benchmark::testAlgorithm(Benchmark *_algorithm, int _n) const{
 
-  int j=5000;//startowa ilosc elementow
+  int j=100;//startowa ilosc elementow
   int average=0;//inicjalizacja zmiennej przechowujacej sredni czas dzialania
 
   std::ofstream ret_data(nazwy[_n]);

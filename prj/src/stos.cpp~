@@ -87,7 +87,7 @@ void Stos::mergesort(int poczatek, int koniec) {
   int i2 = is;
 
   for (int i=ip; i<=ik; ++i) {
-    if ((i1==is) || ((i2<=ik) && (tab[i1] > tab[i2]))) {
+    if (((i1==is) || (i2<=ik) && (tab[i1] > tab[i2]))) {
       temptab[i] = tab[i2];
       ++i2;
     }
