@@ -22,7 +22,19 @@ Klasa \hyperlink{class_stos}{Stos} modelujaca strukture danych typu stos. Obiekt
 void \hyperlink{class_stos_afd5802e405946328cccca3eed676b493}{push} (int \-\_\-elem)
 \begin{DoxyCompactList}\small\item\em Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do stosu. \end{DoxyCompactList}\item 
 int \hyperlink{class_stos_aabb14b8a389c55da6e2b50fbb179ed56}{pop} ()
-\begin{DoxyCompactList}\small\item\em Metoda usuwania elementu. Metoda sluzy do usuwania elementu ze stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda usuwania elementu. Metoda sluzy do usuwania elementu ze stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_ad1abb0cc4ab8b243e1303540c022d3f4}{quicksort} (int poczatek, int koniec)
+\begin{DoxyCompactList}\small\item\em Sortowanie szybkie. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a699ffb887c7e1b1b2fce87a9d57cc019}{optquicksort} (int poczatek, int koniec)
+\begin{DoxyCompactList}\small\item\em Sortowanie szybkie po optymalizacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a3750c6dd385abbb93fc653fb0674da5f}{mergesort} (int poczatek, int koniec)
+\begin{DoxyCompactList}\small\item\em Sortowanie przez scalanie. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a127d4a0d5dac0e51f45945daff3410c4}{heapify} (int i, int max)
+\begin{DoxyCompactList}\small\item\em Metoda przywracajaca porzadek kopca. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a79e9040a576401d70143e28300b19be2}{build\-\_\-heap} ()
+\begin{DoxyCompactList}\small\item\em Tworzenie struktury kopca z nieuporzadkowanej tablicy. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_ac66fde0c17f950c901e85b3eeca45d97}{heapsort} (int koniec)
+\begin{DoxyCompactList}\small\item\em Sortowanie przez kopcowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Metody prywatne}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,7 +70,7 @@ Definicja w linii 9 pliku stos.\-hh.
 )}}\label{class_stos_a1de3b50386d5dfb56ddece17d0ea2389}
 
 
-Definicja w linii 6 pliku stos.\-cpp.
+Definicja w linii 7 pliku stos.\-cpp.
 
 \hypertarget{class_stos_a6606affc11eed2b059b8caf287ffca25}{\index{Stos@{Stos}!Stos@{Stos}}
 \index{Stos@{Stos}!Stos@{Stos}}
@@ -74,7 +86,7 @@ Definicja w linii 6 pliku stos.\-cpp.
 \end{DoxyParams}
 
 
-Definicja w linii 17 pliku stos.\-cpp.
+Definicja w linii 18 pliku stos.\-cpp.
 
 \hypertarget{class_stos_af9a198e2540e18adcc0b5259105fd78e}{\index{Stos@{Stos}!$\sim$\-Stos@{$\sim$\-Stos}}
 \index{$\sim$\-Stos@{$\sim$\-Stos}!Stos@{Stos}}
@@ -85,11 +97,44 @@ Definicja w linii 17 pliku stos.\-cpp.
 )}}\label{class_stos_af9a198e2540e18adcc0b5259105fd78e}
 
 
-Definicja w linii 28 pliku stos.\-cpp.
+Definicja w linii 29 pliku stos.\-cpp.
 
 
 
 \subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_stos_a79e9040a576401d70143e28300b19be2}{\index{Stos@{Stos}!build\-\_\-heap@{build\-\_\-heap}}
+\index{build\-\_\-heap@{build\-\_\-heap}!Stos@{Stos}}
+\subsubsection[{build\-\_\-heap}]{\setlength{\rightskip}{0pt plus 5cm}void Stos\-::build\-\_\-heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a79e9040a576401d70143e28300b19be2}
+
+
+Definicja w linii 159 pliku stos.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_stos_a79e9040a576401d70143e28300b19be2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stos_a79e9040a576401d70143e28300b19be2_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_stos_a1054dda0231b2516b6a04298801c0b27}{\index{Stos@{Stos}!decrease@{decrease}}
 \index{decrease@{decrease}!Stos@{Stos}}
 \subsubsection[{decrease}]{\setlength{\rightskip}{0pt plus 5cm}int Stos\-::decrease (
@@ -99,7 +144,7 @@ Definicja w linii 28 pliku stos.\-cpp.
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_a1054dda0231b2516b6a04298801c0b27}
 
 
-Definicja w linii 63 pliku stos.\-cpp.
+Definicja w linii 64 pliku stos.\-cpp.
 
 
 
@@ -107,7 +152,68 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=256pt]{class_stos_a1054dda0231b2516b6a04298801c0b27_icgraph}
+\includegraphics[width=350pt]{class_stos_a1054dda0231b2516b6a04298801c0b27_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_stos_a127d4a0d5dac0e51f45945daff3410c4}{\index{Stos@{Stos}!heapify@{heapify}}
+\index{heapify@{heapify}!Stos@{Stos}}
+\subsubsection[{heapify}]{\setlength{\rightskip}{0pt plus 5cm}void Stos\-::heapify (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a127d4a0d5dac0e51f45945daff3410c4}
+
+
+Definicja w linii 144 pliku stos.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stos_a127d4a0d5dac0e51f45945daff3410c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_stos_ac66fde0c17f950c901e85b3eeca45d97}{\index{Stos@{Stos}!heapsort@{heapsort}}
+\index{heapsort@{heapsort}!Stos@{Stos}}
+\subsubsection[{heapsort}]{\setlength{\rightskip}{0pt plus 5cm}void Stos\-::heapsort (
+\begin{DoxyParamCaption}
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{class_stos_ac66fde0c17f950c901e85b3eeca45d97}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em koniec} & -\/ koniec tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 168 pliku stos.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stos_ac66fde0c17f950c901e85b3eeca45d97_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_stos_ac66fde0c17f950c901e85b3eeca45d97_icgraph}
 \end{center}
 \end{figure}
 
@@ -121,7 +227,7 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_aaf6e4717d1983c5351c9f5e9797368d3}
 
 
-Definicja w linii 51 pliku stos.\-cpp.
+Definicja w linii 52 pliku stos.\-cpp.
 
 
 
@@ -130,6 +236,66 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_stos_aaf6e4717d1983c5351c9f5e9797368d3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_stos_a3750c6dd385abbb93fc653fb0674da5f}{\index{Stos@{Stos}!mergesort@{mergesort}}
+\index{mergesort@{mergesort}!Stos@{Stos}}
+\subsubsection[{mergesort}]{\setlength{\rightskip}{0pt plus 5cm}void Stos\-::mergesort (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatek, }
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a3750c6dd385abbb93fc653fb0674da5f}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em poczatek} & -\/ poczatek tablicy. \\
+\hline
+\mbox{\tt in}  & {\em koniec} & -\/ koniec tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 119 pliku stos.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_stos_a3750c6dd385abbb93fc653fb0674da5f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_stos_a699ffb887c7e1b1b2fce87a9d57cc019}{\index{Stos@{Stos}!optquicksort@{optquicksort}}
+\index{optquicksort@{optquicksort}!Stos@{Stos}}
+\subsubsection[{optquicksort}]{\setlength{\rightskip}{0pt plus 5cm}void Stos\-::optquicksort (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatek, }
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a699ffb887c7e1b1b2fce87a9d57cc019}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em poczatek} & -\/ poczatek tablicy. \\
+\hline
+\mbox{\tt in}  & {\em koniec} & -\/ koniec tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 100 pliku stos.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_stos_a699ffb887c7e1b1b2fce87a9d57cc019_icgraph}
 \end{center}
 \end{figure}
 
@@ -146,7 +312,7 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{DoxyReturn}
 
 
-Definicja w linii 43 pliku stos.\-cpp.
+Definicja w linii 44 pliku stos.\-cpp.
 
 
 
@@ -155,6 +321,17 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=256pt]{class_stos_aabb14b8a389c55da6e2b50fbb179ed56_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_stos_aabb14b8a389c55da6e2b50fbb179ed56_icgraph}
 \end{center}
 \end{figure}
 
@@ -173,7 +350,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 \end{DoxyParams}
 
 
-Definicja w linii 34 pliku stos.\-cpp.
+Definicja w linii 35 pliku stos.\-cpp.
 
 
 
@@ -192,7 +369,37 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=316pt]{class_stos_afd5802e405946328cccca3eed676b493_icgraph}
+\includegraphics[width=264pt]{class_stos_afd5802e405946328cccca3eed676b493_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_stos_ad1abb0cc4ab8b243e1303540c022d3f4}{\index{Stos@{Stos}!quicksort@{quicksort}}
+\index{quicksort@{quicksort}!Stos@{Stos}}
+\subsubsection[{quicksort}]{\setlength{\rightskip}{0pt plus 5cm}void Stos\-::quicksort (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatek, }
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{class_stos_ad1abb0cc4ab8b243e1303540c022d3f4}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em poczatek} & -\/ poczatek tablicy. \\
+\hline
+\mbox{\tt in}  & {\em koniec} & -\/ koniec tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 79 pliku stos.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_stos_ad1abb0cc4ab8b243e1303540c022d3f4_icgraph}
 \end{center}
 \end{figure}
 

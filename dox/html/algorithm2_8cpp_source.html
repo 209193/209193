@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>lab5: Plik źródłowy algorithm2.cpp</title>
+<title>lab6: Plik źródłowy algorithm2.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,8 +24,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">lab5
-   &#160;<span id="projectnumber">0.0005</span>
+   <div id="projectname">lab6
+   &#160;<span id="projectnumber">0.0006</span>
    </div>
   </td>
  </tr>
@@ -69,31 +69,45 @@ $(document).ready(function(){initNavTree('algorithm2_8cpp_source.html','');});
 <div class="contents">
 <a href="algorithm2_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tab__lista_8hh.html">tab_lista.hh</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stos_8hh.html">stos.hh</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="benchmark_8hh.html">benchmark.hh</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="algorithm2_8hh.html">algorithm2.hh</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* Funkcja wykonujaca algorytm wczytywania elementow do listy tablicowej */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">Algorithm2::runAlgorithm</a>(<span class="keywordtype">int</span> _border){</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;_border; ++i)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_algorithm2.html#af58d491bdb13e788c40754617f3b13df">tablista</a>.<a class="code" href="class_tab_lista.html#a7bd3e5f62a81bfd3813ad874e8a9c059">insert</a>(<a class="code" href="class_algorithm2.html#a4a2c5e1211591fb0ad00d64ca783bf56">tab</a>[i]);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">Algorithm2::runAlgorithm</a>(<span class="keywordtype">int</span> _border) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="class_algorithm2.html#a02585cbfa5330f4719cf97c02729e74a">stos</a>.<a class="code" href="class_stos.html#a699ffb887c7e1b1b2fce87a9d57cc019">optquicksort</a>(0, _border-1);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_algorithm2.html#a50bbb4421660c4200dba66e9da9d7969">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_algorithm2.html#a50bbb4421660c4200dba66e9da9d7969">Algorithm2::load</a>(<span class="keywordtype">int</span> _border) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;_border; ++i) <a class="code" href="class_algorithm2.html#a02585cbfa5330f4719cf97c02729e74a">stos</a>.<a class="code" href="class_stos.html#afd5802e405946328cccca3eed676b493">push</a>(<a class="code" href="class_algorithm2.html#afb40ae7f1e1044802daa927fc7eac7a7">tab</a>[i]);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_algorithm2.html#a3d7e4d0c9308d0b97250cb5596a73165">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_algorithm2.html#a3d7e4d0c9308d0b97250cb5596a73165">Algorithm2::unload</a>(<span class="keywordtype">int</span> _border) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;_border; ++i) <a class="code" href="class_algorithm2.html#a02585cbfa5330f4719cf97c02729e74a">stos</a>.<a class="code" href="class_stos.html#aabb14b8a389c55da6e2b50fbb179ed56">pop</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="stos_8hh_html"><div class="ttname"><a href="stos_8hh.html">stos.hh</a></div></div>
 <div class="ttc" id="benchmark_8hh_html"><div class="ttname"><a href="benchmark_8hh.html">benchmark.hh</a></div></div>
-<div class="ttc" id="class_tab_lista_html_a7bd3e5f62a81bfd3813ad874e8a9c059"><div class="ttname"><a href="class_tab_lista.html#a7bd3e5f62a81bfd3813ad874e8a9c059">TabLista::insert</a></div><div class="ttdeci">void insert(int _elem)</div><div class="ttdoc">Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do konca listy. </div><div class="ttdef"><b>Definition:</b> <a href="tab__lista_8cpp_source.html#l00044">tab_lista.cpp:44</a></div></div>
-<div class="ttc" id="class_algorithm2_html_a409e58d5fb0b6d2407cc986cf163703b"><div class="ttname"><a href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">Algorithm2::runAlgorithm</a></div><div class="ttdeci">virtual void runAlgorithm(int _border)</div><div class="ttdoc">Metoda uruchamiania algorytmu. Metoda sluzy to wykonywania danego algorytmu. Wczytuje elementy do kol...</div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8cpp_source.html#l00009">algorithm2.cpp:9</a></div></div>
-<div class="ttc" id="class_algorithm2_html_a4a2c5e1211591fb0ad00d64ca783bf56"><div class="ttname"><a href="class_algorithm2.html#a4a2c5e1211591fb0ad00d64ca783bf56">Algorithm2::tab</a></div><div class="ttdeci">int tab[SIZE]</div><div class="ttdoc">Tablica elementow z danymi wejsciowymi. </div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8hh_source.html#l00014">algorithm2.hh:14</a></div></div>
-<div class="ttc" id="tab__lista_8hh_html"><div class="ttname"><a href="tab__lista_8hh.html">tab_lista.hh</a></div></div>
-<div class="ttc" id="class_algorithm2_html_af58d491bdb13e788c40754617f3b13df"><div class="ttname"><a href="class_algorithm2.html#af58d491bdb13e788c40754617f3b13df">Algorithm2::tablista</a></div><div class="ttdeci">TabLista tablista</div><div class="ttdoc">Zmienna przechowujaca liste tablicowa. </div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8hh_source.html#l00018">algorithm2.hh:18</a></div></div>
+<div class="ttc" id="class_stos_html_a699ffb887c7e1b1b2fce87a9d57cc019"><div class="ttname"><a href="class_stos.html#a699ffb887c7e1b1b2fce87a9d57cc019">Stos::optquicksort</a></div><div class="ttdeci">void optquicksort(int poczatek, int koniec)</div><div class="ttdoc">Sortowanie szybkie po optymalizacji. </div><div class="ttdef"><b>Definition:</b> <a href="stos_8cpp_source.html#l00100">stos.cpp:100</a></div></div>
+<div class="ttc" id="class_stos_html_aabb14b8a389c55da6e2b50fbb179ed56"><div class="ttname"><a href="class_stos.html#aabb14b8a389c55da6e2b50fbb179ed56">Stos::pop</a></div><div class="ttdeci">int pop()</div><div class="ttdoc">Metoda usuwania elementu. Metoda sluzy do usuwania elementu ze stosu. </div><div class="ttdef"><b>Definition:</b> <a href="stos_8cpp_source.html#l00044">stos.cpp:44</a></div></div>
+<div class="ttc" id="class_algorithm2_html_afb40ae7f1e1044802daa927fc7eac7a7"><div class="ttname"><a href="class_algorithm2.html#afb40ae7f1e1044802daa927fc7eac7a7">Algorithm2::tab</a></div><div class="ttdeci">int * tab</div><div class="ttdoc">Wskaznik na tablice elementow z danymi wejsciowymi. </div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8hh_source.html#l00014">algorithm2.hh:14</a></div></div>
+<div class="ttc" id="class_algorithm2_html_a409e58d5fb0b6d2407cc986cf163703b"><div class="ttname"><a href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">Algorithm2::runAlgorithm</a></div><div class="ttdeci">virtual void runAlgorithm(int _border)</div><div class="ttdoc">Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. Sortuje elementy stosu...</div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8cpp_source.html#l00008">algorithm2.cpp:8</a></div></div>
+<div class="ttc" id="class_stos_html_afd5802e405946328cccca3eed676b493"><div class="ttname"><a href="class_stos.html#afd5802e405946328cccca3eed676b493">Stos::push</a></div><div class="ttdeci">void push(int _elem)</div><div class="ttdoc">Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do stosu. </div><div class="ttdef"><b>Definition:</b> <a href="stos_8cpp_source.html#l00035">stos.cpp:35</a></div></div>
+<div class="ttc" id="class_algorithm2_html_a3d7e4d0c9308d0b97250cb5596a73165"><div class="ttname"><a href="class_algorithm2.html#a3d7e4d0c9308d0b97250cb5596a73165">Algorithm2::unload</a></div><div class="ttdeci">virtual void unload(int _border)</div><div class="ttdoc">Metoda sprzatania. Metoda sluzy do oproznienia struktury. </div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8cpp_source.html#l00020">algorithm2.cpp:20</a></div></div>
 <div class="ttc" id="algorithm2_8hh_html"><div class="ttname"><a href="algorithm2_8hh.html">algorithm2.hh</a></div></div>
+<div class="ttc" id="class_algorithm2_html_a50bbb4421660c4200dba66e9da9d7969"><div class="ttname"><a href="class_algorithm2.html#a50bbb4421660c4200dba66e9da9d7969">Algorithm2::load</a></div><div class="ttdeci">virtual void load(int _border)</div><div class="ttdoc">Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu...</div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8cpp_source.html#l00014">algorithm2.cpp:14</a></div></div>
+<div class="ttc" id="class_algorithm2_html_a02585cbfa5330f4719cf97c02729e74a"><div class="ttname"><a href="class_algorithm2.html#a02585cbfa5330f4719cf97c02729e74a">Algorithm2::stos</a></div><div class="ttdeci">Stos stos</div><div class="ttdoc">Zmienna przechowujaca stos. </div><div class="ttdef"><b>Definition:</b> <a href="algorithm2_8hh_source.html#l00018">algorithm2.hh:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="algorithm2_8cpp.html">algorithm2.cpp</a></li>
-    <li class="footer">Wygenerowano Śr, 15 kwi 2015 23:30:52 dla lab5 programem
+    <li class="footer">Wygenerowano Śr, 22 kwi 2015 23:00:56 dla lab6 programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

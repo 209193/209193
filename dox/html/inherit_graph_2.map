@@ -1,7 +1,7 @@
 <map id="Graficzna hierarchia klas" name="Graficzna hierarchia klas">
 <area shape="rect" id="node1" href="$class_benchmark.html" title="Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy..." alt="" coords="5,81,93,108"/>
-<area shape="rect" id="node2" href="$class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a..." alt="" coords="159,5,243,32"/>
-<area shape="rect" id="node3" href="$class_algorithm_kolejka.html" title="Klasa AlgorithmKolejka modelujaca algorytm wczytywania do kolejki. Obiekt tego typu reprezentuje algo..." alt="" coords="141,56,261,83"/>
-<area shape="rect" id="node4" href="$class_algorithm_lista.html" title="Klasa AlgorithmLista modelujaca algorytm wczytywania do kolejki. Obiekt tego typu reprezentuje algory..." alt="" coords="148,107,255,133"/>
-<area shape="rect" id="node5" href="$class_algorithm_stos.html" title="Klasa AlgorithmStos modelujaca algorytm wczytywania do stosu. Obiekt tego typu reprezentuje algorytm ..." alt="" coords="149,157,253,184"/>
+<area shape="rect" id="node2" href="$class_algorithm1.html" title="Klasa Algorithm1 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="142,5,226,32"/>
+<area shape="rect" id="node3" href="$class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="142,56,226,83"/>
+<area shape="rect" id="node4" href="$class_algorithm3.html" title="Klasa Algorithm3 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="142,107,226,133"/>
+<area shape="rect" id="node5" href="$class_algorithm4.html" title="Klasa Algorithm4 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="142,157,226,184"/>
 </map>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>lab5: Dokumentacja klasy Benchmark</title>
+<title>lab6: Dokumentacja klasy Benchmark</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,8 +24,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">lab5
-   &#160;<span id="projectnumber">0.0005</span>
+   <div id="projectname">lab6
+   &#160;<span id="projectnumber">0.0006</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ Diagram dziedziczenia dla Benchmark</div>
 <div class="dyncontent">
 <div class="center"><img src="class_benchmark__inherit__graph.png" border="0" usemap="#_benchmark_inherit__map" alt="Inheritance graph"/></div>
 <map name="_benchmark_inherit__map" id="_benchmark_inherit__map">
-<area shape="rect" id="node2" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a..." alt="" coords="5,80,88,107"/><area shape="rect" id="node3" href="class_algorithm_kolejka.html" title="Klasa AlgorithmKolejka modelujaca algorytm wczytywania do kolejki. Obiekt tego typu reprezentuje algo..." alt="" coords="113,80,233,107"/><area shape="rect" id="node4" href="class_algorithm_lista.html" title="Klasa AlgorithmLista modelujaca algorytm wczytywania do kolejki. Obiekt tego typu reprezentuje algory..." alt="" coords="257,80,364,107"/><area shape="rect" id="node5" href="class_algorithm_stos.html" title="Klasa AlgorithmStos modelujaca algorytm wczytywania do stosu. Obiekt tego typu reprezentuje algorytm ..." alt="" coords="388,80,492,107"/></map>
+<area shape="rect" id="node2" href="class_algorithm1.html" title="Klasa Algorithm1 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="5,80,88,107"/><area shape="rect" id="node3" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="113,80,196,107"/><area shape="rect" id="node4" href="class_algorithm3.html" title="Klasa Algorithm3 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="221,80,304,107"/><area shape="rect" id="node5" href="class_algorithm4.html" title="Klasa Algorithm4 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj..." alt="" coords="329,80,412,107"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -97,6 +97,12 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a900bc0d26c2ed6aa45afe4d5b295ccd1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a900bc0d26c2ed6aa45afe4d5b295ccd1">testAlgorithm</a> (<a class="el" href="class_benchmark.html">Benchmark</a> *_algorithm, int _n) const </td></tr>
 <tr class="memdesc:a900bc0d26c2ed6aa45afe4d5b295ccd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda testowania algorytmu. Metoda sluzy to testowania szybkosci dzialania algorytmu. Wykonuje testowany algorytm dla 5 kolejnych ilosci elementow. Wykonanie algorytmu dla danego zestawu liczb powtarza dwa razy i usrednia wynik. Otrzymany czas wraz z iloscia testowanych danych zapisuje w pliku ret_data.txt.  <a href="#a900bc0d26c2ed6aa45afe4d5b295ccd1">Więcej...</a><br/></td></tr>
 <tr class="separator:a900bc0d26c2ed6aa45afe4d5b295ccd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935c57201a5d0b9589a898df38b8b5a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3">load</a> (int _border)</td></tr>
+<tr class="memdesc:a935c57201a5d0b9589a898df38b8b5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu. W klasie <a class="el" href="class_benchmark.html" title="Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy...">Benchmark</a> nie ma konkretnego dzialania.  <a href="#a935c57201a5d0b9589a898df38b8b5a3">Więcej...</a><br/></td></tr>
+<tr class="separator:a935c57201a5d0b9589a898df38b8b5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd856205ecb699568533fff0be01209"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#aafd856205ecb699568533fff0be01209">unload</a> (int _border)</td></tr>
+<tr class="memdesc:aafd856205ecb699568533fff0be01209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprzatania. Metoda sluzy do oproznienia struktury. W klasie <a class="el" href="class_benchmark.html" title="Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy...">Benchmark</a> nie ma konkretnego dzialania.  <a href="#aafd856205ecb699568533fff0be01209">Więcej...</a><br/></td></tr>
+<tr class="separator:aafd856205ecb699568533fff0be01209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6363894c058e8bfe146de09d7126b29c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">runAlgorithm</a> (int _border)</td></tr>
 <tr class="memdesc:a6363894c058e8bfe146de09d7126b29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie <a class="el" href="class_benchmark.html" title="Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy...">Benchmark</a> nie ma konkretnego dzialania.  <a href="#a6363894c058e8bfe146de09d7126b29c">Więcej...</a><br/></td></tr>
 <tr class="separator:a6363894c058e8bfe146de09d7126b29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +168,43 @@ Atrybuty prywatne</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a935c57201a5d0b9589a898df38b8b5a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Benchmark::load </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_border</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana w <a class="el" href="class_algorithm1.html#a008c8fdd07c39219099afe14e63e447a">Algorithm1</a>, <a class="el" href="class_algorithm2.html#a50bbb4421660c4200dba66e9da9d7969">Algorithm2</a>, <a class="el" href="class_algorithm3.html#a92b082327e99863c82981cdaec9a45a1">Algorithm3</a> i <a class="el" href="class_algorithm4.html#aa86adbf6be3052692f885c1be28b2300">Algorithm4</a>.</p>
+
+<p>Definicja w linii <a class="el" href="benchmark_8hh_source.html#l00047">47</a> pliku <a class="el" href="benchmark_8hh_source.html">benchmark.hh</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_benchmark_a935c57201a5d0b9589a898df38b8b5a3_icgraph.png" border="0" usemap="#class_benchmark_a935c57201a5d0b9589a898df38b8b5a3_icgraph" alt=""/></div>
+<map name="class_benchmark_a935c57201a5d0b9589a898df38b8b5a3_icgraph" id="class_benchmark_a935c57201a5d0b9589a898df38b8b5a3_icgraph">
+<area shape="rect" id="node2" href="class_benchmark.html#a900bc0d26c2ed6aa45afe4d5b295ccd1" title="Metoda testowania algorytmu. Metoda sluzy to testowania szybkosci dzialania algorytmu. Wykonuje testowany algorytm dla 5 kolejnych ilosci elementow. Wykonanie algorytmu dla danego zestawu liczb powtarza dwa razy i usrednia wynik. Otrzymany czas wraz z iloscia testowanych danych zapisuje w pliku ret_data.txt. " alt="" coords="173,5,344,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a6363894c058e8bfe146de09d7126b29c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,9 +233,9 @@ Atrybuty prywatne</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplementowana w <a class="el" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">Algorithm2</a>, <a class="el" href="class_algorithm_kolejka.html#ae9da3f1862fd90feb4a3c1d6b4f3dd8d">AlgorithmKolejka</a>, <a class="el" href="class_algorithm_lista.html#a5c41dbbd3ae7a9ac34edec1a51bc8eb1">AlgorithmLista</a> i <a class="el" href="class_algorithm_stos.html#a889f7150ae3651b40e5acca7542dbbd1">AlgorithmStos</a>.</p>
+<p>Reimplementowana w <a class="el" href="class_algorithm1.html#a671a2162843b588704044420c9a5dfa9">Algorithm1</a>, <a class="el" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">Algorithm2</a>, <a class="el" href="class_algorithm3.html#ac5c80b248190a12fa770e0386f694570">Algorithm3</a> i <a class="el" href="class_algorithm4.html#ad1e715e2d6ddec7607f3cafa77443cd2">Algorithm4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="benchmark_8hh_source.html#l00048">48</a> pliku <a class="el" href="benchmark_8hh_source.html">benchmark.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="benchmark_8hh_source.html#l00062">62</a> pliku <a class="el" href="benchmark_8hh_source.html">benchmark.hh</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -251,7 +294,44 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_benchmark_a900bc0d26c2ed6aa45afe4d5b295ccd1_cgraph.png" border="0" usemap="#class_benchmark_a900bc0d26c2ed6aa45afe4d5b295ccd1_cgraph" alt=""/></div>
 <map name="class_benchmark_a900bc0d26c2ed6aa45afe4d5b295ccd1_cgraph" id="class_benchmark_a900bc0d26c2ed6aa45afe4d5b295ccd1_cgraph">
-<area shape="rect" id="node2" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c" title="Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie Benchmark nie m..." alt="" coords="225,5,391,32"/></map>
+<area shape="rect" id="node2" href="class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3" title="Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu..." alt="" coords="249,5,367,32"/><area shape="rect" id="node3" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c" title="Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie Benchmark nie m..." alt="" coords="225,56,391,83"/><area shape="rect" id="node4" href="class_benchmark.html#aafd856205ecb699568533fff0be01209" title="Metoda sprzatania. Metoda sluzy do oproznienia struktury. W klasie Benchmark nie ma konkretnego dzial..." alt="" coords="242,107,374,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aafd856205ecb699568533fff0be01209"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Benchmark::unload </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_border</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana w <a class="el" href="class_algorithm1.html#a135dd26c6c741812d75cd7f2f270592d">Algorithm1</a>, <a class="el" href="class_algorithm2.html#a3d7e4d0c9308d0b97250cb5596a73165">Algorithm2</a>, <a class="el" href="class_algorithm3.html#a170d77ee28866741214e65da7efcf533">Algorithm3</a> i <a class="el" href="class_algorithm4.html#a673e2d2373378ab01a7f0378d978f162">Algorithm4</a>.</p>
+
+<p>Definicja w linii <a class="el" href="benchmark_8hh_source.html#l00054">54</a> pliku <a class="el" href="benchmark_8hh_source.html">benchmark.hh</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_benchmark_aafd856205ecb699568533fff0be01209_icgraph.png" border="0" usemap="#class_benchmark_aafd856205ecb699568533fff0be01209_icgraph" alt=""/></div>
+<map name="class_benchmark_aafd856205ecb699568533fff0be01209_icgraph" id="class_benchmark_aafd856205ecb699568533fff0be01209_icgraph">
+<area shape="rect" id="node2" href="class_benchmark.html#a900bc0d26c2ed6aa45afe4d5b295ccd1" title="Metoda testowania algorytmu. Metoda sluzy to testowania szybkosci dzialania algorytmu. Wykonuje testowany algorytm dla 5 kolejnych ilosci elementow. Wykonanie algorytmu dla danego zestawu liczb powtarza dwa razy i usrednia wynik. Otrzymany czas wraz z iloscia testowanych danych zapisuje w pliku ret_data.txt. " alt="" coords="187,5,357,32"/></map>
 </div>
 </p>
 
@@ -290,7 +370,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_benchmark.html">Benchmark</a></li>
-    <li class="footer">Wygenerowano Śr, 15 kwi 2015 23:30:52 dla lab5 programem
+    <li class="footer">Wygenerowano Śr, 22 kwi 2015 23:00:56 dla lab6 programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

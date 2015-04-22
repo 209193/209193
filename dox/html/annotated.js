@@ -1,9 +1,9 @@
 var annotated =
 [
+    [ "Algorithm1", "class_algorithm1.html", "class_algorithm1" ],
     [ "Algorithm2", "class_algorithm2.html", "class_algorithm2" ],
-    [ "AlgorithmKolejka", "class_algorithm_kolejka.html", "class_algorithm_kolejka" ],
-    [ "AlgorithmLista", "class_algorithm_lista.html", "class_algorithm_lista" ],
-    [ "AlgorithmStos", "class_algorithm_stos.html", "class_algorithm_stos" ],
+    [ "Algorithm3", "class_algorithm3.html", "class_algorithm3" ],
+    [ "Algorithm4", "class_algorithm4.html", "class_algorithm4" ],
     [ "ANode", "struct_a_node.html", "struct_a_node" ],
     [ "Asocjacyjna", "class_asocjacyjna.html", "class_asocjacyjna" ],
     [ "Benchmark", "class_benchmark.html", "class_benchmark" ],

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 
-#define SIZE 5000
+#define SIZE 100000
 
 /*!
  *\brief Funkcja generowania pliku z danymi wejsciowymi.

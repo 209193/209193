@@ -28,6 +28,10 @@ Diagram dziedziczenia dla Benchmark\nopagebreak
 \begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{class_benchmark}{Benchmark}. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_benchmark_a900bc0d26c2ed6aa45afe4d5b295ccd1}{test\-Algorithm} (\hyperlink{class_benchmark}{Benchmark} $\ast$\-\_\-algorithm, int \-\_\-n) const 
 \begin{DoxyCompactList}\small\item\em Metoda testowania algorytmu. Metoda sluzy to testowania szybkosci dzialania algorytmu. Wykonuje testowany algorytm dla 5 kolejnych ilosci elementow. Wykonanie algorytmu dla danego zestawu liczb powtarza dwa razy i usrednia wynik. Otrzymany czas wraz z iloscia testowanych danych zapisuje w pliku ret\-\_\-data.\-txt. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_benchmark_a935c57201a5d0b9589a898df38b8b5a3}{load} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu. W klasie \hyperlink{class_benchmark}{Benchmark} nie ma konkretnego dzialania. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_benchmark_aafd856205ecb699568533fff0be01209}{unload} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda sprzatania. Metoda sluzy do oproznienia struktury. W klasie \hyperlink{class_benchmark}{Benchmark} nie ma konkretnego dzialania. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_benchmark_a6363894c058e8bfe146de09d7126b29c}{run\-Algorithm} (int \-\_\-border)
 \begin{DoxyCompactList}\small\item\em Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie \hyperlink{class_benchmark}{Benchmark} nie ma konkretnego dzialania. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atrybuty prywatne}
@@ -70,6 +74,32 @@ Definicja w linii 28 pliku benchmark.\-hh.
 
 
 \subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_benchmark_a935c57201a5d0b9589a898df38b8b5a3}{\index{Benchmark@{Benchmark}!load@{load}}
+\index{load@{load}!Benchmark@{Benchmark}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-::load (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_benchmark_a935c57201a5d0b9589a898df38b8b5a3}
+
+
+Reimplementowana w \hyperlink{class_algorithm1_a008c8fdd07c39219099afe14e63e447a}{Algorithm1}, \hyperlink{class_algorithm2_a50bbb4421660c4200dba66e9da9d7969}{Algorithm2}, \hyperlink{class_algorithm3_a92b082327e99863c82981cdaec9a45a1}{Algorithm3} i \hyperlink{class_algorithm4_aa86adbf6be3052692f885c1be28b2300}{Algorithm4}.
+
+
+
+Definicja w linii 47 pliku benchmark.\-hh.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_benchmark_a935c57201a5d0b9589a898df38b8b5a3_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_benchmark_a6363894c058e8bfe146de09d7126b29c}{\index{Benchmark@{Benchmark}!run\-Algorithm@{run\-Algorithm}}
 \index{run\-Algorithm@{run\-Algorithm}!Benchmark@{Benchmark}}
 \subsubsection[{run\-Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-::run\-Algorithm (
@@ -84,11 +114,11 @@ Definicja w linii 28 pliku benchmark.\-hh.
 \end{DoxyParams}
 
 
-Reimplementowana w \hyperlink{class_algorithm2_a409e58d5fb0b6d2407cc986cf163703b}{Algorithm2}, \hyperlink{class_algorithm_kolejka_ae9da3f1862fd90feb4a3c1d6b4f3dd8d}{Algorithm\-Kolejka}, \hyperlink{class_algorithm_lista_a5c41dbbd3ae7a9ac34edec1a51bc8eb1}{Algorithm\-Lista} i \hyperlink{class_algorithm_stos_a889f7150ae3651b40e5acca7542dbbd1}{Algorithm\-Stos}.
+Reimplementowana w \hyperlink{class_algorithm1_a671a2162843b588704044420c9a5dfa9}{Algorithm1}, \hyperlink{class_algorithm2_a409e58d5fb0b6d2407cc986cf163703b}{Algorithm2}, \hyperlink{class_algorithm3_ac5c80b248190a12fa770e0386f694570}{Algorithm3} i \hyperlink{class_algorithm4_ad1e715e2d6ddec7607f3cafa77443cd2}{Algorithm4}.
 
 
 
-Definicja w linii 48 pliku benchmark.\-hh.
+Definicja w linii 62 pliku benchmark.\-hh.
 
 
 
@@ -127,6 +157,32 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_benchmark_a900bc0d26c2ed6aa45afe4d5b295ccd1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_benchmark_aafd856205ecb699568533fff0be01209}{\index{Benchmark@{Benchmark}!unload@{unload}}
+\index{unload@{unload}!Benchmark@{Benchmark}}
+\subsubsection[{unload}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-::unload (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_benchmark_aafd856205ecb699568533fff0be01209}
+
+
+Reimplementowana w \hyperlink{class_algorithm1_a135dd26c6c741812d75cd7f2f270592d}{Algorithm1}, \hyperlink{class_algorithm2_a3d7e4d0c9308d0b97250cb5596a73165}{Algorithm2}, \hyperlink{class_algorithm3_a170d77ee28866741214e65da7efcf533}{Algorithm3} i \hyperlink{class_algorithm4_a673e2d2373378ab01a7f0378d978f162}{Algorithm4}.
+
+
+
+Definicja w linii 54 pliku benchmark.\-hh.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_benchmark_aafd856205ecb699568533fff0be01209_icgraph}
 \end{center}
 \end{figure}
 

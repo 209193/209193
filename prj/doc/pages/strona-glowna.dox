@@ -1,15 +1,15 @@
 /*!
-  \mainpage Laboratorium 5
+  \mainpage Laboratorium 6
   \author Filip Malinowski
-  \date 16.04.2015
-  \version 0.00055
+  \date 22.04.2015
+  \version 0.0005
 
   Program sluzacy do uruchamiania algorytmow i badania ich szybkosci dzialania.\n
   W programie zaimplementowane sa algorytmy:\n
-  - wczytywanie danej ilosci elementow do stosu\n
-  - wczytywanie danej ilosci elementow do kolejki\n
-  - wczytywanie danej ilosci elementow do listy\n
-  - wczytywanie danej ilosci elementow do listy tablicowej
+  - sortowania szybkiego stosu\n
+  - sortowania szybkiego po optymalizacji pivot stosu\n
+  - sortowania przez scalanie stosu\n
+  - sortowania przez kopcowanie stosu
   *
 
   Do wykonania podanych powyzej trzech ostatnich algorytmow zostaly

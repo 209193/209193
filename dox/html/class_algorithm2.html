@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>lab5: Dokumentacja klasy Algorithm2</title>
+<title>lab6: Dokumentacja klasy Algorithm2</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,8 +24,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">lab5
-   &#160;<span id="projectnumber">0.0005</span>
+   <div id="projectname">lab6
+   &#160;<span id="projectnumber">0.0006</span>
    </div>
   </td>
  </tr>
@@ -74,7 +74,7 @@ $(document).ready(function(){initNavTree('class_algorithm2.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Klasa <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a...">Algorithm2</a> modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje algorytm wykonujacy wykonujacy wczytywanie zadanej ilosci elementow do listy tablicowej.  
+<p>Klasa <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj...">Algorithm2</a> modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonujacy sortowanie szybkie na elementach stosu.  
  <a href="class_algorithm2.html#details">Więcej...</a></p>
 
 <p><code>#include &lt;<a class="el" href="algorithm2_8hh_source.html">algorithm2.hh</a>&gt;</code></p>
@@ -90,25 +90,31 @@ Diagram współpracy dla Algorithm2:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_algorithm2__coll__graph.png" border="0" usemap="#_algorithm2_coll__map" alt="Collaboration graph"/></div>
 <map name="_algorithm2_coll__map" id="_algorithm2_coll__map">
-<area shape="rect" id="node2" href="class_benchmark.html" title="Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy..." alt="" coords="5,5,93,32"/><area shape="rect" id="node3" href="class_tab_lista.html" title="Klasa TabLista modelujaca strukture danych typu lista. Obiekt tego typu reprezentuje strukture danych..." alt="" coords="118,5,191,32"/></map>
+<area shape="rect" id="node2" href="class_benchmark.html" title="Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy..." alt="" coords="5,5,93,32"/><area shape="rect" id="node3" href="class_stos.html" title="Klasa Stos modelujaca strukture danych typu stos. Obiekt tego typu reprezentuje strukture danych typu..." alt="" coords="118,5,167,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:ad77a51433815456eca8139444e78b49b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#ad77a51433815456eca8139444e78b49b">Algorithm2</a> ()</td></tr>
-<tr class="memdesc:ad77a51433815456eca8139444e78b49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor obiektu <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a...">Algorithm2</a>.  <a href="#ad77a51433815456eca8139444e78b49b">Więcej...</a><br/></td></tr>
+<tr class="memdesc:ad77a51433815456eca8139444e78b49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor obiektu <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj...">Algorithm2</a>.  <a href="#ad77a51433815456eca8139444e78b49b">Więcej...</a><br/></td></tr>
 <tr class="separator:ad77a51433815456eca8139444e78b49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5cc064a2727d2c1a2b32d335cd73f8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#ac5cc064a2727d2c1a2b32d335cd73f8d">Algorithm2</a> (int _tab[])</td></tr>
-<tr class="memdesc:ac5cc064a2727d2c1a2b32d335cd73f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor parametryczny obiektu <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a...">Algorithm2</a>.  <a href="#ac5cc064a2727d2c1a2b32d335cd73f8d">Więcej...</a><br/></td></tr>
-<tr class="separator:ac5cc064a2727d2c1a2b32d335cd73f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6623d05c012b2832887a52b693c75583"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a6623d05c012b2832887a52b693c75583">Algorithm2</a> (int *_tab)</td></tr>
+<tr class="memdesc:a6623d05c012b2832887a52b693c75583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor parametryczny obiektu <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj...">Algorithm2</a>.  <a href="#a6623d05c012b2832887a52b693c75583">Więcej...</a><br/></td></tr>
+<tr class="separator:a6623d05c012b2832887a52b693c75583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c630f56f5d2e90f62a13fdaf0cd954"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#ab2c630f56f5d2e90f62a13fdaf0cd954">~Algorithm2</a> ()</td></tr>
-<tr class="memdesc:ab2c630f56f5d2e90f62a13fdaf0cd954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor obiektu <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a...">Algorithm2</a>.  <a href="#ab2c630f56f5d2e90f62a13fdaf0cd954">Więcej...</a><br/></td></tr>
+<tr class="memdesc:ab2c630f56f5d2e90f62a13fdaf0cd954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor obiektu <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj...">Algorithm2</a>.  <a href="#ab2c630f56f5d2e90f62a13fdaf0cd954">Więcej...</a><br/></td></tr>
 <tr class="separator:ab2c630f56f5d2e90f62a13fdaf0cd954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eb066d5e51f2187e717454751bc2934"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a6eb066d5e51f2187e717454751bc2934">testAlgorithm</a> (<a class="el" href="class_benchmark.html">Benchmark</a> *_algorithm)</td></tr>
-<tr class="memdesc:a6eb066d5e51f2187e717454751bc2934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda testowania algorytmu. Metoda sluzy do testowania szybkosci dzialania algorytmu. W klasie <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej. Obiekt tego typu reprezentuje a...">Algorithm2</a> nie ma konkretnego dzialania.  <a href="#a6eb066d5e51f2187e717454751bc2934">Więcej...</a><br/></td></tr>
+<tr class="memdesc:a6eb066d5e51f2187e717454751bc2934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda testowania algorytmu. Metoda sluzy do testowania szybkosci dzialania algorytmu. W klasie <a class="el" href="class_algorithm2.html" title="Klasa Algorithm2 modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonuj...">Algorithm2</a> nie ma konkretnego dzialania.  <a href="#a6eb066d5e51f2187e717454751bc2934">Więcej...</a><br/></td></tr>
 <tr class="separator:a6eb066d5e51f2187e717454751bc2934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bbb4421660c4200dba66e9da9d7969"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a50bbb4421660c4200dba66e9da9d7969">load</a> (int _border)</td></tr>
+<tr class="memdesc:a50bbb4421660c4200dba66e9da9d7969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu.  <a href="#a50bbb4421660c4200dba66e9da9d7969">Więcej...</a><br/></td></tr>
+<tr class="separator:a50bbb4421660c4200dba66e9da9d7969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d7e4d0c9308d0b97250cb5596a73165"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a3d7e4d0c9308d0b97250cb5596a73165">unload</a> (int _border)</td></tr>
+<tr class="memdesc:a3d7e4d0c9308d0b97250cb5596a73165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprzatania. Metoda sluzy do oproznienia struktury.  <a href="#a3d7e4d0c9308d0b97250cb5596a73165">Więcej...</a><br/></td></tr>
+<tr class="separator:a3d7e4d0c9308d0b97250cb5596a73165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a409e58d5fb0b6d2407cc986cf163703b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a409e58d5fb0b6d2407cc986cf163703b">runAlgorithm</a> (int _border)</td></tr>
-<tr class="memdesc:a409e58d5fb0b6d2407cc986cf163703b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda uruchamiania algorytmu. Metoda sluzy to wykonywania danego algorytmu. Wczytuje elementy do kolejki.  <a href="#a409e58d5fb0b6d2407cc986cf163703b">Więcej...</a><br/></td></tr>
+<tr class="memdesc:a409e58d5fb0b6d2407cc986cf163703b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. Sortuje elementy stosu.  <a href="#a409e58d5fb0b6d2407cc986cf163703b">Więcej...</a><br/></td></tr>
 <tr class="separator:a409e58d5fb0b6d2407cc986cf163703b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_benchmark"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_benchmark')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_benchmark.html">Benchmark</a></td></tr>
 <tr class="memitem:acfca497989836a688d44477802e822d8 inherit pub_methods_class_benchmark"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#acfca497989836a688d44477802e822d8">Benchmark</a> ()</td></tr>
@@ -123,12 +129,12 @@ Metody publiczne</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
-<tr class="memitem:a4a2c5e1211591fb0ad00d64ca783bf56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a4a2c5e1211591fb0ad00d64ca783bf56">tab</a> [<a class="el" href="benchmark_8hh.html#a70ed59adcb4159ac551058053e649640">SIZE</a>]</td></tr>
-<tr class="memdesc:a4a2c5e1211591fb0ad00d64ca783bf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tablica elementow z danymi wejsciowymi.  <a href="#a4a2c5e1211591fb0ad00d64ca783bf56">Więcej...</a><br/></td></tr>
-<tr class="separator:a4a2c5e1211591fb0ad00d64ca783bf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af58d491bdb13e788c40754617f3b13df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tab_lista.html">TabLista</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#af58d491bdb13e788c40754617f3b13df">tablista</a></td></tr>
-<tr class="memdesc:af58d491bdb13e788c40754617f3b13df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca liste tablicowa.  <a href="#af58d491bdb13e788c40754617f3b13df">Więcej...</a><br/></td></tr>
-<tr class="separator:af58d491bdb13e788c40754617f3b13df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb40ae7f1e1044802daa927fc7eac7a7"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#afb40ae7f1e1044802daa927fc7eac7a7">tab</a></td></tr>
+<tr class="memdesc:afb40ae7f1e1044802daa927fc7eac7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na tablice elementow z danymi wejsciowymi.  <a href="#afb40ae7f1e1044802daa927fc7eac7a7">Więcej...</a><br/></td></tr>
+<tr class="separator:afb40ae7f1e1044802daa927fc7eac7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02585cbfa5330f4719cf97c02729e74a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stos.html">Stos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm2.html#a02585cbfa5330f4719cf97c02729e74a">stos</a></td></tr>
+<tr class="memdesc:a02585cbfa5330f4719cf97c02729e74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca stos.  <a href="#a02585cbfa5330f4719cf97c02729e74a">Więcej...</a><br/></td></tr>
+<tr class="separator:a02585cbfa5330f4719cf97c02729e74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
@@ -159,7 +165,7 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac5cc064a2727d2c1a2b32d335cd73f8d"></a>
+<a class="anchor" id="a6623d05c012b2832887a52b693c75583"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -169,8 +175,8 @@ Atrybuty prywatne</h2></td></tr>
         <tr>
           <td class="memname">Algorithm2::Algorithm2 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_tab</em>[]</td><td>)</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>_tab</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -217,6 +223,49 @@ Atrybuty prywatne</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a50bbb4421660c4200dba66e9da9d7969"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Algorithm2::load </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_border</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_border</td><td>- ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementowana z <a class="el" href="class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3">Benchmark</a>.</p>
+
+<p>Definicja w linii <a class="el" href="algorithm2_8cpp_source.html#l00014">14</a> pliku <a class="el" href="algorithm2_8cpp_source.html">algorithm2.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_algorithm2_a50bbb4421660c4200dba66e9da9d7969_cgraph.png" border="0" usemap="#class_algorithm2_a50bbb4421660c4200dba66e9da9d7969_cgraph" alt=""/></div>
+<map name="class_algorithm2_a50bbb4421660c4200dba66e9da9d7969_cgraph" id="class_algorithm2_a50bbb4421660c4200dba66e9da9d7969_cgraph">
+<area shape="rect" id="node2" href="class_stos.html#afd5802e405946328cccca3eed676b493" title="Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do stosu. " alt="" coords="168,5,251,32"/><area shape="rect" id="node3" href="class_stos.html#aaf6e4717d1983c5351c9f5e9797368d3" title="Metoda powiekszania stosu. Metoda ta dodaje do stosu 8 kolejnych wolnych pol. " alt="" coords="299,5,403,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a409e58d5fb0b6d2407cc986cf163703b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -247,14 +296,14 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Reimplementowana z <a class="el" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">Benchmark</a>.</p>
 
-<p>Definicja w linii <a class="el" href="algorithm2_8cpp_source.html#l00009">9</a> pliku <a class="el" href="algorithm2_8cpp_source.html">algorithm2.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="algorithm2_8cpp_source.html#l00008">8</a> pliku <a class="el" href="algorithm2_8cpp_source.html">algorithm2.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_algorithm2_a409e58d5fb0b6d2407cc986cf163703b_cgraph.png" border="0" usemap="#class_algorithm2_a409e58d5fb0b6d2407cc986cf163703b_cgraph" alt=""/></div>
 <map name="class_algorithm2_a409e58d5fb0b6d2407cc986cf163703b_cgraph" id="class_algorithm2_a409e58d5fb0b6d2407cc986cf163703b_cgraph">
-<area shape="rect" id="node2" href="class_tab_lista.html#a7bd3e5f62a81bfd3813ad874e8a9c059" title="Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do konca listy. " alt="" coords="217,5,327,32"/><area shape="rect" id="node3" href="class_tab_lista.html#a9ae6a784d488c8b9885ccbc945225f9e" title="Metoda powiekszania listy tablicowe. Metoda ta dodaje do listy 8 kolejnych wolnych pol..." alt="" coords="376,5,504,32"/></map>
+<area shape="rect" id="node2" href="class_stos.html#a699ffb887c7e1b1b2fce87a9d57cc019" title="Sortowanie szybkie po optymalizacji. " alt="" coords="217,5,343,32"/></map>
 </div>
 </p>
 
@@ -292,8 +341,7 @@ Oto graf wywołań dla tej funkcji:</div>
 
 </div>
 </div>
-<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
-<a class="anchor" id="a4a2c5e1211591fb0ad00d64ca783bf56"></a>
+<a class="anchor" id="a3d7e4d0c9308d0b97250cb5596a73165"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -301,21 +349,43 @@ Oto graf wywołań dla tej funkcji:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Algorithm2::tab[<a class="el" href="benchmark_8hh.html#a70ed59adcb4159ac551058053e649640">SIZE</a>]</td>
+          <td class="memname">void Algorithm2::unload </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_border</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_border</td><td>- ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definicja w linii <a class="el" href="algorithm2_8hh_source.html#l00014">14</a> pliku <a class="el" href="algorithm2_8hh_source.html">algorithm2.hh</a>.</p>
+<p>Reimplementowana z <a class="el" href="class_benchmark.html#aafd856205ecb699568533fff0be01209">Benchmark</a>.</p>
+
+<p>Definicja w linii <a class="el" href="algorithm2_8cpp_source.html#l00020">20</a> pliku <a class="el" href="algorithm2_8cpp_source.html">algorithm2.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_algorithm2_a3d7e4d0c9308d0b97250cb5596a73165_cgraph.png" border="0" usemap="#class_algorithm2_a3d7e4d0c9308d0b97250cb5596a73165_cgraph" alt=""/></div>
+<map name="class_algorithm2_a3d7e4d0c9308d0b97250cb5596a73165_cgraph" id="class_algorithm2_a3d7e4d0c9308d0b97250cb5596a73165_cgraph">
+<area shape="rect" id="node2" href="class_stos.html#aabb14b8a389c55da6e2b50fbb179ed56" title="Metoda usuwania elementu. Metoda sluzy do usuwania elementu ze stosu. " alt="" coords="182,5,258,32"/><area shape="rect" id="node3" href="class_stos.html#a1054dda0231b2516b6a04298801c0b27" title="Metoda pomniejszania stosu. Metoda ta odejmuje od stosu jedno pole. " alt="" coords="307,5,415,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="af58d491bdb13e788c40754617f3b13df"></a>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a02585cbfa5330f4719cf97c02729e74a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -323,7 +393,7 @@ Oto graf wywołań dla tej funkcji:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tab_lista.html">TabLista</a> Algorithm2::tablista</td>
+          <td class="memname"><a class="el" href="class_stos.html">Stos</a> Algorithm2::stos</td>
         </tr>
       </table>
   </td>
@@ -337,6 +407,28 @@ Oto graf wywołań dla tej funkcji:</div>
 
 </div>
 </div>
+<a class="anchor" id="afb40ae7f1e1044802daa927fc7eac7a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* Algorithm2::tab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="algorithm2_8hh_source.html#l00014">14</a> pliku <a class="el" href="algorithm2_8hh_source.html">algorithm2.hh</a>.</p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li><a class="el" href="algorithm2_8hh_source.html">algorithm2.hh</a></li>
 <li><a class="el" href="algorithm2_8cpp_source.html">algorithm2.cpp</a></li>
@@ -347,7 +439,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_algorithm2.html">Algorithm2</a></li>
-    <li class="footer">Wygenerowano Śr, 15 kwi 2015 23:30:52 dla lab5 programem
+    <li class="footer">Wygenerowano Śr, 22 kwi 2015 23:00:56 dla lab6 programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

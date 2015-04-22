@@ -66,11 +66,41 @@ public:
   int pop();
 
   /*!
+   *\brief Sortowanie szybkie.
+   *\param[in] poczatek - poczatek tablicy.
+   *\param[in] koniec - koniec tablicy.
+   */
+  void quicksort(int poczatek, int koniec);
+
+  /*!
+   *\brief Sortowanie szybkie po optymalizacji.
+   *\param[in] poczatek - poczatek tablicy.
+   *\param[in] koniec - koniec tablicy.
+   */
+  void optquicksort(int poczatek, int koniec);
+
+  /*!
    *\brief Sortowanie przez scalanie.
    *\param[in] poczatek - poczatek tablicy.
    *\param[in] koniec - koniec tablicy.
    */
   void mergesort(int poczatek, int koniec);
+
+  /*!
+   *\brief Metoda przywracajaca porzadek kopca.
+   */
+  void heapify(int i, int max);
+
+  /*!
+   *\brief Tworzenie struktury kopca z nieuporzadkowanej tablicy.
+   */
+  void build_heap();
+
+  /*!
+   *\brief Sortowanie przez kopcowanie.
+   *\param[in] koniec - koniec tablicy.
+   */
+  void heapsort(int koniec);
 };
 
 #endif

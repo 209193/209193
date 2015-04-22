@@ -1,7 +1,7 @@
 #ifndef BENCHMARK_HH
 #define BENCHMARK_HH
 
-#define SIZE 5000
+#define SIZE 100000
 
 /*!
  *\brief Klasa Benchmark modelujaca program benchmarkujacy.
@@ -40,20 +40,26 @@ public:
   virtual void testAlgorithm(Benchmark *_algorithm, int _n) const;
 
   /*!
+   *\brief Metoda przygotowywania algorytmu.
+   *Metoda sluzy do przygotowania warunkow do przeprowadzenia testu.
+   *W klasie Benchmark nie ma konkretnego dzialania.
+   */
+  virtual void load(int _border) {};
+
+  /*!
+   *\brief Metoda sprzatania.
+   *Metoda sluzy do oproznienia struktury.
+   *W klasie Benchmark nie ma konkretnego dzialania.
+   */
+  virtual void unload(int _border) {};
+
+  /*!
    *\brief Metoda uruchamiania algorytmu.
    *Metoda sluzy do wykonywania danego algorytmu.
    *W klasie Benchmark nie ma konkretnego dzialania.
    *\param[in] _border - ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie.
    */
   virtual void runAlgorithm(int _border) {};
-
-  /*!
-   *\brief Metoda sortowania.
-   *Metoda sluzy do wykonywania sortowania.
-   *W klasie Benchmark nie ma konkretnego dzialania.
-   *\param[in] _border - ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie.
-   */
-  virtual void sort(int _border) {};
 };
 
 #endif

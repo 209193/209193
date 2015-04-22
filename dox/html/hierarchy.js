@@ -3,10 +3,10 @@ var hierarchy =
     [ "ANode", "struct_a_node.html", null ],
     [ "Asocjacyjna", "class_asocjacyjna.html", null ],
     [ "Benchmark", "class_benchmark.html", [
+      [ "Algorithm1", "class_algorithm1.html", null ],
       [ "Algorithm2", "class_algorithm2.html", null ],
-      [ "AlgorithmKolejka", "class_algorithm_kolejka.html", null ],
-      [ "AlgorithmLista", "class_algorithm_lista.html", null ],
-      [ "AlgorithmStos", "class_algorithm_stos.html", null ]
+      [ "Algorithm3", "class_algorithm3.html", null ],
+      [ "Algorithm4", "class_algorithm4.html", null ]
     ] ],
     [ "Kolejka", "class_kolejka.html", null ],
     [ "Lista::Komorka", "struct_lista_1_1_komorka.html", null ],

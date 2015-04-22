@@ -2,20 +2,20 @@
 #define ALGORITHM2_HH
 
 /*!
- *\brief Klasa Algorithm2 modelujaca algorytm wczytywania do listy tablicowej.
- *Obiekt tego typu reprezentuje algorytm wykonujacy wykonujacy
- *wczytywanie zadanej ilosci elementow do listy tablicowej.
+ *\brief Klasa Algorithm2 modelujaca algorytm sortowania stosu.
+ *Obiekt tego typu reprezentuje algorytm wykonujacy
+ *sortowanie szybkie na elementach stosu.
  */
 class Algorithm2: public Benchmark {
 
   /*!
-   *\brief Tablica elementow z danymi wejsciowymi.
+   *\brief Wskaznik na tablice elementow z danymi wejsciowymi.
    */ 
-  int tab[SIZE];
+  int *tab;
   /*!
-   *\brief Zmienna przechowujaca liste tablicowa.
+   *\brief Zmienna przechowujaca stos.
    */ 
-  TabLista tablista;
+  Stos stos;
 
 public:
   /*!
@@ -27,7 +27,7 @@ public:
    *\brief Konstruktor parametryczny obiektu Algorithm2.
    *\param[in] _tab - tablica przechowujaca dane wejsciowe.
    */
-  Algorithm2(int _tab[]) {for(int i=0; i<SIZE; ++i) tab[i]=_tab[i];};
+  Algorithm2(int *_tab): tab(_tab) {};
   
   /*!
    *\brief Destruktor obiektu Algorithm2.
@@ -43,9 +43,23 @@ public:
   virtual void testAlgorithm(Benchmark *_algorithm) {};
 
   /*!
+   *\brief Metoda przygotowywania algorytmu.
+   *Metoda sluzy do przygotowania warunkow do przeprowadzenia testu.
+   *\param[in] _border - ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie.
+   */
+  virtual void load(int _border);
+
+  /*!
+   *\brief Metoda sprzatania.
+   *Metoda sluzy do oproznienia struktury.
+   *\param[in] _border - ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie.
+   */
+  virtual void unload(int _border);
+
+  /*!
    *\brief Metoda uruchamiania algorytmu.
-   *Metoda sluzy to wykonywania danego algorytmu.
-   *Wczytuje elementy do kolejki.
+   *Metoda sluzy do wykonywania danego algorytmu.
+   *Sortuje elementy stosu.
    *\param[in] _border - ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie.
    */
   virtual void runAlgorithm(int _border);

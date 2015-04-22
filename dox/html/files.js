@@ -1,20 +1,20 @@
 var files =
 [
+    [ "algorithm1.cpp", "algorithm1_8cpp.html", null ],
+    [ "algorithm1.hh", "algorithm1_8hh.html", [
+      [ "Algorithm1", "class_algorithm1.html", "class_algorithm1" ]
+    ] ],
     [ "algorithm2.cpp", "algorithm2_8cpp.html", null ],
     [ "algorithm2.hh", "algorithm2_8hh.html", [
       [ "Algorithm2", "class_algorithm2.html", "class_algorithm2" ]
     ] ],
-    [ "algorithm_kolejka.cpp", "algorithm__kolejka_8cpp.html", null ],
-    [ "algorithm_kolejka.hh", "algorithm__kolejka_8hh.html", [
-      [ "AlgorithmKolejka", "class_algorithm_kolejka.html", "class_algorithm_kolejka" ]
+    [ "algorithm3.cpp", "algorithm3_8cpp.html", null ],
+    [ "algorithm3.hh", "algorithm3_8hh.html", [
+      [ "Algorithm3", "class_algorithm3.html", "class_algorithm3" ]
     ] ],
-    [ "algorithm_lista.cpp", "algorithm__lista_8cpp.html", null ],
-    [ "algorithm_lista.hh", "algorithm__lista_8hh.html", [
-      [ "AlgorithmLista", "class_algorithm_lista.html", "class_algorithm_lista" ]
-    ] ],
-    [ "algorithm_stos.cpp", "algorithm__stos_8cpp.html", null ],
-    [ "algorithm_stos.hh", "algorithm__stos_8hh.html", [
-      [ "AlgorithmStos", "class_algorithm_stos.html", "class_algorithm_stos" ]
+    [ "algorithm4.cpp", "algorithm4_8cpp.html", null ],
+    [ "algorithm4.hh", "algorithm4_8hh.html", [
+      [ "Algorithm4", "class_algorithm4.html", "class_algorithm4" ]
     ] ],
     [ "asocjacyjna.cpp", "asocjacyjna_8cpp.html", null ],
     [ "asocjacyjna.hh", "asocjacyjna_8hh.html", [

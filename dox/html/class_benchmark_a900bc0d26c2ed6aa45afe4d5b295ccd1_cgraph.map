@@ -1,3 +1,5 @@
 <map id="Benchmark::testAlgorithm" name="Benchmark::testAlgorithm">
-<area shape="rect" id="node2" href="$class_benchmark.html#a6363894c058e8bfe146de09d7126b29c" title="Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie Benchmark nie m..." alt="" coords="225,5,391,32"/>
+<area shape="rect" id="node2" href="$class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3" title="Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu..." alt="" coords="249,5,367,32"/>
+<area shape="rect" id="node3" href="$class_benchmark.html#a6363894c058e8bfe146de09d7126b29c" title="Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie Benchmark nie m..." alt="" coords="225,56,391,83"/>
+<area shape="rect" id="node4" href="$class_benchmark.html#aafd856205ecb699568533fff0be01209" title="Metoda sprzatania. Metoda sluzy do oproznienia struktury. W klasie Benchmark nie ma konkretnego dzial..." alt="" coords="242,107,374,133"/>
 </map>

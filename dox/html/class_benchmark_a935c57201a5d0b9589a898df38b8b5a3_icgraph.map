@@ -1,0 +1,3 @@
+<map id="Benchmark::load" name="Benchmark::load">
+<area shape="rect" id="node2" href="$class_benchmark.html#a900bc0d26c2ed6aa45afe4d5b295ccd1" title="Metoda testowania algorytmu. Metoda sluzy to testowania szybkosci dzialania algorytmu. Wykonuje testowany algorytm dla 5 kolejnych ilosci elementow. Wykonanie algorytmu dla danego zestawu liczb powtarza dwa razy i usrednia wynik. Otrzymany czas wraz z iloscia testowanych danych zapisuje w pliku ret_data.txt. " alt="" coords="173,5,344,32"/>
+</map>

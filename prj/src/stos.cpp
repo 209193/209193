@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 #include "stos.hh"
 
@@ -10,7 +11,7 @@ Stos::Stos() {
 
   tab = new int[size];
 
-  if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
+  if (tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
 
@@ -21,7 +22,7 @@ Stos::Stos(long _size) {
 
   tab = new int[size];
 
-  if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
+  if (tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
 
@@ -33,7 +34,7 @@ Stos::~Stos() {
 
 void Stos::push(int _elem) {
 
-  if(last == size) increase();
+  if (last == size) increase();
 
   tab[last] = _elem;
   ++last;
@@ -42,7 +43,7 @@ void Stos::push(int _elem) {
 
 int Stos::pop() {
 
-  int temp=decrease();
+  int temp = decrease();
   --last;
   return temp;
 }
@@ -52,7 +53,7 @@ void Stos::increase() {
 
   int *nowa = new int[size + 8];//tworzymy zastepczy stos o 8 wiekszy
 
-  for(int i=0; i<size; ++i) nowa[i] = tab[i];//przepisujemy stary stos
+  for (int i=0; i<size; ++i) nowa[i] = tab[i];//przepisujemy stary stos
 
   delete []tab;
   tab = nowa;
@@ -66,12 +67,52 @@ int Stos::decrease() {
   --size;//pomniejszamy zmienna przechowujaca informacje o rozmiarze o 1
   int *nowa = new int[size];//tworzymy zastepczy stos o 1 mniejszy
 
-  for(int i=0; i<size; ++i) nowa[i] = tab[i];//przepisujemy stary stos
+  for (int i=0; i<size; ++i) nowa[i] = tab[i];//przepisujemy stary stos
 
   delete []tab;
   tab = nowa;
 
   return temp;//zwracamy usuwany element
+}
+
+
+void Stos::quicksort(int poczatek, int koniec) {
+
+  int x = tab[poczatek];
+  int i = poczatek;
+  int j = koniec;
+  do {
+      while (tab[i] < x)
+	++i;
+      while (tab[j]>x)
+	--j;
+      if (i <= j) {
+	std::swap(tab[i], tab[j]);
+	++i;
+	--j;
+      }
+  } while (i <= j);
+  if (poczatek < j) quicksort(poczatek, j);
+  if (koniec > i) quicksort(i, koniec);
+}
+
+
+void Stos::optquicksort(int poczatek, int koniec) {
+
+  int x = (tab[poczatek] + tab[(poczatek + koniec)/2] + tab[koniec])/3;
+  int i = poczatek;
+  int j = koniec;
+  do {
+      while (tab[i] < x) ++i;
+      while (tab[j]>x) --j;
+      if (i <= j) {
+	std::swap(tab[i], tab[j]);
+	++i;
+	--j;
+      }
+  } while (i <= j);
+  if (poczatek < j) optquicksort(poczatek, j);
+  if (koniec > i) optquicksort(i, koniec);
 }
 
 
@@ -96,6 +137,40 @@ void Stos::mergesort(int poczatek, int koniec) {
       ++i1;
     }
   }
-
   for (int i=ip; i<=ik; ++i) tab[i] = temptab[i];
+}
+
+
+void Stos::heapify(int i, int max) {
+  int largest, c1, c2;
+  while (i < max) {
+    largest = i;
+    c1 = (2*i) + 1;
+    c2 = c1 + 1;
+    if (c1 < max && tab[c1] > tab[largest]) largest = c1;
+    if (c2 < max && tab[c2] > tab[largest]) largest = c2;
+    if (largest == i) return;
+    std::swap(tab[i], tab[largest]);
+    i = largest;
+  }
+}
+
+
+void Stos::build_heap() {
+  int i = (size/2) - 1;
+  while (i >= 0) {
+    heapify(i, size);
+    --i;
+  }
+}
+
+
+void Stos::heapsort(int koniec) {
+  build_heap();
+  int end = koniec;
+  while (end > 0) {
+    std::swap(tab[0], tab[end]);
+    heapify(0, end);
+    --end;
+  }
 }

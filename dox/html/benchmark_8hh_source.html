@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>lab5: Plik źródłowy benchmark.hh</title>
+<title>lab6: Plik źródłowy benchmark.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,8 +24,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">lab5
-   &#160;<span id="projectnumber">0.0005</span>
+   <div id="projectname">lab6
+   &#160;<span id="projectnumber">0.0006</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(document).ready(function(){initNavTree('benchmark_8hh_source.html','');});
 <a href="benchmark_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BENCHMARK_HH</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BENCHMARK_HH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="benchmark_8hh.html#a70ed59adcb4159ac551058053e649640">    4</a></span>&#160;<span class="preprocessor">#define SIZE 10000000</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="benchmark_8hh.html#a70ed59adcb4159ac551058053e649640">    4</a></span>&#160;<span class="preprocessor">#define SIZE 100000</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_benchmark.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_benchmark.html">Benchmark</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
@@ -84,15 +84,21 @@ $(document).ready(function(){initNavTree('benchmark_8hh_source.html','');});
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_benchmark.html#a900bc0d26c2ed6aa45afe4d5b295ccd1">testAlgorithm</a>(<a class="code" href="class_benchmark.html">Benchmark</a> *_algorithm, <span class="keywordtype">int</span> _n) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">   48</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">runAlgorithm</a>(<span class="keywordtype">int</span> _border) {};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3">   47</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3">load</a>(<span class="keywordtype">int</span> _border) {};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_benchmark.html#aafd856205ecb699568533fff0be01209">   54</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_benchmark.html#aafd856205ecb699568533fff0be01209">unload</a>(<span class="keywordtype">int</span> _border) {};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">   62</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">runAlgorithm</a>(<span class="keywordtype">int</span> _border) {};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_benchmark_html_a935c57201a5d0b9589a898df38b8b5a3"><div class="ttname"><a href="class_benchmark.html#a935c57201a5d0b9589a898df38b8b5a3">Benchmark::load</a></div><div class="ttdeci">virtual void load(int _border)</div><div class="ttdoc">Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu...</div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00047">benchmark.hh:47</a></div></div>
 <div class="ttc" id="class_benchmark_html"><div class="ttname"><a href="class_benchmark.html">Benchmark</a></div><div class="ttdoc">Klasa Benchmark modelujaca program benchmarkujacy. Obiekt tego typu reprezentuje program sprawdzajacy...</div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00011">benchmark.hh:11</a></div></div>
 <div class="ttc" id="class_benchmark_html_aee0beda65009e7334d34c5957f78c49a"><div class="ttname"><a href="class_benchmark.html#aee0beda65009e7334d34c5957f78c49a">Benchmark::nazwy</a></div><div class="ttdeci">std::string nazwy[4]</div><div class="ttdoc">Tablica stringow przechowujaca nazwy plikow do zapisu. </div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00016">benchmark.hh:16</a></div></div>
 <div class="ttc" id="class_benchmark_html_a900bc0d26c2ed6aa45afe4d5b295ccd1"><div class="ttname"><a href="class_benchmark.html#a900bc0d26c2ed6aa45afe4d5b295ccd1">Benchmark::testAlgorithm</a></div><div class="ttdeci">virtual void testAlgorithm(Benchmark *_algorithm, int _n) const </div><div class="ttdoc">Metoda testowania algorytmu. Metoda sluzy to testowania szybkosci dzialania algorytmu. Wykonuje testowany algorytm dla 5 kolejnych ilosci elementow. Wykonanie algorytmu dla danego zestawu liczb powtarza dwa razy i usrednia wynik. Otrzymany czas wraz z iloscia testowanych danych zapisuje w pliku ret_data.txt. </div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8cpp_source.html#l00012">benchmark.cpp:12</a></div></div>
 <div class="ttc" id="class_benchmark_html_a20476e07f09e2b20ed3e9a7f13a570e6"><div class="ttname"><a href="class_benchmark.html#a20476e07f09e2b20ed3e9a7f13a570e6">Benchmark::~Benchmark</a></div><div class="ttdeci">~Benchmark()</div><div class="ttdoc">Destruktor obiektu Benchmark. </div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00028">benchmark.hh:28</a></div></div>
-<div class="ttc" id="class_benchmark_html_a6363894c058e8bfe146de09d7126b29c"><div class="ttname"><a href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">Benchmark::runAlgorithm</a></div><div class="ttdeci">virtual void runAlgorithm(int _border)</div><div class="ttdoc">Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie Benchmark nie m...</div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00048">benchmark.hh:48</a></div></div>
+<div class="ttc" id="class_benchmark_html_aafd856205ecb699568533fff0be01209"><div class="ttname"><a href="class_benchmark.html#aafd856205ecb699568533fff0be01209">Benchmark::unload</a></div><div class="ttdeci">virtual void unload(int _border)</div><div class="ttdoc">Metoda sprzatania. Metoda sluzy do oproznienia struktury. W klasie Benchmark nie ma konkretnego dzial...</div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00054">benchmark.hh:54</a></div></div>
+<div class="ttc" id="class_benchmark_html_a6363894c058e8bfe146de09d7126b29c"><div class="ttname"><a href="class_benchmark.html#a6363894c058e8bfe146de09d7126b29c">Benchmark::runAlgorithm</a></div><div class="ttdeci">virtual void runAlgorithm(int _border)</div><div class="ttdoc">Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. W klasie Benchmark nie m...</div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00062">benchmark.hh:62</a></div></div>
 <div class="ttc" id="class_benchmark_html_acfca497989836a688d44477802e822d8"><div class="ttname"><a href="class_benchmark.html#acfca497989836a688d44477802e822d8">Benchmark::Benchmark</a></div><div class="ttdeci">Benchmark()</div><div class="ttdoc">Konstrukor obiektu Benchmark. </div><div class="ttdef"><b>Definition:</b> <a href="benchmark_8hh_source.html#l00023">benchmark.hh:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -100,7 +106,7 @@ $(document).ready(function(){initNavTree('benchmark_8hh_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="benchmark_8hh.html">benchmark.hh</a></li>
-    <li class="footer">Wygenerowano Śr, 15 kwi 2015 23:30:52 dla lab5 programem
+    <li class="footer">Wygenerowano Śr, 22 kwi 2015 23:00:56 dla lab6 programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
