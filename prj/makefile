@@ -1,5 +1,6 @@
 CPPFLAGS= -std=gnu++11 -c -g -Iinc -Wall -pedantic
 __start__: program
+	$(MAKE) -C generate
 	./program < generate/danesort.txt
 
 program: obj/main.o obj/benchmark.o obj/stos.o obj/kolejka.o obj/lista.o obj/tab_lista.o obj/asocjacyjna.o obj/mieszajaca.o obj/algorithm1.o obj/algorithm2.o obj/algorithm3.o obj/algorithm4.o
