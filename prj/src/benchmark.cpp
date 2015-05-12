@@ -2,6 +2,8 @@
 #include <fstream>
 #include <chrono>
 
+#include "observer.hh"
+#include "subject.hh"
 #include "benchmark.hh"
 
 #define LENGTH 4//"ile razy pomnozymy przez 10 - patrz linijka 19 i 35"
@@ -9,40 +11,33 @@
 
 
 /* Funkcja testowania szybkosci dzialania algorytmu */
-void Benchmark::testAlgorithm(Benchmark *_algorithm, int _n) const{
+void Benchmark::testAlgorithm(Benchmark *_algorithm) {
 
-  int j=100;//startowa ilosc elementow
-  int average=0;//inicjalizacja zmiennej przechowujacej sredni czas dzialania
+  size=100;//startowa ilosc elementow
+  time=0;//sredni czas dzialania
+  length = 1;
+  repeats = 1;
 
-  std::ofstream ret_data(nazwy[_n]);
-  if (ret_data.is_open()){
-    ret_data << "elem\ttime" << std::endl;//zapisujemy naglowek pliku
-    for(int i=1; i<=LENGTH; ++i ){
-      for(int k=1; k<=REPEATS; ++k){
+  for (unsigned short i=1; i<=length; ++i) {
+    for (unsigned short k=1; k<=repeats; ++k) {
 
-	_algorithm -> load(j);
-
-	std::chrono::high_resolution_clock::time_point start_time = std::chrono::high_resolution_clock::now();
+      _algorithm -> load(size);
+      auto start_time = std::chrono::high_resolution_clock::now();
   
-	_algorithm -> runAlgorithm(j);
+      _algorithm -> runAlgorithm(size);
   
-	std::chrono::high_resolution_clock::time_point end_time = std::chrono::high_resolution_clock::now();
+      auto end_time = std::chrono::high_resolution_clock::now();
+      _algorithm -> unload(size);
 
-	_algorithm -> unload(j);
-
-	std::chrono::high_resolution_clock::duration time_period = end_time - start_time;
-
-	//std::cout << "Czas: " << std::chrono::duration_cast<std::chrono::microseconds>(time_period).count() << "mikrosek" << std::endl;
-	average += std::chrono::duration_cast<std::chrono::microseconds>(time_period).count();//dodajemy czas dzialania algorytmu
-      }
-      average /= REPEATS;//suma czasow dzielona przez powtorzenia
-
-      ret_data << j << "\t" << average << std::endl;//zapisujemy do pliku j - ilosc elementow, average - sredni czas dzialania
-
-      j*=10;//ilosc wczytywanych elementow
-      average=0;//zerowanie sredniej
+      auto time_period = end_time - start_time;
+      time += std::chrono::duration_cast<std::chrono::microseconds>(time_period).count();//dodajemy czas dzialania algorytmu
     }
-    ret_data.close();
+
+    time /= REPEATS;//suma czasow dzielona przez powtorzenia
+
+    notify();//informujemy obserwatorow o zmianie stanu
+
+    size *= 10;//ilosc wczytywanych elementow
+    time = 0;//zerowanie sredniej
   }
-  else std::cerr << "Unable to open ret_data file" << std::endl;
 }

@@ -13,10 +13,10 @@
  */
 int main() {
 
-  int tab[SIZE];
+  unsigned short tab[SIZE];
 
   for(int i=0; i<SIZE; ++i)
-    tab[i] = (std::rand() % 50)+1;
+    tab[i] = (std::rand() % 100)+1;
 
   std::ofstream data("data.txt");
   if (data.is_open()){

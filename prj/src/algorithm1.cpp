@@ -1,14 +1,17 @@
 #include <iostream>
 #include <fstream>
 
+#include "tablicowe.hh"
 #include "stos.hh"
+#include "observer.hh"
+#include "subject.hh"
 #include "benchmark.hh"
 #include "algorithm1.hh"
 
 
 void Algorithm1::runAlgorithm(int _border) {
 
-  stos.quicksort(0, _border-1);
+  //quicksort(0, _border-1);
 }
 
 

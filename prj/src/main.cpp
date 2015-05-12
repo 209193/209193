@@ -1,6 +1,11 @@
 #include <iostream>
 
+#include "observer.hh"
+#include "subject.hh"
 #include "benchmark.hh"
+#include "writing_observer.hh"
+#include "tablicowe.hh"
+#include "sort.hh"
 #include "stos.hh"
 #include "kolejka.hh"
 #include "lista.hh"
@@ -22,20 +27,28 @@
  */
 int main() {
 
-  int *data = new int[SIZE];
+  unsigned short *data = new unsigned short[SIZE];
   for(int i=0; i<SIZE; ++i)
     std::cin >> data[i];
 
-  Benchmark *bench = new Benchmark();//klasa testujaca czas
-  Algorithm1 *sort1 = new Algorithm1(data);
-  Algorithm2 *sort2 = new Algorithm2(data);
-  Algorithm3 *sort3 = new Algorithm3(data);
-  Algorithm4 *sort4 = new Algorithm4(data);
+ 
+  Algorithm1 *test = new Algorithm1(data);
+  WritingObserver *observer = new WritingObserver(test, 1);
 
-  bench -> testAlgorithm(sort1,0);
-  bench -> testAlgorithm(sort2,1);
-  bench -> testAlgorithm(sort3,2);
-  bench -> testAlgorithm(sort4,3);
+  test -> add(observer);
+    
+  test -> testAlgorithm(test);
 
+  /*
+
+    Lista *temp = new Lista;
+    temp -> insert_last(3);
+  temp -> insert_last(5);
+  temp -> insert_last(4);
+  int x = temp -> remove_front();
+  int y = temp -> remove_front();
+  int z = temp -> remove_front();
+  std::cout << x << y << z;
+    */
   return 0;
 }

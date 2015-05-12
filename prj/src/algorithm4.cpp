@@ -1,13 +1,16 @@
 #include <iostream>
 
+#include "tablicowe.hh"
 #include "stos.hh"
+#include "observer.hh"
+#include "subject.hh"
 #include "benchmark.hh"
 #include "algorithm4.hh"
 
 
 void Algorithm4::runAlgorithm(int _border) {
 
-  stos.mergesort(0, _border-1);
+  //mergesort(0, _border-1);
 }
 
 

@@ -1,15 +1,15 @@
 #include <iostream>
 
+#include "tablicowe.hh"
 #include "kolejka.hh"
 
 
 Kolejka::Kolejka() {
 
   size = 8;//poczatkowy rozmiar kolejki
-  f = -1;//-1 bo tablica pusta, indeks pierwszego zapisanego miejsca
-  r = 0;//indeks nastepnego pustego miejsca
+  last = 0;
  
-  tab = new int[size];
+  tab = new short unsigned[size];
   if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
@@ -17,10 +17,9 @@ Kolejka::Kolejka() {
 Kolejka::Kolejka(long _size) {
 
   size = _size;
-  f = -1;
-  r = 0;
+  last = 0;
 
-  tab = new int[size];
+  tab = new short unsigned[size];
   if(tab == nullptr) std::cerr << "Blad alokacji" << std::endl;
 }
 
@@ -33,42 +32,43 @@ Kolejka::~Kolejka() {
 
 void Kolejka::increase() {
 
-  int *nowa = new int[size + 8];//nowa lista przechowujaca kolejke, wieksza o 8
+  short unsigned *nowa = new short unsigned[size * 2];
 
-  for(int i=0; i<r; ++i) nowa[i] = tab[i];//przepisujemy w taki sposob, zeby rozszerzyc tablice pomiedzy
-  for(int i=r+8; i<(size+8); ++i) nowa[i] = tab[i];//iteratorami r i f
+  for(long i=0; i<size; ++i) nowa[i] = tab[i];
   
   delete []tab; 
   tab = nowa;
+  size *= 2;//zwiekszamy rozmiar dwukrotnie
+}
 
-  f += 8;//po rozszerzeniu przesuwamy f o 8 miejsc dalej
-  size +=8;//zwiekszamy rozmiar
+
+int Kolejka::decrease() {
+
+  int temp = tab[0];//zmienna tymczasowa przechowujaca usuwany element
+  --size;//pomniejszamy zmienna przechowujaca informacje o rozmiarze o 1
+  short unsigned *nowa = new short unsigned[size];//tworzymy zastepczy stos o 1 mniejszy
+
+  for (long i=0; i<size; ++i) nowa[i] = tab[i+1];//przepisujemy stary stos
+
+  delete []tab;
+  tab = nowa;
+
+  return temp;//zwracamy usuwany element
 }
 
 
 void Kolejka::enqueue(int _elem) {
 
-  if(r == f) increase();//przy zapelnieniu powiekszamy kolejke
+  if(last == size) increase();//przy zapelnieniu powiekszamy kolejke
   
-  tab[r] = _elem;
-  if(f == -1) ++f;//sprawdzamy czy kolejka byla inicjalizowana
-  ++r;//przesuwamy wolne miejsce o 1 dalej
+  tab[last] = _elem;
+  ++last;
 }
 
 
 int Kolejka::dequeue() {
 
-  int temp = tab[f];//zmienna przechowujaca usuwany element
-
-  //przesuwamy indeks zapisanego elementu o 1 miejsce dalej
-  if(f != -1) {//sprawdzamy czy lista niepusta
-    if(f != (size-1)) ++f;//sprawdzamy czy nie jestesmy na koncu listy
-    else f = 0;//jezeli tak to przesuwamy sie na poczatek
-  }
-  else {
-    std::cerr << "Blad dequeue! Lista pusta!" << std::endl;
-    return -1;
-  }
-
+  int temp = decrease();//zmienna przechowujaca usuwany element
+  --last;
   return temp;//zwracamy usuwany element
 }

@@ -9,60 +9,40 @@
  *wraz ze wskaznikiem na nastepna komorke listy.
  */
 struct ANode {
-
   /*!
    *\brief Wskaznik na nastepna komorke.
    */ 
   ANode *next;
-    /*!
-     *\brief Wskaznik na klucz.
-     */ 
+  /*!
+   *\brief Wskaznik na klucz.
+   */ 
   char *key;
-    /*!
-     *\brief Wartosc klucza.
-     */ 
+  /*!
+   *\brief Wartosc klucza.
+   */ 
   int val;
 
   /*!
    *\brief Konstruktor paramteryczny struktury ANode.
-   *\param[in] k - wskaznik na klucz.
+   *\param[in] _k - wskaznik na klucz.
    */
-  ANode (const char *k):next (nullptr)
-  {
-    key = new char[strlen (k) + 1];
-    strcpy (key, k);
-  };
+  ANode(const char *_k);
   /*!
    *\brief Konstruktor paramteryczny struktury ANode.
-   *\param[in] s - referencja do pary klucz-wartosc.
+   *\param[in] _s - referencja do pary klucz-wartosc.
    */
-  ANode (const ANode &s):next (nullptr)
-  {
-    if (s.key == nullptr)
-      key = nullptr;
-    else
-      {
-	key = new char[strlen (s.key) + 1];
-	strcpy (key, s.key);
-      }
-
-    val=s.val;
-  };
+  ANode(const ANode &_s);
   /*!
    *\brief Destruktor struktury node.
    */
-  ~ANode ()
-  {
-    delete[]key;
-  }
+  ~ANode ();
 
 private:
-
   /*!
    *\brief Przeladowanie operatora przypisania.
    *Zabezpieczenie przed automatycznym operatorem przypisania.
    */
-  ANode & operator= (const ANode &);
+  ANode& operator= (const ANode &);
 };
 
 /*!
@@ -71,8 +51,8 @@ private:
  *asocjacyjna wraz z operacjami mozliwymi do wykonania na
  *tej strukturze.
  */
-class Asocjacyjna {
-
+struct Asocjacyjna {
+private:
   /*!
    *\brief Wskaznik na pierwsza pare klucz-wartosc.
    */ 
@@ -82,73 +62,62 @@ protected:
   /*!
    *\brief Metoda usuwania zawartosci listy.
    */
-  void clear ();
+  void clear();
   /*!
    *\brief Metoda wyszukiwania elementu o podanym kluczu.
-   *\param[in] key - wskaznik na wyszukiwany klucz.
+   *\param[in] _key - wskaznik na wyszukiwany klucz.
    *\return wskaznik na szukana pare klucz-wartosc, nullprt gdy nie znalezniono klucza.
    */
-  ANode *find (const char *key) const;
+  ANode* find(const char *_key) const;
   /*!
    *\brief Metoda wstawiania nowej pary klucz-wartosc.
-   *\param[in] key - wskaznik na klucz.
-   *\param[in] value - wartosc klucza.
+   *\param[in] _key - wskaznik na klucz.
+   *\param[in] _value - wartosc klucza.
    */
-  void insert (const char *key, int value);
+  void insert(const char *_key, int _value);
   /*!
    *\brief Metoda zamiany dwoch list.
-   *\param[in] l - referencja do listy.
+   *\param[in] _l - referencja do listy.
    */
-  void swap (Asocjacyjna &l);
+  void swap(Asocjacyjna &_l);
 
 public:
-
   /*!
    *\brief Konstruktor bezparametryczny obiektu Asocjacyjna.
    */
-  Asocjacyjna ();
+  Asocjacyjna();
   /*!
    *\brief Konstruktor paramteryczny obiektu Asocjacyjna.
-   *\param[in] l - referencja do listy.
+   *\param[in] _l - referencja do listy.
    */
-  Asocjacyjna (const Asocjacyjna &l);
+  Asocjacyjna(const Asocjacyjna &_l);
+  /*!
+   *\brief Destruktor obiektu Asocjacyjna.
+   */
+  ~Asocjacyjna();
+
   /*!
    *\brief Przeladowanie operatora przypisania.
    *Sluzy do wstawiania do klasy elementow innego obiektu
    *tego samego typu.
-   *\param[in] l - referencja do listy.
+   *\param[in] _l - referencja do listy.
    */
-  Asocjacyjna & operator= (const Asocjacyjna &l);
-  /*!
-   *\brief Destruktor obiektu Komorka.
-   */
-  ~Asocjacyjna ();
+  Asocjacyjna& operator= (const Asocjacyjna &_l);
   /*!
    *\brief Przeladowanie operatora nawiasu kwadratowego.
    *Sluzy do wpisywania klucza oraz wartosci.
-   *\param[in] key - wskaznik na klucz.
+   *\param[in] _key - wskaznik na klucz.
    *\return wartosc klucza.
    */
-  int &operator[] (const char *key);
-
+  int& operator[] (const char *_key);
   /*!
    *\brief Przeladowanie operatora przesuniecia bitowego.
    *Sluzy do wypisywania zawartosci listy na strumien wyjsciowy.
-   *\param[in] stream - referencja do strumienia wyjsciowego.
-   *\param[in] l - referencja do listy.
+   *\param[in] _stream - referencja do strumienia wyjsciowego.
+   *\param[in] _l - referencja do listy.
    *\return strumien wyjsciowy.
    */
-  friend std::ostream & operator<< (std::ostream &stream, Asocjacyjna &l)
-  {
-    ANode *c = l.head;
-    while (c)
-      {
-	stream << c->val << " ";
-	c = c->next;
-      };
-
-    return stream;
-  };
+  friend std::ostream& operator<< (std::ostream &_stream, Asocjacyjna &_l);
 };
 
 #endif

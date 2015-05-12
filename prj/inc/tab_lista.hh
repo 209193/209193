@@ -6,42 +6,27 @@
  *Obiekt tego typu reprezentuje strukture danych typu lista
  *zaimplementowana na tablicy dynamicznej. Obiekt zawiera
  *rowniez podstowe metody listy.
+ *Dziedziczy po klasie Tablicowe.
  */
-class TabLista {
-
+struct TabLista: public Tablicowe {
+protected:
   /*!
-   *\brief Wskaznik na tablice elementow listy.
-   */ 
-  int *tab;
-  /*!
-   *\brief Rozmiar listy.
-   */ 
-  long size;
-  /*!
-   *\brief Wskaznik na ostatni wolny element.
-   */ 
-  long last;
-
-  /*!
-   *\brief Metoda powiekszania listy tablicowe.
-   *Metoda ta dodaje do listy 8 kolejnych wolnych pol.
+   *\brief Metoda powiekszania listy tablicowej.
+   *Metoda ta podwaja ilosc pol w liscie tablicowej.
    */
   void increase();
 
 public:
-
   /*!
-   *\brief Konstruktor obiektu TabLista.
+   *\brief Konstruktor struktury TabLista.
    */
   TabLista();
-
  /*!
-   *\brief Konstruktor parametryczny obiektu TabLista.
+   *\brief Konstruktor parametryczny struktury TabLista.
    */
   TabLista(long _size);
-
   /*!
-   *\brief Destruktor obiektu TabLista.
+   *\brief Destruktor struktury TabLista.
    */
   ~TabLista();
 
@@ -51,14 +36,12 @@ public:
    *\param[in] _elem - dodawany element.
    */
   void insert(int _elem);
-
   /*!
    *\brief Metoda usuwania elementu.
    *Metoda sluzy do usuwania elementu o wskazanym indeksie.
    *\param[in] _f - indeks elementu do usuniecia.
-   *\return - usuwany element.
+   *\return usuwany element.
    */
-  int remove(int _f);
+  int remove(long _f);
 };
-
 #endif

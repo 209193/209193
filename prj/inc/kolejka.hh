@@ -5,46 +5,31 @@
  *\brief Klasa Kolejka modelujaca strukture danych typu kolejka.
  *Obiekt tego typu reprezentuje strukture danych typu kolejka
  *wraz z operacjami mozliwymi do wykonania na tej strukturze.
+ *Dziedziczy po klasie Tablicowe.
  */
-class Kolejka {
-
-  /*!
-   *\brief Wskaznik na tablice elementow kolejki.
-   */ 
-  int *tab;
-  /*!
-   *\brief Rozmiar kolejki.
-   */ 
-  long size;
-  /*!
-   *\brief Indeks pierwszego zapisanego elementu.
-   */ 
-  int f;
-  /*!
-   *\brief Indeks ostatniego wolnego pola.
-   */ 
-  int r;
-
+class Kolejka: public Tablicowe {
+private:
   /*!
    *\brief Metoda powiekszania kolejki.
-   *Metoda ta dodaje do kolejki 8 kolejnych wolnych pol
-   *pomiedzy pierwszym a ostatnim zapisanym elementem.
+   *Metoda ta zwieksza ilosc pol w kolejce dwukrotnie.
    */
   void increase();
+    /*!
+   *\brief Metoda pomniejszania kolejki.
+   *Metoda ta odejmuje od kolejki jedno pole.
+   */
+  int decrease();
 
 public:
-
   /*!
    *\brief Konstruktor obiektu Kolejka.
    */
   Kolejka();
-
   /*!
    *\brief Konstruktor parametryczny obiektu Kolejka.
    *\param[in] _size - rozmiar tworzonej kolejki.
    */
   Kolejka(long _size);
-
   /*!
    *\brief Destruktor obiektu Kolejka.
    */
@@ -56,11 +41,10 @@ public:
    *\param[in] _elem - dodawany element.
    */
   void enqueue(int _elem);
-
   /*!
    *\brief Metoda usuwania elementu.
    *Metoda sluzy do usuwania elementu z kolejki.
-   *\return - usuwany element.
+   *\return usuwany element.
    */
   int dequeue();
 };

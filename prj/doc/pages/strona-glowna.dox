@@ -1,8 +1,8 @@
 /*!
-  \mainpage Laboratorium 6
+  \mainpage Laboratorium 7
   \author Filip Malinowski
-  \date 22.04.2015
-  \version 0.0005
+  \date 13.05.2015
+  \version 0.0007
 
   Program sluzacy do uruchamiania algorytmow i badania ich szybkosci dzialania.\n
   W programie zaimplementowane sa algorytmy:\n
@@ -12,8 +12,9 @@
   - sortowania przez kopcowanie stosu
   *
 
-  Do wykonania podanych powyzej trzech ostatnich algorytmow zostaly
+  Do wykonania podanych powyzej algorytmow zostaly
   zaimplementowane potrzebne struktury danych (stos, kolejka, lista oraz lista tablicowa, lista asocjacyjna, tablica z haszowaniem).\n\n
+  Program zapisuje informacje o wykonanym benchmarku za pomoca wzorca obserwatora.\n\n
   Ciala klas znajduja sie w folderze ./prj/inc\n
   Definicje metod znajduja sie w folderze ./prj/src\n
   Sprawozdanie znajduje sie w folderze ./prj/doc/sprawozdanie\n\n

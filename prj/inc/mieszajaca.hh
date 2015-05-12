@@ -18,43 +18,21 @@ struct MNode {
    */ 
   int val;
 
-  MNode()
-  {
-    key = nullptr;
-    val = 0;
-  };
+  MNode();
   /*!
    *\brief Konstruktor paramteryczny struktury MNode.
-   *\param[in] k - wskaznik na klucz.
+   *\param[in] _k - wskaznik na klucz.
    */
-  MNode(const char *k)
-  {
-    key = new char[strlen (k) + 1];
-    strcpy (key, k);
-  };
+  MNode(const char *_k);
   /*!
    *\brief Konstruktor paramteryczny struktury MNode.
-   *\param[in] s - referencja do pary klucz-wartosc.
+   *\param[in] _s - referencja do pary klucz-wartosc.
    */
-  MNode(const MNode &s)
-  {
-    if (s.key == nullptr)
-      key = nullptr;
-    else
-      {
-	key = new char[strlen (s.key) + 1];
-	strcpy (key, s.key);
-      }
-
-    val=s.val;
-  };
+  MNode(const MNode &_s);
   /*!
-   *\brief Destruktor struktury node.
+   *\brief Destruktor struktury MNode.
    */
-  ~MNode ()
-  {
-    delete[]key;
-  }
+  ~MNode ();
 
 private:
 
@@ -62,7 +40,7 @@ private:
    *\brief Przeladowanie operatora przypisania.
    *Zabezpieczenie przed automatycznym operatorem przypisania.
    */
-  MNode & operator= (const MNode &);
+  MNode& operator= (const MNode &);
 };
 
 /*!
@@ -78,7 +56,7 @@ class Mieszajaca {
    */ 
   MNode **tab_l;
   /*!
-   *\brief Wskaznik na lewa tablice elementow.
+   *\brief Wskaznik na prawa tablice elementow.
    */ 
   MNode **tab_p;
   /*!
@@ -89,71 +67,59 @@ class Mieszajaca {
 protected:
   /*!
    *\brief Funkcja haszująca Shift-Add-XOR.
-   *\param[in] key - wskaznik na wyszukiwany klucz.
+   *\param[in] _key - wskaznik na wyszukiwany klucz.
    *\return indeks.
    */
-  unsigned sax_hash(const char *key) const;
+  unsigned sax_hash(const char *_key) const;
   /*!
    *\brief Funkcja haszująca Fovler/Voll/No.
-   *\param[in] key - wskaznik na wyszukiwany klucz.
+   *\param[in] _key - wskaznik na wyszukiwany klucz.
    *\return indeks.
    */
-  unsigned fnv_hash(const char *key) const;
+  unsigned fnv_hash(const char *_key) const;
   /*!
    *\brief Metoda wyszukiwania elementu o podanym kluczu.
-   *\param[in] key - wskaznik na wyszukiwany klucz.
+   *\param[in] _key - wskaznik na wyszukiwany klucz.
    *\return wskaznik na szukana pare klucz-wartosc, nullprt gdy nie znalezniono klucza.
    */
-  MNode *find (const char *key) const;
+  MNode* find (const char *_key) const;
   /*!
    *\brief Metoda wstawiania nowej pary klucz-wartosc.
-   *\param[in] key - wskaznik na klucz.
-   *\param[in] value - wartosc klucza.
+   *\param[in] _key - wskaznik na klucz.
+   *\param[in] _value - wartosc klucza.
    */
-  void insert (const char *key, int value);
+  void insert (const char *_key, int _value);
 
 public:
-
   /*!
    *\brief Konstruktor obiektu Mieszajaca.
    */
   Mieszajaca();
-
   /*!
    *\brief Konstruktor parametryczny obiektu mieszajaca.
    *\param[in] _size - rozmiar tworzonej tablicy mieszajacej.
    */
   Mieszajaca(long _size);
-
   /*!
    *\brief Destruktor obiektu Mieszajaca.
    */
   ~Mieszajaca();
+
   /*!
    *\brief Przeladowanie operatora nawiasu kwadratowego.
    *Sluzy do wpisywania klucza oraz wartosci.
-   *\param[in] key - wskaznik na klucz.
+   *\param[in] _key - wskaznik na klucz.
    *\return wartosc klucza.
    */
-  int &operator[] (const char *key);
-
+  int& operator[] (const char *_key);
   /*!
    *\brief Przeladowanie operatora przesuniecia bitowego.
    *Sluzy do wypisywania zawartosci tablicy mieszajacej na strumien wyjsciowy.
-   *\param[in] stream - referencja do strumienia wyjsciowego.
-   *\param[in] l - referencja do tablicy.
+   *\param[in] _stream - referencja do strumienia wyjsciowego.
+   *\param[in] _l - referencja do tablicy.
    *\return strumien wyjsciowy.
    */
-  friend std::ostream & operator<< (std::ostream &stream, Mieszajaca &l)
-  {
-    int i;
-    for (i=0; i<l.size; ++i)
-      if(l.tab_l[i]) stream << l.tab_l[i] -> val << " ";
-    for (i=0; i<l.size; ++i)
-      if(l.tab_p[i]) stream << l.tab_p[i] -> val << " ";
-
-    return stream;
-  };
+  friend std::ostream& operator<< (std::ostream &_stream, Mieszajaca &_l);
 };
 
 #endif

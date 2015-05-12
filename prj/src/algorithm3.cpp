@@ -1,13 +1,16 @@
 #include <iostream>
 
+#include "tablicowe.hh"
 #include "stos.hh"
+#include "observer.hh"
+#include "subject.hh"
 #include "benchmark.hh"
 #include "algorithm3.hh"
 
 
 void Algorithm3::runAlgorithm(int _border) {
 
-  stos.heapsort(_border-1);
+  //heapsort(_border-1);
 }
 
 

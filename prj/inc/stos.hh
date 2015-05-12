@@ -5,47 +5,32 @@
  *\brief Klasa Stos modelujaca strukture danych typu stos.
  *Obiekt tego typu reprezentuje strukture danych typu stos
  *wraz z operacjami mozliwymi do wykonania na tej strukturze.
+ *Dziedziczy po klasie Tablicowe.
  */
-class Stos {
-
-  /*!
-   *\brief Wskaznik na tablice elementow stosu.
-   */ 
-  int *tab;
-  /*!
-   *\brief Rozmiar stosu.
-   */ 
-  long size;
-  /*!
-   *\brief Indeks ostatniego wolnego pola.
-   */ 
-  long last;
-
+struct Stos: public Tablicowe {
+private:
   /*!
    *\brief Metoda powiekszania stosu.
-   *Metoda ta dodaje do stosu 8 kolejnych wolnych pol.
+   *Metoda ta podwaja ilosc pol.
    */
   void increase();
-
   /*!
    *\brief Metoda pomniejszania stosu.
    *Metoda ta odejmuje od stosu jedno pole.
+   *\return usuwany element.
    */
   int decrease();
 
 public:
-
   /*!
    *\brief Konstruktor obiektu Stos.
    */
   Stos();
-
   /*!
    *\brief Konstruktor parametryczny obiektu Stos.
    *\param[in] _size - rozmiar tworzonego stosu.
    */
   Stos(long _size);
-
   /*!
    *\brief Destruktor obiektu Stos.
    */
@@ -57,50 +42,11 @@ public:
    *\param[in] _elem - dodawany element.
    */
   void push(int _elem);
-
   /*!
    *\brief Metoda usuwania elementu.
    *Metoda sluzy do usuwania elementu ze stosu.
-   *\return - usuwany element.
+   *\return usuwany element.
    */
   int pop();
-
-  /*!
-   *\brief Sortowanie szybkie.
-   *\param[in] poczatek - poczatek tablicy.
-   *\param[in] koniec - koniec tablicy.
-   */
-  void quicksort(int poczatek, int koniec);
-
-  /*!
-   *\brief Sortowanie szybkie po optymalizacji.
-   *\param[in] poczatek - poczatek tablicy.
-   *\param[in] koniec - koniec tablicy.
-   */
-  void optquicksort(int poczatek, int koniec);
-
-  /*!
-   *\brief Sortowanie przez scalanie.
-   *\param[in] poczatek - poczatek tablicy.
-   *\param[in] koniec - koniec tablicy.
-   */
-  void mergesort(int poczatek, int koniec);
-
-  /*!
-   *\brief Metoda przywracajaca porzadek kopca.
-   */
-  void heapify(int i, int max);
-
-  /*!
-   *\brief Tworzenie struktury kopca z nieuporzadkowanej tablicy.
-   */
-  void build_heap();
-
-  /*!
-   *\brief Sortowanie przez kopcowanie.
-   *\param[in] koniec - koniec tablicy.
-   */
-  void heapsort(int koniec);
 };
-
 #endif
