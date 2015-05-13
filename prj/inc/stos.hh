@@ -24,10 +24,12 @@ private:
 public:
   /*!
    *\brief Konstruktor obiektu Stos.
+   *Tworzy stos o domyslnym rozmiarze rownym 8.
    */
   Stos();
   /*!
    *\brief Konstruktor parametryczny obiektu Stos.
+   *Tworzy stos o zadanym rozmiarze rownym _size.
    *\param[in] _size - rozmiar tworzonego stosu.
    */
   Stos(long _size);

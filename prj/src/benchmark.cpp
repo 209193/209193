@@ -1,5 +1,3 @@
-#include <iostream>
-#include <fstream>
 #include <chrono>
 
 #include "observer.hh"
@@ -15,7 +13,7 @@ void Benchmark::testAlgorithm(Benchmark *_algorithm) {
 
   size=100;//startowa ilosc elementow
   time=0;//sredni czas dzialania
-  length = 1;
+  length = 3;
   repeats = 1;
 
   for (unsigned short i=1; i<=length; ++i) {

@@ -7,6 +7,7 @@
 
 
 WritingObserver::WritingObserver(Benchmark *_benchmark, int _id) {
+  std::cerr << "WritingObserver created. Id: " << _id << std::endl;
 
   benchmark = _benchmark;
   id = _id;
@@ -20,14 +21,22 @@ WritingObserver::WritingObserver(Benchmark *_benchmark, int _id) {
 
 
 WritingObserver::~WritingObserver() {
+  std::cerr << "WritingObserver deleted. Id: " << id << std::endl;
 
   ret_data.close();
 }
 
 
 void WritingObserver::update() {
+  ++state_id;
+  std::cerr << "WritingObserver with id: " << id;
+  std::cerr << " notified by subject with id: ";
+  std::cerr << benchmark -> tell_id();
+  std::cerr << ". Update no. " << state_id;
+  std::cerr << " done." << std::endl;
 
   ret_data << (benchmark -> getTime());
   ret_data << '\t';
   ret_data << (benchmark -> getSize());
+  ret_data << std::endl;
 }

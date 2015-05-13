@@ -14,7 +14,7 @@ MNode::MNode() {
 
 MNode::MNode(const char *_k) {
 
-  key = new char[strlen (_k) + 1];
+  key = new char[strlen(_k) + 1];
   strcpy(key, _k);
 }
 
@@ -69,7 +69,7 @@ Mieszajaca::~Mieszajaca() {
 
 unsigned Mieszajaca::sax_hash(const char *_key) const {
   const char *p = _key;
-  unsigned len = (strlen(p)+1);
+  unsigned len = (strlen(p) + 1);
   unsigned h = 0;
   unsigned i;
 
@@ -84,7 +84,7 @@ unsigned Mieszajaca::sax_hash(const char *_key) const {
 
 unsigned Mieszajaca::fnv_hash(const char *_key) const {
   const char *p = _key;
-  unsigned len = (strlen(p)+1);
+  unsigned len = (strlen(p) + 1);
   unsigned h = 2166136261;
   unsigned i;
 
@@ -120,8 +120,8 @@ MNode* Mieszajaca::find(const char *_key) const {
   unsigned i = sax_hash(_key);
   unsigned j = fnv_hash(_key);
 
-  if (!strcmp (tab_l[i]->key,_key)) return tab_l[i];
-  else if (!strcmp(tab_p[j]->key,_key)) return tab_p[i];
+  if (!strcmp (tab_l[i] -> key,_key)) return tab_l[i];
+  else if (!strcmp(tab_p[j] -> key,_key)) return tab_p[i];
 
   for (; i<size; ++i)
     if (!strcmp(tab_l[i] -> key, _key)) return tab_l[i];
@@ -139,7 +139,7 @@ int& Mieszajaca::operator[](const char *key) {
 
   if (!c) insert(key, 0);
 
-  return c->val;
+  return c -> val;
 }
 
 std::ostream& operator<< (std::ostream &_stream, Mieszajaca &_l) {

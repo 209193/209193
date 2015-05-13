@@ -101,6 +101,7 @@ public:
    *Sluzy do wstawiania do klasy elementow innego obiektu
    *tego samego typu.
    *\param[in] _l - referencja do listy.
+   *\return wskaznik na obiekt.
    */
   Asocjacyjna& operator= (const Asocjacyjna &_l);
   /*!

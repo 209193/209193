@@ -1,0 +1,223 @@
+\hypertarget{class_algorithm4}{\section{Dokumentacja klasy Algorithm4}
+\label{class_algorithm4}\index{Algorithm4@{Algorithm4}}
+}
+
+
+Klasa \hyperlink{class_algorithm4}{Algorithm4} modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonujacy sortowanie szybkie po optymalizacji na elementach stosu. Dziedziczy po klasie \hyperlink{class_benchmark}{Benchmark}.  
+
+
+
+
+{\ttfamily \#include $<$algorithm4.\-hh$>$}
+
+
+
+Diagram dziedziczenia dla Algorithm4\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_algorithm4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Algorithm4\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_algorithm4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_algorithm4_a79f0bdede29ae14437031022b7a32278}{Algorithm4} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \hyperlink{class_algorithm4}{Algorithm4}. \end{DoxyCompactList}\item 
+\hyperlink{class_algorithm4_a7e9812499c980dfc9e2032d1a3728b09}{Algorithm4} (unsigned short $\ast$\-\_\-tab, int \-\_\-id)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny obiektu \hyperlink{class_algorithm4}{Algorithm4}. \end{DoxyCompactList}\item 
+\hyperlink{class_algorithm4_ad73b6bd1ca2b289db737e3e4f5b40abf}{$\sim$\-Algorithm4} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{class_algorithm4}{Algorithm4}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm4_aa86adbf6be3052692f885c1be28b2300}{load} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm4_a673e2d2373378ab01a7f0378d978f162}{unload} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda sprzatania. Metoda sluzy do oproznienia struktury. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm4_ad1e715e2d6ddec7607f3cafa77443cd2}{run\-Algorithm} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. Sortuje elementy stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_stos}{Stos} \hyperlink{class_algorithm4_aa9946110dc906caed6ddc49c60f7a3c8}{stos}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca stos. \end{DoxyCompactList}\item 
+\hyperlink{class_sort}{Sort} \hyperlink{class_algorithm4_afbc43ff18fc5837d95e5746353bfc54a}{sort}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca klase sortujaca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 10 pliku algorithm4.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_algorithm4_a79f0bdede29ae14437031022b7a32278}{\index{Algorithm4@{Algorithm4}!Algorithm4@{Algorithm4}}
+\index{Algorithm4@{Algorithm4}!Algorithm4@{Algorithm4}}
+\subsubsection[{Algorithm4}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm4\-::\-Algorithm4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_algorithm4_a79f0bdede29ae14437031022b7a32278}
+
+
+Definicja w linii 24 pliku algorithm4.\-hh.
+
+\hypertarget{class_algorithm4_a7e9812499c980dfc9e2032d1a3728b09}{\index{Algorithm4@{Algorithm4}!Algorithm4@{Algorithm4}}
+\index{Algorithm4@{Algorithm4}!Algorithm4@{Algorithm4}}
+\subsubsection[{Algorithm4}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm4\-::\-Algorithm4 (
+\begin{DoxyParamCaption}
+\item[{unsigned short $\ast$}]{\-\_\-tab, }
+\item[{int}]{\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{class_algorithm4_a7e9812499c980dfc9e2032d1a3728b09}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-tab} & -\/ tablica przechowujaca dane wejsciowe. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-id} & -\/ identyfikator algorytmu. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 12 pliku algorithm4.\-cpp.
+
+\hypertarget{class_algorithm4_ad73b6bd1ca2b289db737e3e4f5b40abf}{\index{Algorithm4@{Algorithm4}!$\sim$\-Algorithm4@{$\sim$\-Algorithm4}}
+\index{$\sim$\-Algorithm4@{$\sim$\-Algorithm4}!Algorithm4@{Algorithm4}}
+\subsubsection[{$\sim$\-Algorithm4}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm4\-::$\sim$\-Algorithm4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_algorithm4_ad73b6bd1ca2b289db737e3e4f5b40abf}
+
+
+Definicja w linii 19 pliku algorithm4.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_algorithm4_aa86adbf6be3052692f885c1be28b2300}{\index{Algorithm4@{Algorithm4}!load@{load}}
+\index{load@{load}!Algorithm4@{Algorithm4}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm4\-::load (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm4_aa86adbf6be3052692f885c1be28b2300}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a41f66d36949f1488facb8e3d49c99f67}{Benchmark}.
+
+
+
+Definicja w linii 30 pliku algorithm4.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm4_aa86adbf6be3052692f885c1be28b2300_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_algorithm4_ad1e715e2d6ddec7607f3cafa77443cd2}{\index{Algorithm4@{Algorithm4}!run\-Algorithm@{run\-Algorithm}}
+\index{run\-Algorithm@{run\-Algorithm}!Algorithm4@{Algorithm4}}
+\subsubsection[{run\-Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm4\-::run\-Algorithm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm4_ad1e715e2d6ddec7607f3cafa77443cd2}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a33e60395b1e126ca65c3aea3abf6debf}{Benchmark}.
+
+
+
+Definicja w linii 24 pliku algorithm4.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_algorithm4_ad1e715e2d6ddec7607f3cafa77443cd2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_algorithm4_a673e2d2373378ab01a7f0378d978f162}{\index{Algorithm4@{Algorithm4}!unload@{unload}}
+\index{unload@{unload}!Algorithm4@{Algorithm4}}
+\subsubsection[{unload}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm4\-::unload (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm4_a673e2d2373378ab01a7f0378d978f162}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a2dcfb6ee9e648ae88d8c131b2b191bed}{Benchmark}.
+
+
+
+Definicja w linii 36 pliku algorithm4.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm4_a673e2d2373378ab01a7f0378d978f162_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_algorithm4_afbc43ff18fc5837d95e5746353bfc54a}{\index{Algorithm4@{Algorithm4}!sort@{sort}}
+\index{sort@{sort}!Algorithm4@{Algorithm4}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sort} Algorithm4\-::sort\hspace{0.3cm}{\ttfamily [private]}}}\label{class_algorithm4_afbc43ff18fc5837d95e5746353bfc54a}
+
+
+Definicja w linii 18 pliku algorithm4.\-hh.
+
+\hypertarget{class_algorithm4_aa9946110dc906caed6ddc49c60f7a3c8}{\index{Algorithm4@{Algorithm4}!stos@{stos}}
+\index{stos@{stos}!Algorithm4@{Algorithm4}}
+\subsubsection[{stos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stos} Algorithm4\-::stos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_algorithm4_aa9946110dc906caed6ddc49c60f7a3c8}
+
+
+Definicja w linii 14 pliku algorithm4.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{algorithm4_8hh}{algorithm4.\-hh}\item 
+\hyperlink{algorithm4_8cpp}{algorithm4.\-cpp}\end{DoxyCompactItemize}

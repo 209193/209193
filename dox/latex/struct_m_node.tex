@@ -1,0 +1,132 @@
+\hypertarget{struct_m_node}{\section{Dokumentacja struktury M\-Node}
+\label{struct_m_node}\index{M\-Node@{M\-Node}}
+}
+
+
+Struktura \hyperlink{struct_a_node}{A\-Node}. Obiekt tego typu reprezentuje pojedyncza komorke tablicy mieszajacej;.  
+
+
+
+
+{\ttfamily \#include $<$mieszajaca.\-hh$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_node_a4f5e9c524bf97b5694d8f008e9436996}{M\-Node} ()
+\item 
+\hyperlink{struct_m_node_a7996f4c14c867e740670e4571e8d5189}{M\-Node} (const char $\ast$\-\_\-k)
+\begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny struktury \hyperlink{struct_m_node}{M\-Node}. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_node_a5f21b0e7ec69965c0105920e06241a47}{M\-Node} (const \hyperlink{struct_m_node}{M\-Node} \&\-\_\-s)
+\begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny struktury \hyperlink{struct_m_node}{M\-Node}. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_node_aa96f44f28eee1e25a9a267baaa61813d}{$\sim$\-M\-Node} ()
+\begin{DoxyCompactList}\small\item\em Destruktor struktury \hyperlink{struct_m_node}{M\-Node}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{struct_m_node_a34eaceeae213bc93c9f18b752801a1f0}{key}
+\begin{DoxyCompactList}\small\item\em Wskaznik na klucz. \end{DoxyCompactList}\item 
+int \hyperlink{struct_m_node_a9ba04f597c758c10b9f2309322fe4c8d}{val}
+\begin{DoxyCompactList}\small\item\em Wartosc klucza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_node}{M\-Node} \& \hyperlink{struct_m_node_a6b2f4245f982546c8437f599bcf410b1}{operator=} (const \hyperlink{struct_m_node}{M\-Node} \&)
+\begin{DoxyCompactList}\small\item\em Przeladowanie operatora przypisania. Zabezpieczenie przed automatycznym operatorem przypisania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 11 pliku mieszajaca.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_m_node_a4f5e9c524bf97b5694d8f008e9436996}{\index{M\-Node@{M\-Node}!M\-Node@{M\-Node}}
+\index{M\-Node@{M\-Node}!MNode@{M\-Node}}
+\subsubsection[{M\-Node}]{\setlength{\rightskip}{0pt plus 5cm}M\-Node\-::\-M\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_m_node_a4f5e9c524bf97b5694d8f008e9436996}
+
+
+Definicja w linii 8 pliku mieszajaca.\-cpp.
+
+\hypertarget{struct_m_node_a7996f4c14c867e740670e4571e8d5189}{\index{M\-Node@{M\-Node}!M\-Node@{M\-Node}}
+\index{M\-Node@{M\-Node}!MNode@{M\-Node}}
+\subsubsection[{M\-Node}]{\setlength{\rightskip}{0pt plus 5cm}M\-Node\-::\-M\-Node (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{\-\_\-k}
+\end{DoxyParamCaption}
+)}}\label{struct_m_node_a7996f4c14c867e740670e4571e8d5189}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-k} & -\/ wskaznik na klucz. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 15 pliku mieszajaca.\-cpp.
+
+\hypertarget{struct_m_node_a5f21b0e7ec69965c0105920e06241a47}{\index{M\-Node@{M\-Node}!M\-Node@{M\-Node}}
+\index{M\-Node@{M\-Node}!MNode@{M\-Node}}
+\subsubsection[{M\-Node}]{\setlength{\rightskip}{0pt plus 5cm}M\-Node\-::\-M\-Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\-Node} \&}]{\-\_\-s}
+\end{DoxyParamCaption}
+)}}\label{struct_m_node_a5f21b0e7ec69965c0105920e06241a47}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-s} & -\/ referencja do pary klucz-\/wartosc. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 22 pliku mieszajaca.\-cpp.
+
+\hypertarget{struct_m_node_aa96f44f28eee1e25a9a267baaa61813d}{\index{M\-Node@{M\-Node}!$\sim$\-M\-Node@{$\sim$\-M\-Node}}
+\index{$\sim$\-M\-Node@{$\sim$\-M\-Node}!MNode@{M\-Node}}
+\subsubsection[{$\sim$\-M\-Node}]{\setlength{\rightskip}{0pt plus 5cm}M\-Node\-::$\sim$\-M\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_m_node_aa96f44f28eee1e25a9a267baaa61813d}
+
+
+Definicja w linii 34 pliku mieszajaca.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{struct_m_node_a6b2f4245f982546c8437f599bcf410b1}{\index{M\-Node@{M\-Node}!operator=@{operator=}}
+\index{operator=@{operator=}!MNode@{M\-Node}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-Node}\& M\-Node\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\-Node} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_m_node_a6b2f4245f982546c8437f599bcf410b1}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{struct_m_node_a34eaceeae213bc93c9f18b752801a1f0}{\index{M\-Node@{M\-Node}!key@{key}}
+\index{key@{key}!MNode@{M\-Node}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ M\-Node\-::key}}\label{struct_m_node_a34eaceeae213bc93c9f18b752801a1f0}
+
+
+Definicja w linii 15 pliku mieszajaca.\-hh.
+
+\hypertarget{struct_m_node_a9ba04f597c758c10b9f2309322fe4c8d}{\index{M\-Node@{M\-Node}!val@{val}}
+\index{val@{val}!MNode@{M\-Node}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}int M\-Node\-::val}}\label{struct_m_node_a9ba04f597c758c10b9f2309322fe4c8d}
+
+
+Definicja w linii 19 pliku mieszajaca.\-hh.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mieszajaca_8hh}{mieszajaca.\-hh}\item 
+\hyperlink{mieszajaca_8cpp}{mieszajaca.\-cpp}\end{DoxyCompactItemize}

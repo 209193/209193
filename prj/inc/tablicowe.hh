@@ -27,8 +27,9 @@ public:
    *\brief Konstruktor obiektu Tablicowe.
    */
   Tablicowe() {}
- /*!
+  /*!
    *\brief Konstruktor parametryczny obiektu Tablicowe.
+   *\param[in] _size - startowy rozmiar struktury;
    */
   Tablicowe(long _size): size(_size) {}
   /*!

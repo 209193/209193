@@ -12,6 +12,10 @@ class Algorithm4: public Benchmark {
    *\brief Zmienna przechowujaca stos.
    */ 
   Stos stos;
+  /*!
+   *\brief Zmienna przechowujaca klase sortujaca.
+   */ 
+  Sort sort;
 
 public:
   /*!
@@ -21,12 +25,13 @@ public:
   /*!
    *\brief Konstruktor parametryczny obiektu Algorithm4.
    *\param[in] _tab - tablica przechowujaca dane wejsciowe.
+   *\param[in] _id - identyfikator algorytmu.
    */
-  Algorithm4(unsigned short *_tab): Benchmark(_tab) {}
+  Algorithm4(unsigned short *_tab, int _id);
   /*!
    *\brief Destruktor obiektu Algorithm4.
    */
-  ~Algorithm4() {}
+  ~Algorithm4();
 
   /*!
    *\brief Metoda przygotowywania algorytmu.
@@ -48,5 +53,4 @@ public:
    */
   virtual void runAlgorithm(int _border);
 };
-
 #endif

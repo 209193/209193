@@ -1,0 +1,223 @@
+\hypertarget{class_algorithm3}{\section{Dokumentacja klasy Algorithm3}
+\label{class_algorithm3}\index{Algorithm3@{Algorithm3}}
+}
+
+
+Klasa \hyperlink{class_algorithm3}{Algorithm3} modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonujacy sortowanie szybkie na elementach stosu. Dziedziczy po klasie \hyperlink{class_benchmark}{Benchmark}.  
+
+
+
+
+{\ttfamily \#include $<$algorithm3.\-hh$>$}
+
+
+
+Diagram dziedziczenia dla Algorithm3\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_algorithm3__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Algorithm3\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_algorithm3__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_algorithm3_a88d9f8567616fd898bf202602726600d}{Algorithm3} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \hyperlink{class_algorithm3}{Algorithm3}. \end{DoxyCompactList}\item 
+\hyperlink{class_algorithm3_a71f0a79b028ae3c867321bcf19a45188}{Algorithm3} (unsigned short $\ast$\-\_\-tab, int \-\_\-id)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny obiektu \hyperlink{class_algorithm3}{Algorithm3}. \end{DoxyCompactList}\item 
+\hyperlink{class_algorithm3_ae9d1f5425fce3fc93d356fe8bf103e28}{$\sim$\-Algorithm3} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{class_algorithm3}{Algorithm3}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm3_a92b082327e99863c82981cdaec9a45a1}{load} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm3_a170d77ee28866741214e65da7efcf533}{unload} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda sprzatania. Metoda sluzy do oproznienia struktury. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm3_ac5c80b248190a12fa770e0386f694570}{run\-Algorithm} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. Sortuje elementy stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_stos}{Stos} \hyperlink{class_algorithm3_afbbe5f5bd47a6af1a83065319ad5d36a}{stos}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca stos. \end{DoxyCompactList}\item 
+\hyperlink{class_sort}{Sort} \hyperlink{class_algorithm3_a536a59931cc4e26ffb0eac855c76ff8a}{sort}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca klase sortujaca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 10 pliku algorithm3.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_algorithm3_a88d9f8567616fd898bf202602726600d}{\index{Algorithm3@{Algorithm3}!Algorithm3@{Algorithm3}}
+\index{Algorithm3@{Algorithm3}!Algorithm3@{Algorithm3}}
+\subsubsection[{Algorithm3}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm3\-::\-Algorithm3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_algorithm3_a88d9f8567616fd898bf202602726600d}
+
+
+Definicja w linii 24 pliku algorithm3.\-hh.
+
+\hypertarget{class_algorithm3_a71f0a79b028ae3c867321bcf19a45188}{\index{Algorithm3@{Algorithm3}!Algorithm3@{Algorithm3}}
+\index{Algorithm3@{Algorithm3}!Algorithm3@{Algorithm3}}
+\subsubsection[{Algorithm3}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm3\-::\-Algorithm3 (
+\begin{DoxyParamCaption}
+\item[{unsigned short $\ast$}]{\-\_\-tab, }
+\item[{int}]{\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{class_algorithm3_a71f0a79b028ae3c867321bcf19a45188}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-tab} & -\/ tablica przechowujaca dane wejsciowe. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-id} & -\/ identyfikator algorytmu. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 12 pliku algorithm3.\-cpp.
+
+\hypertarget{class_algorithm3_ae9d1f5425fce3fc93d356fe8bf103e28}{\index{Algorithm3@{Algorithm3}!$\sim$\-Algorithm3@{$\sim$\-Algorithm3}}
+\index{$\sim$\-Algorithm3@{$\sim$\-Algorithm3}!Algorithm3@{Algorithm3}}
+\subsubsection[{$\sim$\-Algorithm3}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm3\-::$\sim$\-Algorithm3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_algorithm3_ae9d1f5425fce3fc93d356fe8bf103e28}
+
+
+Definicja w linii 19 pliku algorithm3.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_algorithm3_a92b082327e99863c82981cdaec9a45a1}{\index{Algorithm3@{Algorithm3}!load@{load}}
+\index{load@{load}!Algorithm3@{Algorithm3}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm3\-::load (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm3_a92b082327e99863c82981cdaec9a45a1}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a41f66d36949f1488facb8e3d49c99f67}{Benchmark}.
+
+
+
+Definicja w linii 30 pliku algorithm3.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm3_a92b082327e99863c82981cdaec9a45a1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_algorithm3_ac5c80b248190a12fa770e0386f694570}{\index{Algorithm3@{Algorithm3}!run\-Algorithm@{run\-Algorithm}}
+\index{run\-Algorithm@{run\-Algorithm}!Algorithm3@{Algorithm3}}
+\subsubsection[{run\-Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm3\-::run\-Algorithm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm3_ac5c80b248190a12fa770e0386f694570}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a33e60395b1e126ca65c3aea3abf6debf}{Benchmark}.
+
+
+
+Definicja w linii 24 pliku algorithm3.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm3_ac5c80b248190a12fa770e0386f694570_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_algorithm3_a170d77ee28866741214e65da7efcf533}{\index{Algorithm3@{Algorithm3}!unload@{unload}}
+\index{unload@{unload}!Algorithm3@{Algorithm3}}
+\subsubsection[{unload}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm3\-::unload (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm3_a170d77ee28866741214e65da7efcf533}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a2dcfb6ee9e648ae88d8c131b2b191bed}{Benchmark}.
+
+
+
+Definicja w linii 36 pliku algorithm3.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm3_a170d77ee28866741214e65da7efcf533_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_algorithm3_a536a59931cc4e26ffb0eac855c76ff8a}{\index{Algorithm3@{Algorithm3}!sort@{sort}}
+\index{sort@{sort}!Algorithm3@{Algorithm3}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sort} Algorithm3\-::sort\hspace{0.3cm}{\ttfamily [private]}}}\label{class_algorithm3_a536a59931cc4e26ffb0eac855c76ff8a}
+
+
+Definicja w linii 18 pliku algorithm3.\-hh.
+
+\hypertarget{class_algorithm3_afbbe5f5bd47a6af1a83065319ad5d36a}{\index{Algorithm3@{Algorithm3}!stos@{stos}}
+\index{stos@{stos}!Algorithm3@{Algorithm3}}
+\subsubsection[{stos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stos} Algorithm3\-::stos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_algorithm3_afbbe5f5bd47a6af1a83065319ad5d36a}
+
+
+Definicja w linii 14 pliku algorithm3.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{algorithm3_8hh}{algorithm3.\-hh}\item 
+\hyperlink{algorithm3_8cpp}{algorithm3.\-cpp}\end{DoxyCompactItemize}

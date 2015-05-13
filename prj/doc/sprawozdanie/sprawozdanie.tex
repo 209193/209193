@@ -27,13 +27,30 @@ W programie zastosowalem wzorzec obserwatora.
 Zdefiniowalem do tego ogolnego obserwatora
 Observer oraz ogolnego obserwowanego Subject.
 Klasa Benchmark jest obserwowanym.
-Dany benchmark algorytmu dodaje na liste
-obserwatorow obserwatora zapisujacego
-w celu zapisania danych o wykonanym benchmarku.
+Kolejne klasy symulujace algorytmy dziedzicza
+po klasie Benchmark bedac tym samym obserwowanymi.
+Dany algorytm dodaje na liste
+obserwatorow obserwatora zapisujacego,
+ktory przy kazdym powiadomieniu pobiera
+aktualne czasy oraz ilosci danych wykonane
+w danym algorytmie. Pobrane dane nastepnie
+zapisuje do pliku zachowujac zrozumialy format.
 
 Sortowania zostaly uogolnione do wszystkich
 struktur napisanych na tablicy.
 
 Zostaly tez wprowadzone poprawki przy strukturach,
-benchmarku i pochodnych w celu ograniczenia
+benchmarku i pochodnych w celu zmiejszenia
 zuzycia pamieci.
+
+W programie zostaly przy okazji dodane komunikaty
+o pracy konkretnych obiektow kierowane na
+standardowy strumien bledow.
+Kazdy obserwowany oraz obserwator przy tworzeniu
+moze otrzymac identyfikator wykorzystywany
+przy komunikatach.
+
+Dokumentacja zostala kolejny raz sprawdzona
+i uzupelniona. Znaleznione bledy zostaly poprawione.
+
+\end{document}

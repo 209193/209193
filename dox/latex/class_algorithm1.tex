@@ -1,0 +1,223 @@
+\hypertarget{class_algorithm1}{\section{Dokumentacja klasy Algorithm1}
+\label{class_algorithm1}\index{Algorithm1@{Algorithm1}}
+}
+
+
+Klasa \hyperlink{class_algorithm1}{Algorithm1} modelujaca algorytm sortowania stosu. Obiekt tego typu reprezentuje algorytm wykonujacy sortowanie szybkie na elementach stosu. Dziedziczy po klasie \hyperlink{class_benchmark}{Benchmark}.  
+
+
+
+
+{\ttfamily \#include $<$algorithm1.\-hh$>$}
+
+
+
+Diagram dziedziczenia dla Algorithm1\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_algorithm1__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Algorithm1\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_algorithm1__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_algorithm1_ad2b1593378788a36b954b65d1c2af8ff}{Algorithm1} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \hyperlink{class_algorithm1}{Algorithm1}. \end{DoxyCompactList}\item 
+\hyperlink{class_algorithm1_a13f1f7ab415c372d8affcc683ec99240}{Algorithm1} (unsigned short $\ast$\-\_\-tab, int \-\_\-id)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny obiektu \hyperlink{class_algorithm1}{Algorithm1}. \end{DoxyCompactList}\item 
+\hyperlink{class_algorithm1_afbd4d69811879472fcadb25a1c3c5262}{$\sim$\-Algorithm1} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{class_algorithm1}{Algorithm1}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm1_a008c8fdd07c39219099afe14e63e447a}{load} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda przygotowywania algorytmu. Metoda sluzy do przygotowania warunkow do przeprowadzenia testu. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm1_a135dd26c6c741812d75cd7f2f270592d}{unload} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda sprzatania. Metoda sluzy do oproznienia struktury. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_algorithm1_a671a2162843b588704044420c9a5dfa9}{run\-Algorithm} (int \-\_\-border)
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiania algorytmu. Metoda sluzy do wykonywania danego algorytmu. Sortuje elementy stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_stos}{Stos} \hyperlink{class_algorithm1_a3fb7f66d1e4aae77a49c6f7c241f47c9}{stos}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca stos. \end{DoxyCompactList}\item 
+\hyperlink{class_sort}{Sort} \hyperlink{class_algorithm1_a1c9da737fa3cf2373357f558496f09b4}{sort}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca klase sortujaca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 10 pliku algorithm1.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_algorithm1_ad2b1593378788a36b954b65d1c2af8ff}{\index{Algorithm1@{Algorithm1}!Algorithm1@{Algorithm1}}
+\index{Algorithm1@{Algorithm1}!Algorithm1@{Algorithm1}}
+\subsubsection[{Algorithm1}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm1\-::\-Algorithm1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_algorithm1_ad2b1593378788a36b954b65d1c2af8ff}
+
+
+Definicja w linii 24 pliku algorithm1.\-hh.
+
+\hypertarget{class_algorithm1_a13f1f7ab415c372d8affcc683ec99240}{\index{Algorithm1@{Algorithm1}!Algorithm1@{Algorithm1}}
+\index{Algorithm1@{Algorithm1}!Algorithm1@{Algorithm1}}
+\subsubsection[{Algorithm1}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm1\-::\-Algorithm1 (
+\begin{DoxyParamCaption}
+\item[{unsigned short $\ast$}]{\-\_\-tab, }
+\item[{int}]{\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{class_algorithm1_a13f1f7ab415c372d8affcc683ec99240}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-tab} & -\/ tablica przechowujaca dane wejsciowe. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-id} & -\/ identyfikator algorytmu. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 12 pliku algorithm1.\-cpp.
+
+\hypertarget{class_algorithm1_afbd4d69811879472fcadb25a1c3c5262}{\index{Algorithm1@{Algorithm1}!$\sim$\-Algorithm1@{$\sim$\-Algorithm1}}
+\index{$\sim$\-Algorithm1@{$\sim$\-Algorithm1}!Algorithm1@{Algorithm1}}
+\subsubsection[{$\sim$\-Algorithm1}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm1\-::$\sim$\-Algorithm1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_algorithm1_afbd4d69811879472fcadb25a1c3c5262}
+
+
+Definicja w linii 19 pliku algorithm1.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_algorithm1_a008c8fdd07c39219099afe14e63e447a}{\index{Algorithm1@{Algorithm1}!load@{load}}
+\index{load@{load}!Algorithm1@{Algorithm1}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm1\-::load (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm1_a008c8fdd07c39219099afe14e63e447a}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a41f66d36949f1488facb8e3d49c99f67}{Benchmark}.
+
+
+
+Definicja w linii 30 pliku algorithm1.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm1_a008c8fdd07c39219099afe14e63e447a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_algorithm1_a671a2162843b588704044420c9a5dfa9}{\index{Algorithm1@{Algorithm1}!run\-Algorithm@{run\-Algorithm}}
+\index{run\-Algorithm@{run\-Algorithm}!Algorithm1@{Algorithm1}}
+\subsubsection[{run\-Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm1\-::run\-Algorithm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm1_a671a2162843b588704044420c9a5dfa9}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych algorytm ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a33e60395b1e126ca65c3aea3abf6debf}{Benchmark}.
+
+
+
+Definicja w linii 24 pliku algorithm1.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_algorithm1_a671a2162843b588704044420c9a5dfa9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_algorithm1_a135dd26c6c741812d75cd7f2f270592d}{\index{Algorithm1@{Algorithm1}!unload@{unload}}
+\index{unload@{unload}!Algorithm1@{Algorithm1}}
+\subsubsection[{unload}]{\setlength{\rightskip}{0pt plus 5cm}void Algorithm1\-::unload (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-border}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_algorithm1_a135dd26c6c741812d75cd7f2f270592d}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-border} & -\/ ilosc elementow dla ktorych metoda ma wykonac swoje dzialanie. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \hyperlink{class_benchmark_a2dcfb6ee9e648ae88d8c131b2b191bed}{Benchmark}.
+
+
+
+Definicja w linii 36 pliku algorithm1.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_algorithm1_a135dd26c6c741812d75cd7f2f270592d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_algorithm1_a1c9da737fa3cf2373357f558496f09b4}{\index{Algorithm1@{Algorithm1}!sort@{sort}}
+\index{sort@{sort}!Algorithm1@{Algorithm1}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sort} Algorithm1\-::sort\hspace{0.3cm}{\ttfamily [private]}}}\label{class_algorithm1_a1c9da737fa3cf2373357f558496f09b4}
+
+
+Definicja w linii 18 pliku algorithm1.\-hh.
+
+\hypertarget{class_algorithm1_a3fb7f66d1e4aae77a49c6f7c241f47c9}{\index{Algorithm1@{Algorithm1}!stos@{stos}}
+\index{stos@{stos}!Algorithm1@{Algorithm1}}
+\subsubsection[{stos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stos} Algorithm1\-::stos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_algorithm1_a3fb7f66d1e4aae77a49c6f7c241f47c9}
+
+
+Definicja w linii 14 pliku algorithm1.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{algorithm1_8hh}{algorithm1.\-hh}\item 
+\hyperlink{algorithm1_8cpp}{algorithm1.\-cpp}\end{DoxyCompactItemize}

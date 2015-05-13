@@ -3,6 +3,14 @@
 #include "lista.hh"
 
 
+//KOMORKA
+Komorka::Komorka(int _elem) {
+  elem = _elem;
+  next = nullptr;
+}
+
+
+//LISTA
 void Lista::insert_last(int _elem) {
 
   if (head != nullptr) {

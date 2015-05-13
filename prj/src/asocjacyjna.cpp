@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cstring>
-#include <cctype>
 
 #include "asocjacyjna.hh"
+
 
 //STRUKTURA ANODE
 ANode::ANode(const char *_k) {

@@ -19,10 +19,13 @@ protected:
 public:
   /*!
    *\brief Konstruktor struktury TabLista.
+   *Tworzy liste tablicowa o domyslnym rozmiarze rownym 8.
    */
   TabLista();
  /*!
    *\brief Konstruktor parametryczny struktury TabLista.
+   *Tworzy liste tablicowa o zadanym rozmiarze rownym _size.
+   *\param[in] _size - startowy rozmiar struktury.
    */
   TabLista(long _size);
   /*!

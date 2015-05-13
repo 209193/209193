@@ -1,0 +1,138 @@
+\hypertarget{class_writing_observer}{\section{Dokumentacja klasy Writing\-Observer}
+\label{class_writing_observer}\index{Writing\-Observer@{Writing\-Observer}}
+}
+
+
+Klasa \hyperlink{class_writing_observer}{Writing\-Observer} modelujaca zapisujacego obserwatora. Obiekt tego typu reprezentuje obserwatora zapisujacego czas i ilosc elementow dla ktorych dany algorytm sie wykonal. Dziedziczy po klasie \hyperlink{class_observer}{Observer}.  
+
+
+
+
+{\ttfamily \#include $<$writing\-\_\-observer.\-hh$>$}
+
+
+
+Diagram dziedziczenia dla Writing\-Observer\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_writing_observer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Writing\-Observer\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_writing_observer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_writing_observer_a3493eeeaa50bb703c6d30899ccd97c7f}{Writing\-Observer} (\hyperlink{class_benchmark}{Benchmark} $\ast$\-\_\-benchmark, int \-\_\-id)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny obiektu \hyperlink{class_writing_observer}{Writing\-Observer}. Sluzy do dodawania obiektu obserwowanego. Nadaje indeks tworzonemu obiektowi \hyperlink{class_writing_observer}{Writing\-Observer} oraz otwiera plik z benchmarkiem do zapisu. \end{DoxyCompactList}\item 
+\hyperlink{class_writing_observer_a94f0c7b3f3fe9d96771912ddac3f5333}{$\sim$\-Writing\-Observer} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{class_writing_observer}{Writing\-Observer}. Zamyka plik z benchmarkiem. \end{DoxyCompactList}\item 
+void \hyperlink{class_writing_observer_a7b5aa3fa85ae0e1d27ccd8b08366f043}{update} ()
+\begin{DoxyCompactList}\small\item\em Metoda aktualizujaca stan obserwatora. Sluzy do dodawania kolejnych linijek z dana iloscia elementow oraz czasem pobranym z obiektu obserwowanego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_benchmark}{Benchmark} $\ast$ \hyperlink{class_writing_observer_a1db5db63499d7345e7a1ad42316a4f01}{benchmark}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obserwowany algorytm. \end{DoxyCompactList}\item 
+std\-::ofstream \hyperlink{class_writing_observer_a45c8c4d5ae006232061423c657fd1eeb}{ret\-\_\-data}
+\begin{DoxyCompactList}\small\item\em Plik wyjsciowy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 12 pliku writing\-\_\-observer.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_writing_observer_a3493eeeaa50bb703c6d30899ccd97c7f}{\index{Writing\-Observer@{Writing\-Observer}!Writing\-Observer@{Writing\-Observer}}
+\index{Writing\-Observer@{Writing\-Observer}!WritingObserver@{Writing\-Observer}}
+\subsubsection[{Writing\-Observer}]{\setlength{\rightskip}{0pt plus 5cm}Writing\-Observer\-::\-Writing\-Observer (
+\begin{DoxyParamCaption}
+\item[{{\bf Benchmark} $\ast$}]{\-\_\-benchmark, }
+\item[{int}]{\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{class_writing_observer_a3493eeeaa50bb703c6d30899ccd97c7f}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-benchmark} & -\/ obserwowany benchmark. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-id} & -\/ identyfikator obserwatora. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 9 pliku writing\-\_\-observer.\-cpp.
+
+\hypertarget{class_writing_observer_a94f0c7b3f3fe9d96771912ddac3f5333}{\index{Writing\-Observer@{Writing\-Observer}!$\sim$\-Writing\-Observer@{$\sim$\-Writing\-Observer}}
+\index{$\sim$\-Writing\-Observer@{$\sim$\-Writing\-Observer}!WritingObserver@{Writing\-Observer}}
+\subsubsection[{$\sim$\-Writing\-Observer}]{\setlength{\rightskip}{0pt plus 5cm}Writing\-Observer\-::$\sim$\-Writing\-Observer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_writing_observer_a94f0c7b3f3fe9d96771912ddac3f5333}
+
+
+Definicja w linii 23 pliku writing\-\_\-observer.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_writing_observer_a7b5aa3fa85ae0e1d27ccd8b08366f043}{\index{Writing\-Observer@{Writing\-Observer}!update@{update}}
+\index{update@{update}!WritingObserver@{Writing\-Observer}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Writing\-Observer\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_writing_observer_a7b5aa3fa85ae0e1d27ccd8b08366f043}
+
+
+Implementuje \hyperlink{class_observer_ac75e4b339faeb3ea6fe0a01bf0b4a215}{Observer}.
+
+
+
+Definicja w linii 30 pliku writing\-\_\-observer.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_writing_observer_a7b5aa3fa85ae0e1d27ccd8b08366f043_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_writing_observer_a1db5db63499d7345e7a1ad42316a4f01}{\index{Writing\-Observer@{Writing\-Observer}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!WritingObserver@{Writing\-Observer}}
+\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Benchmark}$\ast$ Writing\-Observer\-::benchmark\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_writing_observer_a1db5db63499d7345e7a1ad42316a4f01}
+
+
+Definicja w linii 17 pliku writing\-\_\-observer.\-hh.
+
+\hypertarget{class_writing_observer_a45c8c4d5ae006232061423c657fd1eeb}{\index{Writing\-Observer@{Writing\-Observer}!ret\-\_\-data@{ret\-\_\-data}}
+\index{ret\-\_\-data@{ret\-\_\-data}!WritingObserver@{Writing\-Observer}}
+\subsubsection[{ret\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ofstream Writing\-Observer\-::ret\-\_\-data\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_writing_observer_a45c8c4d5ae006232061423c657fd1eeb}
+
+
+Definicja w linii 21 pliku writing\-\_\-observer.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{writing__observer_8hh}{writing\-\_\-observer.\-hh}\item 
+\hyperlink{writing__observer_8cpp}{writing\-\_\-observer.\-cpp}\end{DoxyCompactItemize}

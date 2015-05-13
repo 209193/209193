@@ -50,7 +50,6 @@ private:
  *tej strukturze.
  */
 class Mieszajaca {
-
   /*!
    *\brief Wskaznik na lewa tablice elementow.
    */ 
@@ -96,7 +95,7 @@ public:
    */
   Mieszajaca();
   /*!
-   *\brief Konstruktor parametryczny obiektu mieszajaca.
+   *\brief Konstruktor parametryczny obiektu Mieszajaca.
    *\param[in] _size - rozmiar tworzonej tablicy mieszajacej.
    */
   Mieszajaca(long _size);

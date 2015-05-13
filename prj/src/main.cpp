@@ -32,12 +32,15 @@ int main() {
     std::cin >> data[i];
 
  
-  Algorithm1 *test = new Algorithm1(data);
-  WritingObserver *observer = new WritingObserver(test, 1);
+  Algorithm1 *test = new Algorithm1(data, 1);
+  WritingObserver *observer = new WritingObserver(test, 2);
 
   test -> add(observer);
     
   test -> testAlgorithm(test);
+
+  delete observer;
+  delete test;
 
   /*
 

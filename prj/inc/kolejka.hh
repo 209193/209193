@@ -23,11 +23,13 @@ private:
 public:
   /*!
    *\brief Konstruktor obiektu Kolejka.
+   *Tworzy kolejke o domyslnym rozmiarze rownym 8.
    */
   Kolejka();
   /*!
    *\brief Konstruktor parametryczny obiektu Kolejka.
-   *\param[in] _size - rozmiar tworzonej kolejki.
+   *Tworzy kolejke o zadanym rozmiarze rownym _size.
+   *\param[in] _size - startowy rozmiar struktury.
    */
   Kolejka(long _size);
   /*!

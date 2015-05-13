@@ -1,17 +1,17 @@
+#include <iostream>
 #include <algorithm>
 
 #include "tablicowe.hh"
 #include "sort.hh"
 
 void Sort::quicksort(Tablicowe *_struct,int _poczatek, int _koniec) {
-
   int x = _struct -> Tablica()[_poczatek];
   int i = _poczatek;
   int j = _koniec;
   do {
     while (_struct -> Tablica()[i] < x)
       ++i;
-    while (_struct -> Tablica()[j]>x)
+    while (_struct -> Tablica()[j] > x)
       --j;
     if (i <= j) {
       std::swap(_struct -> Tablica()[i], _struct -> Tablica()[j]);
@@ -25,13 +25,12 @@ void Sort::quicksort(Tablicowe *_struct,int _poczatek, int _koniec) {
 
 
 void Sort::optquicksort(Tablicowe *_struct,int _poczatek, int _koniec) {
-
   int x = (_struct -> Tablica()[_poczatek] + _struct -> Tablica()[(_poczatek + _koniec)/2] + _struct -> Tablica()[_koniec])/3;
   int i = _poczatek;
   int j = _koniec;
   do {
       while (_struct -> Tablica()[i] < x) ++i;
-      while (_struct -> Tablica()[j]>x) --j;
+      while (_struct -> Tablica()[j] > x) --j;
       if (i <= j) {
 	std::swap(_struct -> Tablica()[i], _struct -> Tablica()[j]);
 	++i;

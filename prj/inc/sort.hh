@@ -8,6 +8,19 @@
  */
 class Sort {
   /*!
+   *\brief Metoda przywracajaca porzadek kopca.
+   *\param[in] _struct - wskaznik na strukture.
+   *\param[in] _i - indeks elementu kopca.
+   *\param[in] _max - indeks ostatniego elementu kopca.
+   */
+  void heapify(Tablicowe *_struct, int _i, int _max);
+  /*!
+   *\brief Tworzenie struktury kopca z nieuporzadkowanej tablicy.
+   *\param[in] _struct - wskaznik na strukture.
+   */
+  void build_heap(Tablicowe *_struct);
+public:
+  /*!
    *\brief Sortowanie szybkie.
    *\param[in] _struct - wskaznik na strukture.
    *\param[in] _poczatek - poczatek tablicy.
@@ -28,16 +41,6 @@ class Sort {
    *\param[in] _koniec - koniec tablicy.
    */
   void mergesort(Tablicowe *_struct, int _poczatek, int _koniec);
-  /*!
-   *\brief Metoda przywracajaca porzadek kopca.
-   *\param[in] _struct - wskaznik na strukture.
-   */
-  void heapify(Tablicowe *_struct, int _i, int _max);
-  /*!
-   *\brief Tworzenie struktury kopca z nieuporzadkowanej tablicy.
-   *\param[in] _struct - wskaznik na strukture.
-   */
-  void build_heap(Tablicowe *_struct);
   /*!
    *\brief Sortowanie przez kopcowanie.
    *\param[in] _struct - wskaznik na strukture.

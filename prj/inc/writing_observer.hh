@@ -12,10 +12,6 @@
 class WritingObserver: public Observer {
 protected:
   /*!
-   *\brief Identyfikator obserwatora.
-   */
-  int id;
-  /*!
    *\brief Wskaznik na obserwowany algorytm.
    */
   Benchmark *benchmark;
@@ -27,10 +23,11 @@ protected:
 public:
   /*!
    *\brief Konstruktor parametryczny obiektu WritingObserver.
-   *Sluzy do dodawania obserwatorow do listy obserwatorow.
+   *Sluzy do dodawania obiektu obserwowanego.
    *Nadaje indeks tworzonemu obiektowi WritingObserver
    *oraz otwiera plik z benchmarkiem do zapisu.
-   *\param[in] _obs - dany obserwator.
+   *\param[in] _benchmark - obserwowany benchmark.
+   *\param[in] _id - identyfikator obserwatora.
    */
   WritingObserver(Benchmark *_benchmark, int _id);
   /*!

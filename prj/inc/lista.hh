@@ -19,10 +19,10 @@ struct Komorka {
    *\brief Konstruktor paramteryczny obiektu Komorka.
    *\param[in] _elem - wartosc przechowywanego elementu.
    */
-  Komorka(int _elem) {
-    elem = _elem;
-    next = nullptr;
-  }
+  Komorka(int _elem);
+  /*!
+   *\brief Destruktor obiektu Komorka.
+   */  
   ~Komorka() {}
 };
 

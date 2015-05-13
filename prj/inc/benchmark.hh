@@ -41,9 +41,10 @@ public:
   /*!
    *\brief Konstrukor parametryczny obiektu Benchmark.
    *Kopiuje wskazink na wczytana tablice elementow.
-   *\param[in] - _tab - tablica elementow.
+   *\param[in] _tab - tablica elementow.
+   *\param[in] _id - identyfikator benchmarku.
    */
-  Benchmark(unsigned short *_tab): tab(_tab) {}
+  Benchmark(unsigned short *_tab, int _id): Subject(_id), tab(_tab) {}
   /*!
    *\brief Destruktor obiektu Benchmark.
    */
