@@ -16,6 +16,7 @@ program: obj/main.o\
 		obj/tab_lista.o\
 		obj/asocjacyjna.o\
 		obj/mieszajaca.o\
+		obj/binary_tree.o\
 		obj/algorithm1.o\
 		obj/algorithm2.o\
 		obj/algorithm3.o\
@@ -34,6 +35,7 @@ program: obj/main.o\
 		obj/tab_lista.o\
 		obj/asocjacyjna.o\
 		obj/mieszajaca.o\
+		obj/binary_tree.o\
 		obj/algorithm1.o\
 		obj/algorithm2.o\
 		obj/algorithm3.o\
@@ -52,6 +54,7 @@ obj/main.o: src/main.cpp\
 		inc/tab_lista.hh\
 		inc/asocjacyjna.hh\
 		inc/mieszajaca.hh\
+		inc/binary_tree.hh\
 		inc/algorithm1.hh\
 		inc/algorithm2.hh\
 		inc/algorithm3.hh\
@@ -69,6 +72,9 @@ obj/algorithm2.o: src/algorithm2.cpp inc/algorithm2.hh
 
 obj/algorithm1.o: src/algorithm1.cpp inc/algorithm1.hh
 	g++ ${CPPFLAGS} -o obj/algorithm1.o src/algorithm1.cpp
+
+obj/binary_tree.o: src/binary_tree.cpp inc/binary_tree.hh
+	g++ ${CPPFLAGS} -o obj/binary_tree.o src/binary_tree.cpp
 
 obj/mieszajaca.o: src/mieszajaca.cpp inc/mieszajaca.hh
 	g++ ${CPPFLAGS} -o obj/mieszajaca.o src/mieszajaca.cpp

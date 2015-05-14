@@ -12,6 +12,7 @@
 #include "tab_lista.hh"
 #include "asocjacyjna.hh"
 #include "mieszajaca.hh"
+#include "binary_tree.hh"
 #include "algorithm1.hh"
 #include "algorithm2.hh"
 #include "algorithm3.hh"
@@ -31,7 +32,7 @@ int main() {
   for(int i=0; i<SIZE; ++i)
     std::cin >> data[i];
 
- 
+  /*
   Algorithm1 *test = new Algorithm1(data, 1);
   WritingObserver *observer = new WritingObserver(test, 2);
 
@@ -41,17 +42,16 @@ int main() {
 
   delete observer;
   delete test;
+  */
 
-  /*
+  BinaryTree *tree = new BinaryTree;
 
-    Lista *temp = new Lista;
-    temp -> insert_last(3);
-  temp -> insert_last(5);
-  temp -> insert_last(4);
-  int x = temp -> remove_front();
-  int y = temp -> remove_front();
-  int z = temp -> remove_front();
-  std::cout << x << y << z;
-    */
+  tree -> add(5);
+  tree -> add(6);
+  tree -> add(3);
+  tree -> add(4);
+
+  std::cout << tree -> getvar(6);
+
   return 0;
 }
