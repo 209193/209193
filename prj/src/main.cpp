@@ -26,5 +26,16 @@ int main() {
   for(int i=0; i<SIZE; ++i)
     std::cin >> data[i];
 
+  Benchmark *bench = new Benchmark();//klasa testujaca czas
+  Algorithm1 *alg1 = new Algorithm1(data);
+  Algorithm2 *alg2 = new Algorithm2(data);
+  Algorithm3 *alg3 = new Algorithm3(data);
+  Algorithm4 *alg4 = new Algorithm4(data);
+
+  bench -> testAlgorithm(alg1,0);
+  bench -> testAlgorithm(alg2,1);
+  bench -> testAlgorithm(alg3,2);
+  bench -> testAlgorithm(alg4,3);
+
   return 0;
 }
