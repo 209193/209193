@@ -1,0 +1,106 @@
+\hypertarget{class_observer}{\section{Dokumentacja klasy Observer}
+\label{class_observer}\index{Observer@{Observer}}
+}
+
+
+Klasa \hyperlink{class_observer}{Observer} modelujaca obserwatora. Jest to klasa modelujaca ogolnego obserwatora. Przeznaczona jedynie do dziedziczenia.  
+
+
+
+
+{\ttfamily \#include $<$observer.\-hh$>$}
+
+
+
+Diagram dziedziczenia dla Observer
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_observer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_observer_a46f35957f410c0390ccfd03440b5b558}{tell\-\_\-id} ()
+\begin{DoxyCompactList}\small\item\em Metoda identyfikacji obserwatora. Sluzy do informowania o identyfikatorze obserwatora. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_observer_ac75e4b339faeb3ea6fe0a01bf0b4a215}{update} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda aktualizujaca stan obserwatora. W klasie \hyperlink{class_observer}{Observer} nie ma konkretnego dzialania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_observer_ac67c499a5b16953f268840890fd7e6ab}{id}
+\begin{DoxyCompactList}\small\item\em Identyfikator obserwatora. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_observer_a6e82806d2c300975d1e194798af109d2}{state\-\_\-id} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna zliczajaca aktualizacje. Sluzy do przechowywania informacji o wykonanych aktualizacjach obserwatora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 9 pliku observer.\-hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_observer_a46f35957f410c0390ccfd03440b5b558}{\index{Observer@{Observer}!tell\-\_\-id@{tell\-\_\-id}}
+\index{tell\-\_\-id@{tell\-\_\-id}!Observer@{Observer}}
+\subsubsection[{tell\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}int Observer\-::tell\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_observer_a46f35957f410c0390ccfd03440b5b558}
+\begin{DoxyReturn}{Zwraca}
+identyfikator obserwatora. 
+\end{DoxyReturn}
+
+
+Definicja w linii 4 pliku observer.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_observer_a46f35957f410c0390ccfd03440b5b558_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_observer_ac75e4b339faeb3ea6fe0a01bf0b4a215}{\index{Observer@{Observer}!update@{update}}
+\index{update@{update}!Observer@{Observer}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Observer\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_observer_ac75e4b339faeb3ea6fe0a01bf0b4a215}
+
+
+Implementowany w \hyperlink{class_writing_observer_a7b5aa3fa85ae0e1d27ccd8b08366f043}{Writing\-Observer}.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_observer_ac67c499a5b16953f268840890fd7e6ab}{\index{Observer@{Observer}!id@{id}}
+\index{id@{id}!Observer@{Observer}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Observer\-::id\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_observer_ac67c499a5b16953f268840890fd7e6ab}
+
+
+Definicja w linii 14 pliku observer.\-hh.
+
+\hypertarget{class_observer_a6e82806d2c300975d1e194798af109d2}{\index{Observer@{Observer}!state\-\_\-id@{state\-\_\-id}}
+\index{state\-\_\-id@{state\-\_\-id}!Observer@{Observer}}
+\subsubsection[{state\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Observer\-::state\-\_\-id = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_observer_a6e82806d2c300975d1e194798af109d2}
+
+
+Definicja w linii 20 pliku observer.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{observer_8hh}{observer.\-hh}\item 
+\hyperlink{observer_8cpp}{observer.\-cpp}\end{DoxyCompactItemize}

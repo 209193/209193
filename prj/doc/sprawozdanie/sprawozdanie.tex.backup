@@ -1,0 +1,29 @@
+\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{pdflscape}
+
+\title{Laboratorium 8}
+\author{Filip Malinowski}
+\date{\today}
+
+\pdfinfo{%
+  /Title    (Laboratorium 8)
+  /Author   (Filip Malinowski)
+}
+
+\begin{document}
+
+\title{Sprawozdanie z laboratorium 8}
+\author{Filip Malinowski}
+\date{\today}
+
+\maketitle
+
+Do programu zostały dodane drzewo binarne oraz
+drzewo czerwono-czarne.
+
+\end{document}

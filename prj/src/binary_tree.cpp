@@ -11,121 +11,126 @@ TNode::TNode(int _elem) {
   right = nullptr;
 }
 
-
-bool TNode::operator== (TNode *_node) {
-  if (this -> elem == _node -> elem) return true;
-  else return false;
-}
-
-
-bool TNode::operator== (int _elem) {
-  if (this -> elem == _elem) return true;
-  else return false;
-}
-
-
-bool TNode::operator> (TNode *_node) {
-  if (this -> elem > _node -> elem) return true;
-  else return false;
-}
-
-
-bool TNode::operator> (int _elem) {
-  if (this -> elem > _elem) return true;
-  else return false;
-}
-
-
-bool TNode::operator< (TNode *_node) {
-  if (this -> elem < _node -> elem) return true;
-  else return false;
-}
-
-
-bool TNode::operator< (int _elem) {
-  if (this -> elem < _elem) return true;
-  else return false;
-}
-
 //BINARY TREE
-void BinaryTree::add(int _elem) {
+TNode* BinaryTree::look(TNode *_node, int _elem) {
+  if (_node == nullptr) return nullptr;
 
-  if (root != nullptr) {
-    TNode *temp = new TNode(_elem);
-    temp -> top = root;
-    if (temp == nullptr) std::cerr << "Blad alokacji" << std::endl;
+  if (_node -> elem == _elem) return _node;
+  else {
+    if (_node -> elem < _elem)
+      return look(_node -> right, _elem);
+    else return look(_node -> left, _elem);
+  }
+}
 
-    if (temp -> top -> left == nullptr || temp -> top -> right != nullptr) {
-      std::cerr << "Seeking place" << std::endl;
-      if (*(temp -> top) > temp && temp -> top -> left != nullptr) {
-	temp -> top = temp -> top -> left;
-	std::cerr << "Went lvl down to the left" << std::endl;
-      }
-      else if (*(temp -> top) < temp && temp -> top -> right != nullptr) {
-	temp -> top = temp -> top -> right;
-	std::cerr << "Went lvl down to the right" << std::endl;
-      }
-      else if (*(temp -> top) > temp) {
-	temp -> top -> left = temp;
-	std::cerr << "Elem " << _elem << " added to left" << std::endl;
-	return;
-      }
-      else if (*(temp -> top) < temp) {
-	temp -> top -> right = temp;
-	std::cerr << "Elem " << _elem << " added to right" << std::endl;
-	return;
-      }
-    }
-    
-    while (temp -> top -> left != nullptr || temp -> top -> right != nullptr) {
-      std::cerr << "Seeking place" << std::endl;
-      if (*(temp -> top) > temp && temp -> top -> left != nullptr) {
-	temp -> top = temp -> top -> left;
-	std::cerr << "Went lvl down to the left" << std::endl;
-      }
-      else if (*(temp -> top) < temp && temp -> top -> right != nullptr) {
-	temp -> top = temp -> top -> right;
-	std::cerr << "Went lvl down to the right" << std::endl;
-      }
-      else if (*(temp -> top) > temp) {
-	temp -> top -> left = temp;
-	std::cerr << "Elem " << _elem << " added to left" << std::endl;
-	return;
-      }
-      else if (*(temp -> top) < temp) {
-	temp -> top -> right = temp;
-	std::cerr << "Elem " << _elem << " added to right" << std::endl;
-	return;
-      }
+TNode* BinaryTree::look(int _elem) {
+  TNode *node = root;
+  if (node == nullptr) return nullptr;
+  
+  if (node -> elem == _elem) return node;
+  else {
+    if (node -> elem < _elem)
+      return look(node -> right, _elem);
+    else return look(node -> left, _elem);
+  }
+}
+
+TNode* BinaryTree::min_elem() {
+  TNode *node = root;
+
+  if (node == nullptr) return nullptr;
+  while (node -> left) node = node -> left;
+  return node;
+}
+
+TNode* BinaryTree::max_elem() {
+  TNode *node = root;
+
+  if (node == nullptr) return nullptr;
+  while (node -> right) node = node -> right;
+  return node;
+}
+
+TNode* BinaryTree::new_node(int _elem) {
+  TNode *node = new TNode(_elem);
+  
+  return node;
+}
+
+void BinaryTree::add_elem(TNode *_node, int _elem) {
+  TNode *temp;
+
+  if (_node == nullptr) _node = new_node(_elem);
+  else if (_node -> elem > _elem) {
+    if (_node -> left != nullptr) add_elem(_node -> left, _elem);
+    else {
+      temp = new_node(_elem);
+      temp -> top = _node;
+      _node -> left = temp;
     }
   }
   else {
-    root = new TNode(_elem);
-    std::cerr << "Node created with elem " << root -> elem << std::endl;
-    return;
+    if (_node -> right != nullptr) add_elem(_node -> right, _elem);
+    else {
+      temp = new_node(_elem);
+      temp -> top = _node;
+      _node -> right = temp;
+    }
   }
-  
-  std::cerr << "Something went wrong with elem " << _elem << std::endl;
 }
 
-
-int BinaryTree::getvar(int _elem) {
+void BinaryTree::add_elem(int _elem) {
   TNode *temp;
-  temp = root;
 
-  if (*temp == _elem)
-    return temp -> elem;
-  
-  while (temp -> left != nullptr || temp -> right != nullptr) {
-    if (*temp > _elem && temp -> left != nullptr) {
-      temp = temp -> left;
-      if (*temp == _elem) return temp -> elem;
-    }
-    else if (*temp < _elem && temp -> right != nullptr) {
-      temp = temp -> right;
-      if (*temp == _elem) return temp -> elem;
+  if (root == nullptr) root = new_node(_elem);
+  else if (root -> elem > _elem) {
+    if (root -> left != nullptr) add_elem(root, _elem);
+    else {
+      temp = new_node(_elem);
+      temp -> top = root;
+      root -> left = temp;
     }
   }
+  else {
+    if (root -> right != nullptr) add_elem(root, _elem);
+    else {
+      temp = new_node(_elem);
+      temp -> top = root;
+      root -> right = temp;
+    }
+  }
+}
 
-  return -1;
+void BinaryTree::clear(TNode *_node) {
+  if (_node != nullptr) {
+    clear(_node -> left);
+    clear(_node -> right);
+    delete _node;
+  }
+}
+
+void BinaryTree::clear() {
+  TNode *node = root;
+
+  if (node != nullptr) {
+    clear(node -> left);
+    clear(node -> right);
+    delete node;
+  }
+}
+
+void BinaryTree::print_tree(TNode *_node) {
+  if (_node == nullptr) return;
+  print_tree(_node -> left);
+  //std::cout << _node -> elem << " ";
+  print_tree(_node -> right);
+}
+
+void BinaryTree::print_tree() {
+  TNode *node = root;
+
+  if (node == nullptr) return;
+  print_tree(node -> left);
+  //std::cout << node -> elem << " ";
+  print_tree(node -> right);
 }

@@ -6,12 +6,12 @@
 #include "writing_observer.hh"
 
 
-WritingObserver::WritingObserver(Benchmark *_benchmark, int _id) {
+WritingObserver::WritingObserver(Benchmark *_benchmark, int _id, std::string _string) {
   std::cerr << "WritingObserver created. Id: " << _id << std::endl;
 
   benchmark = _benchmark;
   id = _id;
-  ret_data.open("ret_data.txt", std::ofstream::out | std::ofstream::trunc);
+  ret_data.open(_string, std::ofstream::out | std::ofstream::trunc);
 
   if (ret_data.is_open()) {
     ret_data << "elem\ttime" << std::endl;//zapisujemy naglowek pliku

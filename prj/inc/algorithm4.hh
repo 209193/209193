@@ -9,13 +9,9 @@
  */
 class Algorithm4: public Benchmark {
   /*!
-   *\brief Zmienna przechowujaca stos.
+   *\brief Zmienna przechowujaca drzewo czerwono-czarne.
    */ 
-  Stos stos;
-  /*!
-   *\brief Zmienna przechowujaca klase sortujaca.
-   */ 
-  Sort sort;
+  RBTree tree;
 
 public:
   /*!

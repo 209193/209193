@@ -9,13 +9,9 @@
  */
 class Algorithm1: public Benchmark {
   /*!
-   *\brief Zmienna przechowujaca stos.
+   *\brief Zmienna przechowujaca drzewo binarne.
    */ 
-  Stos stos;
-  /*!
-   *\brief Zmienna przechowujaca klase sortujaca.
-   */ 
-  Sort sort;
+  BinaryTree tree;
 
 public:
   /*!

@@ -1,0 +1,331 @@
+\hypertarget{class_r_b_tree}{\section{Dokumentacja klasy R\-B\-Tree}
+\label{class_r_b_tree}\index{R\-B\-Tree@{R\-B\-Tree}}
+}
+
+
+{\ttfamily \#include $<$rb\-\_\-tree.\-hh$>$}
+
+
+
+Diagram współpracy dla R\-B\-Tree\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_r_b_tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}{R\-B\-Tree} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \hyperlink{class_r_b_tree}{R\-B\-Tree}. \end{DoxyCompactList}\item 
+\hyperlink{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}{$\sim$\-R\-B\-Tree} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{class_r_b_tree}{R\-B\-Tree}. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_b_tree_aa0127eced84667918a344ee7739b9811}{clear} ()
+\begin{DoxyCompactList}\small\item\em Metoda oprozniania drzewa. Metoda sluzy do usuwania wszystkich elementow z drzewa. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_b_tree_af045f7f6e6bfc35cab6cb94c5c0d305f}{print\-\_\-tree} ()
+\begin{DoxyCompactList}\small\item\em Metoda drukowania drzewa. Metoda sluzy do wypisywania wszystkich elementow z drzewa na std out. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_b_tree_a0025428da80878d6965d80f2b94572f3}{rot\-\_\-left} (\hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda rotacji. Metoda sluzy do rotacji w lewo wzgledem komorki \-\_\-node. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_b_tree_aaabf0c18f855a0ba78f165668ec01fda}{rot\-\_\-right} (\hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda rotacji. Metoda sluzy do rotacji w prawo wzgledem komorki \-\_\-node. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_b_tree_a48854977f8fd0b49f99ef1ec19dc1d16}{add\-\_\-elem} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda dodawania elementu. Metoda sluzy do dodawania elementu o zadanej wartosci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_r_b_tree_aaae99736aba689ed1bf78fae6cdc2136}{print\-\_\-tree} (\hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda drukowania drzewa. Metoda sluzy do wypisywania wszystkich elementow z drzewa na std out. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_b_tree_ade98f364326386c42f0da62b9ab5f950}{clear} (\hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda oprozniania drzewa. Metoda sluzy do usuwania wszystkich elementow z drzewa. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$ \hyperlink{class_r_b_tree_a259103b092340c5b64aabff1d9bc644c}{root}
+\begin{DoxyCompactList}\small\item\em Wskaznik na korzen drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 38 pliku rb\-\_\-tree.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}{\index{R\-B\-Tree@{R\-B\-Tree}!R\-B\-Tree@{R\-B\-Tree}}
+\index{R\-B\-Tree@{R\-B\-Tree}!RBTree@{R\-B\-Tree}}
+\subsubsection[{R\-B\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}R\-B\-Tree\-::\-R\-B\-Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_a19921f34f32f777bb3c4b85d4ff1d9de}
+
+
+Definicja w linii 16 pliku rb\-\_\-tree.\-cpp.
+
+\hypertarget{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}{\index{R\-B\-Tree@{R\-B\-Tree}!$\sim$\-R\-B\-Tree@{$\sim$\-R\-B\-Tree}}
+\index{$\sim$\-R\-B\-Tree@{$\sim$\-R\-B\-Tree}!RBTree@{R\-B\-Tree}}
+\subsubsection[{$\sim$\-R\-B\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}R\-B\-Tree\-::$\sim$\-R\-B\-Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b}
+
+
+Definicja w linii 40 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_r_b_tree_abab51e54e07c1adf0ca0c9a5d466427b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_r_b_tree_a48854977f8fd0b49f99ef1ec19dc1d16}{\index{R\-B\-Tree@{R\-B\-Tree}!add\-\_\-elem@{add\-\_\-elem}}
+\index{add\-\_\-elem@{add\-\_\-elem}!RBTree@{R\-B\-Tree}}
+\subsubsection[{add\-\_\-elem}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::add\-\_\-elem (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_a48854977f8fd0b49f99ef1ec19dc1d16}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ wartosc elementu. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 89 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_r_b_tree_a48854977f8fd0b49f99ef1ec19dc1d16_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_r_b_tree_a48854977f8fd0b49f99ef1ec19dc1d16_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_r_b_tree_ade98f364326386c42f0da62b9ab5f950}{\index{R\-B\-Tree@{R\-B\-Tree}!clear@{clear}}
+\index{clear@{clear}!RBTree@{R\-B\-Tree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::clear (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-B\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_r_b_tree_ade98f364326386c42f0da62b9ab5f950}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na startowa komorke. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 21 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_r_b_tree_ade98f364326386c42f0da62b9ab5f950_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_r_b_tree_ade98f364326386c42f0da62b9ab5f950_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_r_b_tree_aa0127eced84667918a344ee7739b9811}{\index{R\-B\-Tree@{R\-B\-Tree}!clear@{clear}}
+\index{clear@{clear}!RBTree@{R\-B\-Tree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_aa0127eced84667918a344ee7739b9811}
+
+
+Definicja w linii 30 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_b_tree_aa0127eced84667918a344ee7739b9811_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_r_b_tree_aaae99736aba689ed1bf78fae6cdc2136}{\index{R\-B\-Tree@{R\-B\-Tree}!print\-\_\-tree@{print\-\_\-tree}}
+\index{print\-\_\-tree@{print\-\_\-tree}!RBTree@{R\-B\-Tree}}
+\subsubsection[{print\-\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::print\-\_\-tree (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-B\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_r_b_tree_aaae99736aba689ed1bf78fae6cdc2136}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na startowa komorke. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 44 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_r_b_tree_aaae99736aba689ed1bf78fae6cdc2136_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_r_b_tree_aaae99736aba689ed1bf78fae6cdc2136_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_r_b_tree_af045f7f6e6bfc35cab6cb94c5c0d305f}{\index{R\-B\-Tree@{R\-B\-Tree}!print\-\_\-tree@{print\-\_\-tree}}
+\index{print\-\_\-tree@{print\-\_\-tree}!RBTree@{R\-B\-Tree}}
+\subsubsection[{print\-\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::print\-\_\-tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_af045f7f6e6bfc35cab6cb94c5c0d305f}
+
+
+Definicja w linii 51 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_b_tree_af045f7f6e6bfc35cab6cb94c5c0d305f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_r_b_tree_a0025428da80878d6965d80f2b94572f3}{\index{R\-B\-Tree@{R\-B\-Tree}!rot\-\_\-left@{rot\-\_\-left}}
+\index{rot\-\_\-left@{rot\-\_\-left}!RBTree@{R\-B\-Tree}}
+\subsubsection[{rot\-\_\-left}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::rot\-\_\-left (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-B\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_a0025428da80878d6965d80f2b94572f3}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ komorka, wzgledem ktorej wykonywana jest rotacja. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 61 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_b_tree_a0025428da80878d6965d80f2b94572f3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_r_b_tree_aaabf0c18f855a0ba78f165668ec01fda}{\index{R\-B\-Tree@{R\-B\-Tree}!rot\-\_\-right@{rot\-\_\-right}}
+\index{rot\-\_\-right@{rot\-\_\-right}!RBTree@{R\-B\-Tree}}
+\subsubsection[{rot\-\_\-right}]{\setlength{\rightskip}{0pt plus 5cm}void R\-B\-Tree\-::rot\-\_\-right (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-B\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)}}\label{class_r_b_tree_aaabf0c18f855a0ba78f165668ec01fda}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ komorka, wzgledem ktorej wykonywana jest rotacja. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 75 pliku rb\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_b_tree_aaabf0c18f855a0ba78f165668ec01fda_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_r_b_tree_a259103b092340c5b64aabff1d9bc644c}{\index{R\-B\-Tree@{R\-B\-Tree}!root@{root}}
+\index{root@{root}!RBTree@{R\-B\-Tree}}
+\subsubsection[{root}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-B\-Node}$\ast$ R\-B\-Tree\-::root\hspace{0.3cm}{\ttfamily [private]}}}\label{class_r_b_tree_a259103b092340c5b64aabff1d9bc644c}
+
+
+Definicja w linii 42 pliku rb\-\_\-tree.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rb__tree_8hh}{rb\-\_\-tree.\-hh}\item 
+\hyperlink{rb__tree_8cpp}{rb\-\_\-tree.\-cpp}\end{DoxyCompactItemize}

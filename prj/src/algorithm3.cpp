@@ -1,8 +1,6 @@
 #include <iostream>
 
-#include "tablicowe.hh"
-#include "sort.hh"
-#include "stos.hh"
+#include "rb_tree.hh"
 #include "observer.hh"
 #include "subject.hh"
 #include "benchmark.hh"
@@ -23,17 +21,17 @@ Algorithm3::~Algorithm3() {
 
 void Algorithm3::runAlgorithm(int _border) {
   std::cerr << "Algorithm run." << std::endl;
-  sort.heapsort(&stos, _border-1);
+  for (int i=0; i<_border; ++i)
+    tree.add_elem(tab[i]);
 }
 
 
 void Algorithm3::load(int _border) {
   std::cerr << "Algorithm loaded." << std::endl;
-  for (int i=0; i<_border; ++i) stos.push(tab[i]);
 }
 
 
 void Algorithm3::unload(int _border) {
   std::cerr << "Algorithm unloaded." << std::endl;
-  for (int i=0; i<_border; ++i) stos.pop();
+  tree.clear();
 }

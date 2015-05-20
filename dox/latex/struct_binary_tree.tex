@@ -1,0 +1,449 @@
+\hypertarget{struct_binary_tree}{\section{Dokumentacja struktury Binary\-Tree}
+\label{struct_binary_tree}\index{Binary\-Tree@{Binary\-Tree}}
+}
+
+
+{\ttfamily \#include $<$binary\-\_\-tree.\-hh$>$}
+
+
+
+Diagram współpracy dla Binary\-Tree\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{struct_binary_tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_binary_tree_adf45bce605436b26c353b87e27bffe50}{Binary\-Tree} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \hyperlink{struct_binary_tree}{Binary\-Tree}. \end{DoxyCompactList}\item 
+\hyperlink{struct_binary_tree_a48c23a22a8400765d099e0e6fcebc236}{$\sim$\-Binary\-Tree} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{struct_binary_tree}{Binary\-Tree}. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_binary_tree_a478377892185d59a6af540ad1e667898}{look} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda poszukiwania elementu. Metoda sluzy do szukania elementu o danej wartosci. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_binary_tree_a224960241e35019ce084f25632a4dbcd}{min\-\_\-elem} ()
+\begin{DoxyCompactList}\small\item\em Metoda poszukiwania najmniejszego elementu. Metoda sluzy do poszukiwania najmniejszego elementu drzewa przez poszukiwanie lewego konca drzewa. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_binary_tree_a858b64e28ff27071b08ec57af7ea1f50}{max\-\_\-elem} ()
+\begin{DoxyCompactList}\small\item\em Metoda poszukiwania najwiekszego elementu. Metoda sluzy do poszukiwania najwiekszego elementu drzewa przez poszukiwanie prawego konca drzewa. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_a2cba03e2583aa1aaba6e610e21fb7521}{add\-\_\-elem} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda dodawania elementu. Metoda sluzy do dodawania elementu o zadanej wartosci. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_a2c72362db265ea08bb9ab45e285eb4a1}{is\-\_\-\-B\-S\-T} ()
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzania struktury drzewa. Metoda sluzy do sprawdzania czy drzewo ma strukture binarnego drzewa poszukiwan. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_ad0e4ce622ad8abf4dfb0f051e9c9af92}{clear} ()
+\begin{DoxyCompactList}\small\item\em Metoda oprozniania drzewa. Metoda sluzy do usuwania wszystkich elementow z drzewa. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_a8f557920c17957b4ae378727ac898c18}{print\-\_\-tree} ()
+\begin{DoxyCompactList}\small\item\em Metoda drukowania drzewa. Metoda sluzy do wypisywania wszystkich elementow z drzewa na std out. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_binary_tree_a47e590bb37b4b419ac9eff13fb03b6cf}{look} (\hyperlink{struct_t_node}{T\-Node} $\ast$\-\_\-node, int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda poszukiwania elementu. Metoda sluzy do szukania elementu o danej wartosci. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_binary_tree_a749356c206465c8c4b7ef905a2a75f63}{new\-\_\-node} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda tworzenia komorki. Metoda sluzy do tworzenia komorki o zadanej wartosci. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_acffce31cb381fa5fd9029e420ec7bceb}{add\-\_\-elem} (\hyperlink{struct_t_node}{T\-Node} $\ast$\-\_\-node, int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda dodawania elementu. Metoda sluzy do dodawania elementu o zadanej wartosci. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_a95191528b6584bd3f05e38a91069f050}{is\-\_\-\-B\-S\-T} (\hyperlink{struct_t_node}{T\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzania struktury drzewa. Metoda sluzy do sprawdzania czy drzewo ma strukture binarnego drzewa poszukiwan. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_a71e2586551ccbaff9b2dfcc61c27820f}{clear} (\hyperlink{struct_t_node}{T\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda oprozniania drzewa. Metoda sluzy do usuwania wszystkich elementow z drzewa. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\item 
+void \hyperlink{struct_binary_tree_ae0183134e9d30f5a61869df126e8bc2c}{print\-\_\-tree} (\hyperlink{struct_t_node}{T\-Node} $\ast$\-\_\-node)
+\begin{DoxyCompactList}\small\item\em Metoda drukowania drzewa. Metoda sluzy do wypisywania wszystkich elementow z drzewa na std out. Wykonuje swoje dzialanie rekurencyjnie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_binary_tree_a154cd3336ceeeb98481e70aa973007b4}{root}
+\begin{DoxyCompactList}\small\item\em Wskaznik na korzen drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 33 pliku binary\-\_\-tree.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_binary_tree_adf45bce605436b26c353b87e27bffe50}{\index{Binary\-Tree@{Binary\-Tree}!Binary\-Tree@{Binary\-Tree}}
+\index{Binary\-Tree@{Binary\-Tree}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{Binary\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}Binary\-Tree\-::\-Binary\-Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_binary_tree_adf45bce605436b26c353b87e27bffe50}
+
+
+Definicja w linii 89 pliku binary\-\_\-tree.\-hh.
+
+\hypertarget{struct_binary_tree_a48c23a22a8400765d099e0e6fcebc236}{\index{Binary\-Tree@{Binary\-Tree}!$\sim$\-Binary\-Tree@{$\sim$\-Binary\-Tree}}
+\index{$\sim$\-Binary\-Tree@{$\sim$\-Binary\-Tree}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{$\sim$\-Binary\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}Binary\-Tree\-::$\sim$\-Binary\-Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_binary_tree_a48c23a22a8400765d099e0e6fcebc236}
+
+
+Definicja w linii 93 pliku binary\-\_\-tree.\-hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{struct_binary_tree_acffce31cb381fa5fd9029e420ec7bceb}{\index{Binary\-Tree@{Binary\-Tree}!add\-\_\-elem@{add\-\_\-elem}}
+\index{add\-\_\-elem@{add\-\_\-elem}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{add\-\_\-elem}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::add\-\_\-elem (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-Node} $\ast$}]{\-\_\-node, }
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_binary_tree_acffce31cb381fa5fd9029e420ec7bceb}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na komorke. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ wartosc. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 60 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{struct_binary_tree_acffce31cb381fa5fd9029e420ec7bceb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{struct_binary_tree_acffce31cb381fa5fd9029e420ec7bceb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_a2cba03e2583aa1aaba6e610e21fb7521}{\index{Binary\-Tree@{Binary\-Tree}!add\-\_\-elem@{add\-\_\-elem}}
+\index{add\-\_\-elem@{add\-\_\-elem}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{add\-\_\-elem}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::add\-\_\-elem (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_a2cba03e2583aa1aaba6e610e21fb7521}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ wartosc elementu. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 82 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_binary_tree_a2cba03e2583aa1aaba6e610e21fb7521_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_a71e2586551ccbaff9b2dfcc61c27820f}{\index{Binary\-Tree@{Binary\-Tree}!clear@{clear}}
+\index{clear@{clear}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::clear (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_binary_tree_a71e2586551ccbaff9b2dfcc61c27820f}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na startowa komorke. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 104 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{struct_binary_tree_a71e2586551ccbaff9b2dfcc61c27820f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{struct_binary_tree_a71e2586551ccbaff9b2dfcc61c27820f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_ad0e4ce622ad8abf4dfb0f051e9c9af92}{\index{Binary\-Tree@{Binary\-Tree}!clear@{clear}}
+\index{clear@{clear}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_ad0e4ce622ad8abf4dfb0f051e9c9af92}
+
+
+Definicja w linii 112 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_binary_tree_ad0e4ce622ad8abf4dfb0f051e9c9af92_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_a95191528b6584bd3f05e38a91069f050}{\index{Binary\-Tree@{Binary\-Tree}!is\-\_\-\-B\-S\-T@{is\-\_\-\-B\-S\-T}}
+\index{is\-\_\-\-B\-S\-T@{is\-\_\-\-B\-S\-T}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{is\-\_\-\-B\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::is\-\_\-\-B\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_binary_tree_a95191528b6584bd3f05e38a91069f050}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na startowa komorke. \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_binary_tree_a2c72362db265ea08bb9ab45e285eb4a1}{\index{Binary\-Tree@{Binary\-Tree}!is\-\_\-\-B\-S\-T@{is\-\_\-\-B\-S\-T}}
+\index{is\-\_\-\-B\-S\-T@{is\-\_\-\-B\-S\-T}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{is\-\_\-\-B\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::is\-\_\-\-B\-S\-T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_a2c72362db265ea08bb9ab45e285eb4a1}
+\hypertarget{struct_binary_tree_a47e590bb37b4b419ac9eff13fb03b6cf}{\index{Binary\-Tree@{Binary\-Tree}!look@{look}}
+\index{look@{look}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{look}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node} $\ast$ Binary\-Tree\-::look (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-Node} $\ast$}]{\-\_\-node, }
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_binary_tree_a47e590bb37b4b419ac9eff13fb03b6cf}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na komorke \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ dodawany element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+poszukiwana komorka. 
+\end{DoxyReturn}
+
+
+Definicja w linii 15 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{struct_binary_tree_a47e590bb37b4b419ac9eff13fb03b6cf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_a478377892185d59a6af540ad1e667898}{\index{Binary\-Tree@{Binary\-Tree}!look@{look}}
+\index{look@{look}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{look}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node} $\ast$ Binary\-Tree\-::look (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_a478377892185d59a6af540ad1e667898}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ dodawany element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+poszukiwana komorka. 
+\end{DoxyReturn}
+
+
+Definicja w linii 26 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{struct_binary_tree_a478377892185d59a6af540ad1e667898_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_a858b64e28ff27071b08ec57af7ea1f50}{\index{Binary\-Tree@{Binary\-Tree}!max\-\_\-elem@{max\-\_\-elem}}
+\index{max\-\_\-elem@{max\-\_\-elem}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{max\-\_\-elem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node} $\ast$ Binary\-Tree\-::max\-\_\-elem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_a858b64e28ff27071b08ec57af7ea1f50}
+\begin{DoxyReturn}{Zwraca}
+poszukiwana komorka. 
+\end{DoxyReturn}
+
+
+Definicja w linii 46 pliku binary\-\_\-tree.\-cpp.
+
+\hypertarget{struct_binary_tree_a224960241e35019ce084f25632a4dbcd}{\index{Binary\-Tree@{Binary\-Tree}!min\-\_\-elem@{min\-\_\-elem}}
+\index{min\-\_\-elem@{min\-\_\-elem}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{min\-\_\-elem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node} $\ast$ Binary\-Tree\-::min\-\_\-elem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_a224960241e35019ce084f25632a4dbcd}
+\begin{DoxyReturn}{Zwraca}
+poszukiwana komorka. 
+\end{DoxyReturn}
+
+
+Definicja w linii 38 pliku binary\-\_\-tree.\-cpp.
+
+\hypertarget{struct_binary_tree_a749356c206465c8c4b7ef905a2a75f63}{\index{Binary\-Tree@{Binary\-Tree}!new\-\_\-node@{new\-\_\-node}}
+\index{new\-\_\-node@{new\-\_\-node}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{new\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node} $\ast$ Binary\-Tree\-::new\-\_\-node (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_binary_tree_a749356c206465c8c4b7ef905a2a75f63}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ wartosc tworzonej komorki. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wskaznik na tworzona komorke. 
+\end{DoxyReturn}
+
+
+Definicja w linii 54 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_binary_tree_a749356c206465c8c4b7ef905a2a75f63_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_ae0183134e9d30f5a61869df126e8bc2c}{\index{Binary\-Tree@{Binary\-Tree}!print\-\_\-tree@{print\-\_\-tree}}
+\index{print\-\_\-tree@{print\-\_\-tree}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{print\-\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::print\-\_\-tree (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-Node} $\ast$}]{\-\_\-node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_binary_tree_ae0183134e9d30f5a61869df126e8bc2c}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-node} & -\/ wskaznik na startowa komorke. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 122 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{struct_binary_tree_ae0183134e9d30f5a61869df126e8bc2c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{struct_binary_tree_ae0183134e9d30f5a61869df126e8bc2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_binary_tree_a8f557920c17957b4ae378727ac898c18}{\index{Binary\-Tree@{Binary\-Tree}!print\-\_\-tree@{print\-\_\-tree}}
+\index{print\-\_\-tree@{print\-\_\-tree}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{print\-\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}void Binary\-Tree\-::print\-\_\-tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_binary_tree_a8f557920c17957b4ae378727ac898c18}
+
+
+Definicja w linii 129 pliku binary\-\_\-tree.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_binary_tree_a8f557920c17957b4ae378727ac898c18_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{struct_binary_tree_a154cd3336ceeeb98481e70aa973007b4}{\index{Binary\-Tree@{Binary\-Tree}!root@{root}}
+\index{root@{root}!BinaryTree@{Binary\-Tree}}
+\subsubsection[{root}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node}$\ast$ Binary\-Tree\-::root\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_binary_tree_a154cd3336ceeeb98481e70aa973007b4}
+
+
+Definicja w linii 38 pliku binary\-\_\-tree.\-hh.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{binary__tree_8hh}{binary\-\_\-tree.\-hh}\item 
+\hyperlink{binary__tree_8cpp}{binary\-\_\-tree.\-cpp}\end{DoxyCompactItemize}

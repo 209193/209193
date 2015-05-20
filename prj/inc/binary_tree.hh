@@ -28,18 +28,6 @@ struct TNode {
    *\brief Destruktor obiektu Komorka.
    */  
   ~TNode() {}
-
-  bool operator== (TNode *_node);
-
-  bool operator== (int _elem);
-
-  bool operator> (TNode *_node);
-
-  bool operator> (int _elem);
-
-  bool operator< (TNode *_node);
-
-  bool operator< (int _elem);
 };
 
 struct BinaryTree {
@@ -48,6 +36,51 @@ private:
    *\brief Wskaznik na korzen drzewa.
    */ 
   TNode* root;
+
+protected:
+  /*!
+   *\brief Metoda poszukiwania elementu.
+   *Metoda sluzy do szukania elementu o danej wartosci.
+   *\param[in] _node - wskaznik na komorke
+   *\param[in] _elem - dodawany element.
+   *\return poszukiwana komorka.
+   */
+  TNode* look(TNode *_node,int _elem);
+  /*!
+   *\brief Metoda tworzenia komorki.
+   *Metoda sluzy do tworzenia komorki o zadanej wartosci.
+   *\param[in] _elem - wartosc tworzonej komorki.
+   *\return wskaznik na tworzona komorke.
+   */
+  TNode* new_node(int _elem);
+  /*!
+   *\brief Metoda dodawania elementu.
+   *Metoda sluzy do dodawania elementu o zadanej wartosci.
+   *\param[in] _node - wskaznik na komorke.
+   *\param[in] _elem - wartosc.
+   */
+  void add_elem(TNode *_node, int _elem);
+  /*!
+   *\brief Metoda sprawdzania struktury drzewa.
+   *Metoda sluzy do sprawdzania czy drzewo ma
+   *strukture binarnego drzewa poszukiwan.
+   *\param[in] _node - wskaznik na startowa komorke.
+   */
+  void is_BST(TNode *_node);
+  /*!
+   *\brief Metoda oprozniania drzewa.
+   *Metoda sluzy do usuwania wszystkich elementow
+   *z drzewa. Wykonuje swoje dzialanie rekurencyjnie.
+   *\param[in] _node - wskaznik na startowa komorke.
+   */
+  void clear(TNode *_node);
+  /*!
+   *\brief Metoda drukowania drzewa.
+   *Metoda sluzy do wypisywania wszystkich elementow
+   *z drzewa na std out. Wykonuje swoje dzialanie rekurencyjnie.
+   *\param[in] _node - wskaznik na startowa komorke.
+   */
+  void print_tree(TNode *_node);
 
 public:
   /*!
@@ -59,17 +92,51 @@ public:
    */
   ~BinaryTree() {}
   /*!
-   *\brief Metoda dodawnia elementu.
-   *Metoda sluzy do dodawania elementu o danej wartosci.
+   *\brief Metoda poszukiwania elementu.
+   *Metoda sluzy do szukania elementu o danej wartosci.
    *\param[in] _elem - dodawany element.
+   *\return poszukiwana komorka.
    */
-  void add(int _elem);
+  TNode* look(int _elem);
   /*!
-   *\brief Metoda usuwania elementu.
-   *Metoda sluzy do usuwania elementu o danej wartosci.
-   *\param[in] _elem - wartosc szukanego elementu.
-   *\return usuwany element
+   *\brief Metoda poszukiwania najmniejszego elementu.
+   *Metoda sluzy do poszukiwania najmniejszego elementu drzewa
+   *przez poszukiwanie lewego konca drzewa.
+   *\return poszukiwana komorka.
    */
-  int getvar(int _elem);
+  TNode* min_elem();
+  /*!
+   *\brief Metoda poszukiwania najwiekszego elementu.
+   *Metoda sluzy do poszukiwania najwiekszego elementu drzewa
+   *przez poszukiwanie prawego konca drzewa.
+   *\return poszukiwana komorka.
+   */
+  TNode* max_elem();
+  /*!
+   *\brief Metoda dodawania elementu.
+   *Metoda sluzy do dodawania elementu o zadanej wartosci.
+   *\param[in] _elem - wartosc elementu.
+   */
+  void add_elem(int _elem);
+  /*!
+   *\brief Metoda sprawdzania struktury drzewa.
+   *Metoda sluzy do sprawdzania czy drzewo ma
+   *strukture binarnego drzewa poszukiwan.
+   */
+  void is_BST();
+  /*!
+   *\brief Metoda oprozniania drzewa.
+   *Metoda sluzy do usuwania wszystkich elementow
+   *z drzewa. Wykonuje swoje dzialanie rekurencyjnie.
+   */
+  void clear();
+  /*!
+   *\brief Metoda drukowania drzewa.
+   *Metoda sluzy do wypisywania wszystkich elementow
+   *z drzewa na std out. Wykonuje swoje dzialanie rekurencyjnie.
+   */
+  void print_tree();
+
+
 };
 #endif

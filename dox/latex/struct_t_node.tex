@@ -1,0 +1,109 @@
+\hypertarget{struct_t_node}{\section{Dokumentacja struktury T\-Node}
+\label{struct_t_node}\index{T\-Node@{T\-Node}}
+}
+
+
+{\ttfamily \#include $<$binary\-\_\-tree.\-hh$>$}
+
+
+
+Diagram współpracy dla T\-Node\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{struct_t_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_t_node_a8681e0920f2e2ba9fab62fcb735b6c8b}{T\-Node} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny obiektu \hyperlink{struct_komorka}{Komorka}. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node_a374606795ee14fe9a6df10dec491d799}{$\sim$\-T\-Node} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{struct_komorka}{Komorka}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_t_node_a154d15b7fa0ce8356c458efecf2e99a5}{elem}
+\begin{DoxyCompactList}\small\item\em Wartosc elementu w pojedynczej komorce. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_t_node_a17c4c510a01bba35b600f8f1f9dec97c}{top}
+\begin{DoxyCompactList}\small\item\em Wskaznik na poprzednia komorke. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_t_node_ab461fed725a135f9c749c53bf23db6ed}{left}
+\begin{DoxyCompactList}\small\item\em Wskaznik na lewa nastepna komorke. \end{DoxyCompactList}\item 
+\hyperlink{struct_t_node}{T\-Node} $\ast$ \hyperlink{struct_t_node_a6b5dd12f769d27a03be38706ea41e129}{right}
+\begin{DoxyCompactList}\small\item\em Wskaznik na prawa nastepna komorke. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 5 pliku binary\-\_\-tree.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_t_node_a8681e0920f2e2ba9fab62fcb735b6c8b}{\index{T\-Node@{T\-Node}!T\-Node@{T\-Node}}
+\index{T\-Node@{T\-Node}!TNode@{T\-Node}}
+\subsubsection[{T\-Node}]{\setlength{\rightskip}{0pt plus 5cm}T\-Node\-::\-T\-Node (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)}}\label{struct_t_node_a8681e0920f2e2ba9fab62fcb735b6c8b}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ wartosc przechowywanego elementu. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 7 pliku binary\-\_\-tree.\-cpp.
+
+\hypertarget{struct_t_node_a374606795ee14fe9a6df10dec491d799}{\index{T\-Node@{T\-Node}!$\sim$\-T\-Node@{$\sim$\-T\-Node}}
+\index{$\sim$\-T\-Node@{$\sim$\-T\-Node}!TNode@{T\-Node}}
+\subsubsection[{$\sim$\-T\-Node}]{\setlength{\rightskip}{0pt plus 5cm}T\-Node\-::$\sim$\-T\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_t_node_a374606795ee14fe9a6df10dec491d799}
+
+
+Definicja w linii 30 pliku binary\-\_\-tree.\-hh.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{struct_t_node_a154d15b7fa0ce8356c458efecf2e99a5}{\index{T\-Node@{T\-Node}!elem@{elem}}
+\index{elem@{elem}!TNode@{T\-Node}}
+\subsubsection[{elem}]{\setlength{\rightskip}{0pt plus 5cm}int T\-Node\-::elem}}\label{struct_t_node_a154d15b7fa0ce8356c458efecf2e99a5}
+
+
+Definicja w linii 9 pliku binary\-\_\-tree.\-hh.
+
+\hypertarget{struct_t_node_ab461fed725a135f9c749c53bf23db6ed}{\index{T\-Node@{T\-Node}!left@{left}}
+\index{left@{left}!TNode@{T\-Node}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node}$\ast$ T\-Node\-::left}}\label{struct_t_node_ab461fed725a135f9c749c53bf23db6ed}
+
+
+Definicja w linii 17 pliku binary\-\_\-tree.\-hh.
+
+\hypertarget{struct_t_node_a6b5dd12f769d27a03be38706ea41e129}{\index{T\-Node@{T\-Node}!right@{right}}
+\index{right@{right}!TNode@{T\-Node}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node}$\ast$ T\-Node\-::right}}\label{struct_t_node_a6b5dd12f769d27a03be38706ea41e129}
+
+
+Definicja w linii 21 pliku binary\-\_\-tree.\-hh.
+
+\hypertarget{struct_t_node_a17c4c510a01bba35b600f8f1f9dec97c}{\index{T\-Node@{T\-Node}!top@{top}}
+\index{top@{top}!TNode@{T\-Node}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Node}$\ast$ T\-Node\-::top}}\label{struct_t_node_a17c4c510a01bba35b600f8f1f9dec97c}
+
+
+Definicja w linii 13 pliku binary\-\_\-tree.\-hh.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{binary__tree_8hh}{binary\-\_\-tree.\-hh}\item 
+\hyperlink{binary__tree_8cpp}{binary\-\_\-tree.\-cpp}\end{DoxyCompactItemize}

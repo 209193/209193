@@ -13,8 +13,8 @@ void Benchmark::testAlgorithm(Benchmark *_algorithm) {
 
   size=100;//startowa ilosc elementow
   time=0;//sredni czas dzialania
-  length = 3;
-  repeats = 1;
+  length = LENGTH;
+  repeats = REPEATS;
 
   for (unsigned short i=1; i<=length; ++i) {
     for (unsigned short k=1; k<=repeats; ++k) {

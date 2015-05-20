@@ -6,51 +6,59 @@
 \usepackage{enumerate}
 \usepackage{pdflscape}
 
-\title{Laboratorium 7}
+\title{Laboratorium 8}
 \author{Filip Malinowski}
 \date{\today}
 
 \pdfinfo{%
-  /Title    (Laboratorium 7)
+  /Title    (Laboratorium 8)
   /Author   (Filip Malinowski)
 }
 
 \begin{document}
 
-\title{Sprawozdanie z laboratorium 7}
+\title{Sprawozdanie z laboratorium 8}
 \author{Filip Malinowski}
 \date{\today}
 
 \maketitle
 
-W programie zastosowalem wzorzec obserwatora.
-Zdefiniowalem do tego ogolnego obserwatora
-Observer oraz ogolnego obserwowanego Subject.
-Klasa Benchmark jest obserwowanym.
-Kolejne klasy symulujace algorytmy dziedzicza
-po klasie Benchmark bedac tym samym obserwowanymi.
-Dany algorytm dodaje na liste
-obserwatorow obserwatora zapisujacego,
-ktory przy kazdym powiadomieniu pobiera
-aktualne czasy oraz ilosci danych wykonane
-w danym algorytmie. Pobrane dane nastepnie
-zapisuje do pliku zachowujac zrozumialy format.
+Do programu zostały dodane drzewo binarne oraz
+drzewo czerwono-czarne.
+Drzewo czerwono-czarne niestety nie jest poprawnie
+napisane. Przy próbie dodania elementów pojawia się
+segmentation fault. Nie zdołałem poprawić tego błędu.
 
-Sortowania zostaly uogolnione do wszystkich
-struktur napisanych na tablicy.
+Złożoność obliczeniowa dodawania elementów do
+binarnego drzewa poszukiwań powinna wynosić
+\begin{math}
+  n^{3}.
+\end{math}
+Zgadza się to z pomiarami.
 
-Zostaly tez wprowadzone poprawki przy strukturach,
-benchmarku i pochodnych w celu zmiejszenia
-zuzycia pamieci.
+Złożoność obliczeniowa odczytu w binarnym
+drzewie poszukiwań powinna wynosić
+\begin{math}
+ n*log(n).
+\end{math}
+Również zgadza się to z pomiarami.
 
-W programie zostaly przy okazji dodane komunikaty
-o pracy konkretnych obiektow kierowane na
-standardowy strumien bledow.
-Kazdy obserwowany oraz obserwator przy tworzeniu
-moze otrzymac identyfikator wykorzystywany
-przy komunikatach.
+\pagebreak
 
-Dokumentacja zostala kolejny raz sprawdzona
-i uzupelniona. Znaleznione bledy zostaly poprawione.
+\begin{landscape}
+\begin{figure}
+ \centering
+ \includegraphics{wczytywanie}
+ \caption{Wykres złożoności obliczeniowej wczytywania}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics{odczytywanie}
+ \caption{Wykres złożoności obliczeniowej odczytywania}
+\end{figure}
+
+\end{landscape}
+
 
 \end{document}

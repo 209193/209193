@@ -13,6 +13,7 @@
 #include "asocjacyjna.hh"
 #include "mieszajaca.hh"
 #include "binary_tree.hh"
+#include "rb_tree.hh"
 #include "algorithm1.hh"
 #include "algorithm2.hh"
 #include "algorithm3.hh"
@@ -32,26 +33,35 @@ int main() {
   for(int i=0; i<SIZE; ++i)
     std::cin >> data[i];
 
+  
+  Algorithm1 *test1 = new Algorithm1(data, 1);
+  WritingObserver *observer1 = new WritingObserver(test1, 2, "ret_1");
+  test1 -> add(observer1);
+  test1 -> testAlgorithm(test1);
+  delete observer1;
+  delete test1;
   /*
-  Algorithm1 *test = new Algorithm1(data, 1);
-  WritingObserver *observer = new WritingObserver(test, 2);
-
-  test -> add(observer);
-    
-  test -> testAlgorithm(test);
-
-  delete observer;
-  delete test;
+  Algorithm2 *test2 = new Algorithm2(data, 3);
+  WritingObserver *observer2 = new WritingObserver(test2, 4, "ret_2");
+  test2 -> add(observer2);
+  test2 -> testAlgorithm(test2);
+  delete observer2;
+  delete test2;
+  /*
+  Algorithm3 *test3 = new Algorithm3(data, 5);
+  WritingObserver *observer3 = new WritingObserver(test3, 6, "ret_3");
+  test3 -> add(observer3);
+  test3 -> testAlgorithm(test3);
+  delete observer3;
+  delete test3;
+  
+  Algorithm4 *test4 = new Algorithm4(data, 7);
+  WritingObserver *observer4 = new WritingObserver(test4, 8, "ret_4");
+  test4 -> add(observer4);
+  test4 -> testAlgorithm(test4);
+  delete observer4;
+  delete test4;
   */
-
-  BinaryTree *tree = new BinaryTree;
-
-  tree -> add(5);
-  tree -> add(6);
-  tree -> add(3);
-  tree -> add(4);
-
-  std::cout << tree -> getvar(6);
 
   return 0;
 }

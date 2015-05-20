@@ -28,8 +28,9 @@ public:
    *oraz otwiera plik z benchmarkiem do zapisu.
    *\param[in] _benchmark - obserwowany benchmark.
    *\param[in] _id - identyfikator obserwatora.
+   *\param[in] _string - nazwa pliku do zapisu.
    */
-  WritingObserver(Benchmark *_benchmark, int _id);
+  WritingObserver(Benchmark *_benchmark, int _id, std::string _string);
   /*!
    *\brief Destruktor obiektu WritingObserver.
    *Zamyka plik z benchmarkiem.

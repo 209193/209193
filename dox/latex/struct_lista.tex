@@ -1,0 +1,128 @@
+\hypertarget{struct_lista}{\section{Dokumentacja struktury Lista}
+\label{struct_lista}\index{Lista@{Lista}}
+}
+
+
+Klasa \hyperlink{struct_lista}{Lista} modelujaca strukture danych typu lista. Obiekt tego typu reprezentuje strukture danych typu lista wraz z operacjami mozliwymi do wykonania na tej strukturze.  
+
+
+
+
+{\ttfamily \#include $<$lista.\-hh$>$}
+
+
+
+Diagram współpracy dla Lista\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{struct_lista__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_lista_a1f668b36909182ef1360b48503529a31}{Lista} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \hyperlink{struct_lista}{Lista}. \end{DoxyCompactList}\item 
+\hyperlink{struct_lista_a4d7394b2728a00ad8404965b2e15d096}{$\sim$\-Lista} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{struct_lista}{Lista}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_lista_ae3bfec9ea8f7f63172f49500ffa7bf49}{insert\-\_\-last} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda dodawnia elementu. Metoda sluzy do dodawania elementu do konca listy. \end{DoxyCompactList}\item 
+int \hyperlink{struct_lista_ad43dc38036e49d500a8ece8c3bf57ee4}{remove\-\_\-front} ()
+\begin{DoxyCompactList}\small\item\em Metoda usuwania elementu. Metoda sluzy do usuwania elementu na poczatku listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_komorka}{Komorka} $\ast$ \hyperlink{struct_lista_aeba20505030183d334971bd44c3c8b95}{head}
+\begin{DoxyCompactList}\small\item\em Wskaznik na poczatek listy. \end{DoxyCompactList}\item 
+\hyperlink{struct_komorka}{Komorka} $\ast$ \hyperlink{struct_lista_a7d42e5f99e945d97c29d6f764f71f4e7}{tail}
+\begin{DoxyCompactList}\small\item\em Wskaznik na koniec listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 34 pliku lista.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_lista_a1f668b36909182ef1360b48503529a31}{\index{Lista@{Lista}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista@{Lista}}
+\subsubsection[{Lista}]{\setlength{\rightskip}{0pt plus 5cm}Lista\-::\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_lista_a1f668b36909182ef1360b48503529a31}
+
+
+Definicja w linii 49 pliku lista.\-hh.
+
+\hypertarget{struct_lista_a4d7394b2728a00ad8404965b2e15d096}{\index{Lista@{Lista}!$\sim$\-Lista@{$\sim$\-Lista}}
+\index{$\sim$\-Lista@{$\sim$\-Lista}!Lista@{Lista}}
+\subsubsection[{$\sim$\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}Lista\-::$\sim$\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_lista_a4d7394b2728a00ad8404965b2e15d096}
+
+
+Definicja w linii 53 pliku lista.\-hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{struct_lista_ae3bfec9ea8f7f63172f49500ffa7bf49}{\index{Lista@{Lista}!insert\-\_\-last@{insert\-\_\-last}}
+\index{insert\-\_\-last@{insert\-\_\-last}!Lista@{Lista}}
+\subsubsection[{insert\-\_\-last}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\-::insert\-\_\-last (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)}}\label{struct_lista_ae3bfec9ea8f7f63172f49500ffa7bf49}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ dodawany element. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 14 pliku lista.\-cpp.
+
+\hypertarget{struct_lista_ad43dc38036e49d500a8ece8c3bf57ee4}{\index{Lista@{Lista}!remove\-\_\-front@{remove\-\_\-front}}
+\index{remove\-\_\-front@{remove\-\_\-front}!Lista@{Lista}}
+\subsubsection[{remove\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}int Lista\-::remove\-\_\-front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_lista_ad43dc38036e49d500a8ece8c3bf57ee4}
+\begin{DoxyReturn}{Zwraca}
+usuwany element. 
+\end{DoxyReturn}
+
+
+Definicja w linii 29 pliku lista.\-cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{struct_lista_aeba20505030183d334971bd44c3c8b95}{\index{Lista@{Lista}!head@{head}}
+\index{head@{head}!Lista@{Lista}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Komorka}$\ast$ Lista\-::head\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_lista_aeba20505030183d334971bd44c3c8b95}
+
+
+Definicja w linii 39 pliku lista.\-hh.
+
+\hypertarget{struct_lista_a7d42e5f99e945d97c29d6f764f71f4e7}{\index{Lista@{Lista}!tail@{tail}}
+\index{tail@{tail}!Lista@{Lista}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Komorka}$\ast$ Lista\-::tail\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_lista_a7d42e5f99e945d97c29d6f764f71f4e7}
+
+
+Definicja w linii 43 pliku lista.\-hh.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lista_8hh}{lista.\-hh}\item 
+\hyperlink{lista_8cpp}{lista.\-cpp}\end{DoxyCompactItemize}
