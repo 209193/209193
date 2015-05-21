@@ -18,6 +18,7 @@ program: obj/main.o\
 		obj/mieszajaca.o\
 		obj/binary_tree.o\
 		obj/rb_tree.o\
+		obj/graph.o\
 		obj/algorithm1.o\
 		obj/algorithm2.o\
 		obj/algorithm3.o\
@@ -38,6 +39,7 @@ program: obj/main.o\
 		obj/mieszajaca.o\
 		obj/binary_tree.o\
 		obj/rb_tree.o\
+		obj/graph.o\
 		obj/algorithm1.o\
 		obj/algorithm2.o\
 		obj/algorithm3.o\
@@ -58,6 +60,7 @@ obj/main.o: src/main.cpp\
 		inc/mieszajaca.hh\
 		inc/binary_tree.hh\
 		inc/rb_tree.hh\
+		inc/graph.hh\
 		inc/algorithm1.hh\
 		inc/algorithm2.hh\
 		inc/algorithm3.hh\
@@ -75,6 +78,9 @@ obj/algorithm2.o: src/algorithm2.cpp inc/algorithm2.hh
 
 obj/algorithm1.o: src/algorithm1.cpp inc/algorithm1.hh
 	g++ ${CPPFLAGS} -o obj/algorithm1.o src/algorithm1.cpp
+
+obj/graph.o: src/graph.cpp inc/graph.hh
+	g++ ${CPPFLAGS} -o obj/graph.o src/graph.cpp
 
 obj/rb_tree.o: src/rb_tree.cpp inc/rb_tree.hh
 	g++ ${CPPFLAGS} -o obj/rb_tree.o src/rb_tree.cpp
