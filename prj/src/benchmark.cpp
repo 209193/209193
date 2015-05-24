@@ -4,14 +4,14 @@
 #include "subject.hh"
 #include "benchmark.hh"
 
-#define LENGTH 4//"ile razy pomnozymy przez 10 - patrz linijka 19 i 35"
-#define REPEATS 3//ilosc powtorzen dla obliczenia sredniej - patrz linijka 20"
+#define LENGTH 1//"ile razy pomnozymy przez 10 - patrz linijka 19 i 35"
+#define REPEATS 1//ilosc powtorzen dla obliczenia sredniej - patrz linijka 20"
 
 
 /* Funkcja testowania szybkosci dzialania algorytmu */
 void Benchmark::testAlgorithm(Benchmark *_algorithm) {
 
-  size=100;//startowa ilosc elementow
+  size=100000;//startowa ilosc elementow
   time=0;//sredni czas dzialania
   length = LENGTH;
   repeats = REPEATS;

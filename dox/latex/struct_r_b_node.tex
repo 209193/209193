@@ -7,8 +7,7 @@
 
 
 
-Diagram współpracy dla R\-B\-Node\-:
-\nopagebreak
+Diagram współpracy dla R\-B\-Node\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,6 +16,8 @@ Diagram współpracy dla R\-B\-Node\-:
 \end{figure}
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_b_node_a6c581adb50310ce3794f2e4613ac166c}{R\-B\-Node} ()
 \item 
 \hyperlink{struct_r_b_node_a47877ed34169ca5d7b4e7ea1ca702fbf}{R\-B\-Node} (int \-\_\-elem, \hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$\-\_\-node)
 \begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny obiektu \hyperlink{struct_r_b_node}{R\-B\-Node}. \end{DoxyCompactList}\item 
@@ -33,7 +34,7 @@ int \hyperlink{struct_r_b_node_a5c76fd9ee8fa04e10e59509852d91bb5}{elem}
 \begin{DoxyCompactList}\small\item\em Wskaznik na lewa nastepna komorke. \end{DoxyCompactList}\item 
 \hyperlink{struct_r_b_node}{R\-B\-Node} $\ast$ \hyperlink{struct_r_b_node_af82826872827c548a5713eb84f264767}{right}
 \begin{DoxyCompactList}\small\item\em Wskaznik na prawa nastepna komorke. \end{DoxyCompactList}\item 
-int \hyperlink{struct_r_b_node_a37ed571d3fcd839972379cc10800c4ab}{colour}
+char \hyperlink{struct_r_b_node_a2d05f661e51c09ad6d1e4e60667a5d94}{colour}
 \begin{DoxyCompactList}\small\item\em Kolor komorki. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -45,6 +46,17 @@ Definicja w linii 5 pliku rb\-\_\-tree.\-hh.
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_r_b_node_a6c581adb50310ce3794f2e4613ac166c}{\index{R\-B\-Node@{R\-B\-Node}!R\-B\-Node@{R\-B\-Node}}
+\index{R\-B\-Node@{R\-B\-Node}!RBNode@{R\-B\-Node}}
+\subsubsection[{R\-B\-Node}]{\setlength{\rightskip}{0pt plus 5cm}R\-B\-Node\-::\-R\-B\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_r_b_node_a6c581adb50310ce3794f2e4613ac166c}
+
+
+Definicja w linii 7 pliku rb\-\_\-tree.\-cpp.
+
 \hypertarget{struct_r_b_node_a47877ed34169ca5d7b4e7ea1ca702fbf}{\index{R\-B\-Node@{R\-B\-Node}!R\-B\-Node@{R\-B\-Node}}
 \index{R\-B\-Node@{R\-B\-Node}!RBNode@{R\-B\-Node}}
 \subsubsection[{R\-B\-Node}]{\setlength{\rightskip}{0pt plus 5cm}R\-B\-Node\-::\-R\-B\-Node (
@@ -62,7 +74,7 @@ Definicja w linii 5 pliku rb\-\_\-tree.\-hh.
 \end{DoxyParams}
 
 
-Definicja w linii 7 pliku rb\-\_\-tree.\-cpp.
+Definicja w linii 10 pliku rb\-\_\-tree.\-cpp.
 
 \hypertarget{struct_r_b_node_aca1bb7761c39ebd05b9051314df10843}{\index{R\-B\-Node@{R\-B\-Node}!$\sim$\-R\-B\-Node@{$\sim$\-R\-B\-Node}}
 \index{$\sim$\-R\-B\-Node@{$\sim$\-R\-B\-Node}!RBNode@{R\-B\-Node}}
@@ -73,14 +85,14 @@ Definicja w linii 7 pliku rb\-\_\-tree.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_r_b_node_aca1bb7761c39ebd05b9051314df10843}
 
 
-Definicja w linii 35 pliku rb\-\_\-tree.\-hh.
+Definicja w linii 36 pliku rb\-\_\-tree.\-hh.
 
 
 
 \subsection{Dokumentacja atrybutów składowych}
-\hypertarget{struct_r_b_node_a37ed571d3fcd839972379cc10800c4ab}{\index{R\-B\-Node@{R\-B\-Node}!colour@{colour}}
+\hypertarget{struct_r_b_node_a2d05f661e51c09ad6d1e4e60667a5d94}{\index{R\-B\-Node@{R\-B\-Node}!colour@{colour}}
 \index{colour@{colour}!RBNode@{R\-B\-Node}}
-\subsubsection[{colour}]{\setlength{\rightskip}{0pt plus 5cm}int R\-B\-Node\-::colour}}\label{struct_r_b_node_a37ed571d3fcd839972379cc10800c4ab}
+\subsubsection[{colour}]{\setlength{\rightskip}{0pt plus 5cm}char R\-B\-Node\-::colour}}\label{struct_r_b_node_a2d05f661e51c09ad6d1e4e60667a5d94}
 
 
 Definicja w linii 25 pliku rb\-\_\-tree.\-hh.

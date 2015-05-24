@@ -34,5 +34,4 @@ void Algorithm4::load(int _border){
 
 void Algorithm4::unload(int _border) {
   std::cerr << "Algorithm unloaded." << std::endl;
-  tree.clear();
 }

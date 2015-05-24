@@ -25,9 +25,7 @@
 
 Do programu zostały dodane drzewo binarne oraz
 drzewo czerwono-czarne.
-Drzewo czerwono-czarne niestety nie jest poprawnie
-napisane. Przy próbie dodania elementów pojawia się
-segmentation fault. Nie zdołałem poprawić tego błędu.
+Drzewo czerwono-czarne zostało poprawione.
 
 Złożoność obliczeniowa dodawania elementów do
 binarnego drzewa poszukiwań powinna wynosić
@@ -42,6 +40,29 @@ drzewie poszukiwań powinna wynosić
  n*log(n).
 \end{math}
 Również zgadza się to z pomiarami.
+
+Złożoność obliczeniowa dodawania elementów do
+drzewa czerwono-czarnego powinna wynosić
+\begin{math}
+  n*log{n}.
+\end{math}
+Zgadza się to z pomiarami.
+
+Złożoność obliczeniowa odczytu w drzewie
+czerwono-czarnym powinna wynosić
+\begin{math}
+ n*log(n).
+\end{math}
+Również zgadza się to z pomiarami.
+
+Największe różnice występują w zapisie dla
+dużej ilości danych dla drzewa binarnego
+i czerwono-czarnego. Jest tak dlatego, że
+drzewo binarne nie jest reorganizowane
+po każdorazowym dodaniu elementu.
+Odczyt obu drzew jest porównywalny.
+Wynika to stąd, że odczyt drzewa binarnego
+oraz czerwono-czarnego jest taki sam.
 
 \pagebreak
 
