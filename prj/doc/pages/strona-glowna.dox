@@ -1,8 +1,8 @@
 /*!
-  \mainpage Laboratorium 8
+  \mainpage Laboratorium 9
   \author Filip Malinowski
-  \date 20.05.2015
-  \version 0.0008
+  \date 27.05.2015
+  \version 0.0009
 
   Program sluzacy do uruchamiania algorytmow i badania ich szybkosci dzialania.\n
   W programie zaimplementowane sa algorytmy:\n
@@ -14,7 +14,8 @@
 
   Do wykonania podanych powyzej algorytmow zostaly
   zaimplementowane potrzebne struktury danych (stos, kolejka, lista oraz lista tablicowa, lista asocjacyjna, tablica z haszowaniem).\n\n
-  W programie znajduja sie rowniez drzewo binarne oraz drzewo czerwono-czarne.\n\n
+  W programie znajduja sie rowniez drzewo binarne oraz drzewo czerwono-czarne.\n
+  Został dodany graf wraz z przeszukiwaniem w głąb i wszerz.\n
   Program zapisuje informacje o wykonanym benchmarku za pomoca wzorca obserwatora.\n\n
   Ciala klas znajduja sie w folderze ./prj/inc\n
   Definicje metod znajduja sie w folderze ./prj/src\n

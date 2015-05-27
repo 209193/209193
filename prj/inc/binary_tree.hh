@@ -20,12 +20,12 @@ struct TNode {
    */  
   TNode* right;
   /*!
-   *\brief Konstruktor paramteryczny obiektu Komorka.
+   *\brief Konstruktor paramteryczny obiektu TNode.
    *\param[in] _elem - wartosc przechowywanego elementu.
    */
   TNode(int _elem);
   /*!
-   *\brief Destruktor obiektu Komorka.
+   *\brief Destruktor obiektu TNode.
    */  
   ~TNode() {}
 };

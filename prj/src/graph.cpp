@@ -1,18 +1,18 @@
 #include <iostream>
+#include <list>
 
 #include "graph.hh"
 
 GNode::GNode(int _elem) {
   elem = _elem;
-  colour = 1;
 }
 
 Graph::Graph(int _vertexCount) {
   vertexCount = _vertexCount;
   adjacencyMatrix = new bool*[vertexCount];
-  for (int i = 0; i < vertexCount; i++) {
+  for (int i = 0; i < vertexCount; ++i) {
     adjacencyMatrix[i] = new bool[vertexCount];
-    for (int j = 0; j < vertexCount; j++)
+    for (int j = 0; j < vertexCount; ++j)
       adjacencyMatrix[i][j] = false;
   }
 }
@@ -24,24 +24,17 @@ void Graph::addNode(int _elem) {
 }
 
 void Graph::addEdge(int _i, int _j) {
-  if (_i >= 0 && _i < vertexCount && _j > 0 && _j < vertexCount) {
+  if (_i >= 0 && _i < vertexCount && _j >= 0 && _j < vertexCount) {
     adjacencyMatrix[_i][_j] = true;
     adjacencyMatrix[_j][_i] = true;
   }
 }
 
-void Graph::removeEdge(int _i, int _j) {
-  if (_i >= 0 && _i < vertexCount && _j > 0 && _j < vertexCount) {
-    adjacencyMatrix[_i][_j] = false;
-    adjacencyMatrix[_j][_i] = false;
-  }
-}
-
 bool Graph::isEdge(int _i, int _j) {
-  if (_i >= 0 && _i < vertexCount && _j > 0 && _j < vertexCount)
+  if (_i >= 0 && _i < vertexCount && _j >= 0 && _j < vertexCount) {
     return adjacencyMatrix[_i][_j];
-  else
-    return false;
+  }
+  else return false;
 }
 
 Graph::~Graph() {
@@ -50,19 +43,50 @@ Graph::~Graph() {
   delete[] adjacencyMatrix;
 }
 
-GNode* Graph::visitNode(GNode *_node) {
-  _node -> colour = 2;
-  int i = _node -> id;
-  for (int j=0; j<vertexCount; ++j) {
-    if (adjacencyMatrix[i][j] && nodes[j] -> colour == 1)
-      visitNode(nodes[j]);
-  }
-  _node -> colour = 3;
-  return _node
+void Graph::runDFS(int _u, vertexState *&_state) {
+  _state[_u] = Gray;
+  for (int v=0; v<vertexCount; ++v)
+    if (isEdge(_u, v) && _state[v] == White)
+      runDFS(v, _state);
+  _state[_u] = Black;
+  std::cout << "Node id: " << _u << " Elem: " << nodes[_u] -> elem << std::endl;
 }
 
-void DFS() {
+void Graph::DFS() {
+  std::cout << "DFS run:" << std::endl;
+  vertexState *state = new vertexState[vertexCount];
   for (int i=0; i<vertexCount; ++i)
-    nodes[i] -> colour = 1;
+    state[i] = White;
+  runDFS(0, state);
+  delete []state;
+  std::cout << "DFS end." << std::endl;
+}
 
+
+void Graph::BFS(int _id) {
+  std::cout << "BFS run:" << std::endl;
+  bool *visited = new bool[vertexCount];
+  for (int i=0; i<vertexCount; ++i)
+    visited[i] = false;
+
+  std::list<int> queue;
+  visited[_id] = true;
+  queue.push_back(_id);
+
+  while (!queue.empty()) {
+    _id = queue.front();
+    std::cout << "Node id: " << nodes[_id]->id;
+    std::cout << " Elem: " << nodes[_id]->elem << std::endl;
+
+    for (int i = 0; i < vertexCount; ++i) {
+      if (isEdge(_id, i)){
+	if (!visited[i]) {
+	  visited[i] = true;
+	  queue.push_back(i);
+	}
+      }
+    }
+    queue.pop_front();
+  }
+  std::cout << "BFS end." << std::endl;
 }

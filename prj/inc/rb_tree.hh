@@ -22,7 +22,8 @@ struct RBNode {
   /*!
    *\brief Kolor komorki.
    */  
-  int colour;
+  char colour;
+  RBNode();
   /*!
    *\brief Konstruktor paramteryczny obiektu RBNode.
    *\param[in] _elem - wartosc przechowywanego elementu.
@@ -40,6 +41,10 @@ class RBTree {
    *\brief Wskaznik na korzen drzewa.
    */ 
   RBNode *root;
+  /*!
+   *\brief Straznik.
+   */ 
+  RBNode guard;
   /*!
    *\brief Metoda drukowania drzewa.
    *Metoda sluzy do wypisywania wszystkich elementow

@@ -33,8 +33,25 @@ int main() {
   unsigned short *data = new unsigned short[SIZE];
   for(int i=0; i<SIZE; ++i)
     std::cin >> data[i];
+  
+  Graph *graph = new Graph(6);
 
-  Graph *graph = new Graph(5);
+  graph -> addNode(5);
+  graph -> addNode(3);
+  graph -> addNode(4);
+  graph -> addNode(2);
+  graph -> addNode(7);
+  graph -> addNode(11);
+
+  graph -> addEdge(0,1);
+  graph -> addEdge(0,2);
+  graph -> addEdge(1,2);
+  graph -> addEdge(2,5);
+  graph -> addEdge(5,3);
+  graph -> addEdge(5,4);
+
+  //graph -> DFS();
+  graph -> BFS(0);
 
   return 0;
 }

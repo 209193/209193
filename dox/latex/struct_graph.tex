@@ -1,0 +1,292 @@
+\hypertarget{struct_graph}{\section{Dokumentacja struktury Graph}
+\label{struct_graph}\index{Graph@{Graph}}
+}
+
+
+{\ttfamily \#include $<$graph.\-hh$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_graph_af3ba578bbc7a49562ff5de0f5f37c663}{Graph} (int \-\_\-vertex\-Count)
+\begin{DoxyCompactList}\small\item\em Konstruktor paramteryczny obiektu \hyperlink{struct_graph}{Graph}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_graph_a8ad83b85369c9d92229137873f9089b8}{add\-Node} (int \-\_\-elem)
+\begin{DoxyCompactList}\small\item\em Metoda dodawania wierzcholka. Metoda sluzy do dodawania wierzcholka o zadanej wartosci. \end{DoxyCompactList}\item 
+void \hyperlink{struct_graph_a97e1714cf7b5f082158d112a0fbd4141}{add\-Edge} (int \-\_\-i, int \-\_\-j)
+\begin{DoxyCompactList}\small\item\em Metoda dodawania krawedzi. Metoda sluzy do dodawania krawedzi pomiedzy wierzcholkami. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_graph_af8505da7d2360f8bf6daba137ed6ab9e}{is\-Edge} (int \-\_\-i, int \-\_\-j)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzania krawedzi. Metoda sluzy do sprawdzania istnienia krawedzi pomiedzy wierzcholkami. \end{DoxyCompactList}\item 
+void \hyperlink{struct_graph_a134ba75705fd92115b1c612b2681f6ea}{run\-D\-F\-S} (int \-\_\-u, \hyperlink{struct_graph_a0046a1a92a5949395eab395fed7b778c}{vertex\-State} $\ast$\&\-\_\-state)
+\begin{DoxyCompactList}\small\item\em Metoda wykonywania D\-F\-S. Metoda sluzy do przeszukiwania grafu w głąb. \end{DoxyCompactList}\item 
+void \hyperlink{struct_graph_aa89036af82002a332699d5722d7863d9}{D\-F\-S} ()
+\begin{DoxyCompactList}\small\item\em Metoda rozpoczynania D\-F\-S. Metoda sluzy do uruchamiania przeszukiwania grafu w głąb. \end{DoxyCompactList}\item 
+void \hyperlink{struct_graph_ab25e348f68d6ccb51765dcc547b65ff0}{B\-F\-S} (int \-\_\-s)
+\begin{DoxyCompactList}\small\item\em Metoda wykonywania B\-F\-S. Metoda sluzy do przeszukiwania grafu wszerz. \end{DoxyCompactList}\item 
+\hyperlink{struct_graph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\-Graph} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu \hyperlink{struct_graph}{Graph}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typy prywatne}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_graph_a0046a1a92a5949395eab395fed7b778c}{vertex\-State} \{ \hyperlink{struct_graph_a0046a1a92a5949395eab395fed7b778cab88fda19b4d020cc4275fb8632d0679b}{White}, 
+\hyperlink{struct_graph_a0046a1a92a5949395eab395fed7b778ca348bae6aacbec71f300c8346028cd151}{Gray}, 
+\hyperlink{struct_graph_a0046a1a92a5949395eab395fed7b778ca0915f0cf88c9f5071c2b00f21daeffe1}{Black}
+ \}
+\begin{DoxyCompactList}\small\item\em Wyliczeniowy typ dla stanu wierzcholka. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{struct_g_node}{G\-Node} $\ast$ $>$ \hyperlink{struct_graph_a5850883f2e0f8624184f1918e16ccb7b}{nodes}
+\begin{DoxyCompactList}\small\item\em Wskaznik na liste wierzcholkow. \end{DoxyCompactList}\item 
+bool $\ast$$\ast$ \hyperlink{struct_graph_a567f812ec20174e2642722ff8bd63b07}{adjacency\-Matrix}
+\begin{DoxyCompactList}\small\item\em Wskaznik na tablice krawedzi miedzy wierzcholkami. \end{DoxyCompactList}\item 
+int \hyperlink{struct_graph_aa61a470b538b8c5836ae3f3e6a4dc438}{vertex\-Count}
+\begin{DoxyCompactList}\small\item\em Ilosc krawedzi pomiedzy wierzcholkami. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 23 pliku graph.\-hh.
+
+
+
+\subsection{Dokumentacja składowych wyliczanych}
+\hypertarget{struct_graph_a0046a1a92a5949395eab395fed7b778c}{\index{Graph@{Graph}!vertex\-State@{vertex\-State}}
+\index{vertex\-State@{vertex\-State}!Graph@{Graph}}
+\subsubsection[{vertex\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Graph\-::vertex\-State}\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_graph_a0046a1a92a5949395eab395fed7b778c}
+\begin{Desc}
+\item[Wartości wyliczeń]\par
+\begin{description}
+\index{White@{White}!Graph@{Graph}}\index{Graph@{Graph}!White@{White}}\item[{\em 
+\hypertarget{struct_graph_a0046a1a92a5949395eab395fed7b778cab88fda19b4d020cc4275fb8632d0679b}{White}\label{struct_graph_a0046a1a92a5949395eab395fed7b778cab88fda19b4d020cc4275fb8632d0679b}
+}]\index{Gray@{Gray}!Graph@{Graph}}\index{Graph@{Graph}!Gray@{Gray}}\item[{\em 
+\hypertarget{struct_graph_a0046a1a92a5949395eab395fed7b778ca348bae6aacbec71f300c8346028cd151}{Gray}\label{struct_graph_a0046a1a92a5949395eab395fed7b778ca348bae6aacbec71f300c8346028cd151}
+}]\index{Black@{Black}!Graph@{Graph}}\index{Graph@{Graph}!Black@{Black}}\item[{\em 
+\hypertarget{struct_graph_a0046a1a92a5949395eab395fed7b778ca0915f0cf88c9f5071c2b00f21daeffe1}{Black}\label{struct_graph_a0046a1a92a5949395eab395fed7b778ca0915f0cf88c9f5071c2b00f21daeffe1}
+}]\end{description}
+\end{Desc}
+
+
+Definicja w linii 40 pliku graph.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{struct_graph_af3ba578bbc7a49562ff5de0f5f37c663}{\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-::\-Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-vertex\-Count}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_af3ba578bbc7a49562ff5de0f5f37c663}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-vertex\-Count} & -\/ ilosc przechowywanych wierzcholkow. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 10 pliku graph.\-cpp.
+
+\hypertarget{struct_graph_a902c5b3eacb66d60752525ab23297a95}{\index{Graph@{Graph}!$\sim$\-Graph@{$\sim$\-Graph}}
+\index{$\sim$\-Graph@{$\sim$\-Graph}!Graph@{Graph}}
+\subsubsection[{$\sim$\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-::$\sim$\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_a902c5b3eacb66d60752525ab23297a95}
+
+
+Definicja w linii 40 pliku graph.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{struct_graph_a97e1714cf7b5f082158d112a0fbd4141}{\index{Graph@{Graph}!add\-Edge@{add\-Edge}}
+\index{add\-Edge@{add\-Edge}!Graph@{Graph}}
+\subsubsection[{add\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::add\-Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-i, }
+\item[{int}]{\-\_\-j}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_a97e1714cf7b5f082158d112a0fbd4141}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-i} & -\/ identyfikator pierwszego wierzcholka. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-j} & -\/ identyfikator drugiego wierzcholka. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 26 pliku graph.\-cpp.
+
+\hypertarget{struct_graph_a8ad83b85369c9d92229137873f9089b8}{\index{Graph@{Graph}!add\-Node@{add\-Node}}
+\index{add\-Node@{add\-Node}!Graph@{Graph}}
+\subsubsection[{add\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::add\-Node (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-elem}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_a8ad83b85369c9d92229137873f9089b8}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-elem} & -\/ wartosc tworzonego wierzcholka. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 20 pliku graph.\-cpp.
+
+\hypertarget{struct_graph_ab25e348f68d6ccb51765dcc547b65ff0}{\index{Graph@{Graph}!B\-F\-S@{B\-F\-S}}
+\index{B\-F\-S@{B\-F\-S}!Graph@{Graph}}
+\subsubsection[{B\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::\-B\-F\-S (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-s}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_ab25e348f68d6ccb51765dcc547b65ff0}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-s} & -\/ identyfikator komorki odniesienia. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 66 pliku graph.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{struct_graph_ab25e348f68d6ccb51765dcc547b65ff0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_graph_aa89036af82002a332699d5722d7863d9}{\index{Graph@{Graph}!D\-F\-S@{D\-F\-S}}
+\index{D\-F\-S@{D\-F\-S}!Graph@{Graph}}
+\subsubsection[{D\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::\-D\-F\-S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_aa89036af82002a332699d5722d7863d9}
+
+
+Definicja w linii 55 pliku graph.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_graph_aa89036af82002a332699d5722d7863d9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_graph_af8505da7d2360f8bf6daba137ed6ab9e}{\index{Graph@{Graph}!is\-Edge@{is\-Edge}}
+\index{is\-Edge@{is\-Edge}!Graph@{Graph}}
+\subsubsection[{is\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::is\-Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-i, }
+\item[{int}]{\-\_\-j}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_af8505da7d2360f8bf6daba137ed6ab9e}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-i} & -\/ identyfikator pierwszego wierzcholka. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-j} & -\/ identyfikator drugiego wierzcholka. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+stan istnienia krawedzi. 
+\end{DoxyReturn}
+
+
+Definicja w linii 33 pliku graph.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_graph_af8505da7d2360f8bf6daba137ed6ab9e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_graph_a134ba75705fd92115b1c612b2681f6ea}{\index{Graph@{Graph}!run\-D\-F\-S@{run\-D\-F\-S}}
+\index{run\-D\-F\-S@{run\-D\-F\-S}!Graph@{Graph}}
+\subsubsection[{run\-D\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::run\-D\-F\-S (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-u, }
+\item[{{\bf vertex\-State} $\ast$\&}]{\-\_\-state}
+\end{DoxyParamCaption}
+)}}\label{struct_graph_a134ba75705fd92115b1c612b2681f6ea}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-u} & -\/ identyfikator komorki odniesienia. \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-state} & -\/ tablica stanow komorek. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 46 pliku graph.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{struct_graph_a134ba75705fd92115b1c612b2681f6ea_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{struct_graph_a134ba75705fd92115b1c612b2681f6ea_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{struct_graph_a567f812ec20174e2642722ff8bd63b07}{\index{Graph@{Graph}!adjacency\-Matrix@{adjacency\-Matrix}}
+\index{adjacency\-Matrix@{adjacency\-Matrix}!Graph@{Graph}}
+\subsubsection[{adjacency\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$$\ast$ Graph\-::adjacency\-Matrix\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_graph_a567f812ec20174e2642722ff8bd63b07}
+
+
+Definicja w linii 32 pliku graph.\-hh.
+
+\hypertarget{struct_graph_a5850883f2e0f8624184f1918e16ccb7b}{\index{Graph@{Graph}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph@{Graph}}
+\subsubsection[{nodes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf G\-Node}$\ast$$>$ Graph\-::nodes\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_graph_a5850883f2e0f8624184f1918e16ccb7b}
+
+
+Definicja w linii 28 pliku graph.\-hh.
+
+\hypertarget{struct_graph_aa61a470b538b8c5836ae3f3e6a4dc438}{\index{Graph@{Graph}!vertex\-Count@{vertex\-Count}}
+\index{vertex\-Count@{vertex\-Count}!Graph@{Graph}}
+\subsubsection[{vertex\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\-::vertex\-Count\hspace{0.3cm}{\ttfamily [private]}}}\label{struct_graph_aa61a470b538b8c5836ae3f3e6a4dc438}
+
+
+Definicja w linii 36 pliku graph.\-hh.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graph_8hh}{graph.\-hh}\item 
+\hyperlink{graph_8cpp}{graph.\-cpp}\end{DoxyCompactItemize}

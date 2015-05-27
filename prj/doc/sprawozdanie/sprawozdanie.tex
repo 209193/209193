@@ -6,59 +6,64 @@
 \usepackage{enumerate}
 \usepackage{pdflscape}
 
-\title{Laboratorium 8}
+\title{Laboratorium 9}
 \author{Filip Malinowski}
 \date{\today}
 
 \pdfinfo{%
-  /Title    (Laboratorium 8)
+  /Title    (Laboratorium 9)
   /Author   (Filip Malinowski)
 }
 
 \begin{document}
 
-\title{Sprawozdanie z laboratorium 8}
+\title{Sprawozdanie z laboratorium 9}
 \author{Filip Malinowski}
 \date{\today}
 
 \maketitle
 
-Do programu zostały dodane drzewo binarne oraz
-drzewo czerwono-czarne.
-Drzewo czerwono-czarne niestety nie jest poprawnie
-napisane. Przy próbie dodania elementów pojawia się
-segmentation fault. Nie zdołałem poprawić tego błędu.
+W programie został napisany graf z użyciem
+macierzy sąsiedztwa. Zaimplementowane zostały
+przy tym odpowiednie funkcje tworzące krawędzie
+pomiędzy wierzchołkami. Graf tworzony jest na
+ustaloną ilość wierzchołków.
 
-Złożoność obliczeniowa dodawania elementów do
-binarnego drzewa poszukiwań powinna wynosić
+Złożoność obliczeniowa tego typu implementacji
+grafu jest następująca:
+\begin{itemize}
+  \item dodanie nowej krawędzi w czasie stałym
+  \item sprawdzenie czy dana krawędź istnieje w czasie stałym
+  \item usunięcie krawędzi w czasie stałym
+\end{itemize}
+
+Ma to jednak jeden minus, a mianowicie duże wymagania
+pamięciowe m.in. z powodu macierzy sąsiedzctwa.
+
+Zostały zaimplementowane przeszukiwania
+w głąb i wszerz. Oba zostały sprawdzone pod kątem
+poprawności działania. Testy szybkości działania
+tych przeszukiwań nie zostały przeprowadzone
+z racji trudności zautomatyzowania w dodawaniu
+dużej ilości wierzchołków oraz krawędzi.
+
+Oba przeszukiwania mają tę samą złożoność
+obliczeniową przeszukiwania
 \begin{math}
-  n^{3}.
+O(V + E),
 \end{math}
-Zgadza się to z pomiarami.
+gdzie V to ilość wierzchołków, a E to ilość
+krawędzi.
 
-Złożoność obliczeniowa odczytu w binarnym
-drzewie poszukiwań powinna wynosić
-\begin{math}
- n*log(n).
-\end{math}
-Również zgadza się to z pomiarami.
-
-\pagebreak
-
-\begin{landscape}
-\begin{figure}
- \centering
- \includegraphics{wczytywanie}
- \caption{Wykres złożoności obliczeniowej wczytywania}
-\end{figure}
-
-\begin{figure}
- \centering
- \includegraphics{odczytywanie}
- \caption{Wykres złożoności obliczeniowej odczytywania}
-\end{figure}
-
-\end{landscape}
+W mojej implementacji
+przeszukiwanie w głąb i wszerz wymaga istnienia
+tablicy stanów w celu zapamiętywania informacji
+o odwiedzonych komórkach.
+Przeszukiwanie wszerz dodadkowo wymaga istnienia
+kolejki do przechowywania identyfikatorów
+wierzchołków z kolejnych poziomów
+co powoduje większą pamięciożerność
+od przeszukiwania w głąb.
 
 
 \end{document}
