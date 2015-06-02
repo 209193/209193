@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.11)  24 MAY 2015 22:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.11)  2 JUN 2015 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,47 +516,73 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10> on input line 25.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <7> on input line 25.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 32.
- [1
+(Font)              <5> on input line 33.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--108
+
+ []
+
+[1
 
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<wczytywanie.png, id=12, 426.8748pt x 217.7736pt>
+<wczytywanie.png, id=13, 426.8748pt x 217.7736pt>
 File: wczytywanie.png Graphic file (type png)
  <use wczytywanie.png>
-Package pdftex.def Info: wczytywanie.png used on input line 72.
+Package pdftex.def Info: wczytywanie.png used on input line 127.
 (pdftex.def)             Requested size: 426.87375pt x 217.77306pt.
 
-<odczytywanie.png, id=13, 426.8748pt x 217.7736pt>
+<odczytywanie.png, id=14, 426.8748pt x 217.7736pt>
 File: odczytywanie.png Graphic file (type png)
  <use odczytywanie.png>
-Package pdftex.def Info: odczytywanie.png used on input line 78.
+Package pdftex.def Info: odczytywanie.png used on input line 133.
 (pdftex.def)             Requested size: 426.87375pt x 217.77306pt.
 
 [2 <./wczytywanie.png>] [3 <./odczytywanie.png>] (./sprawozdanie.aux) ) 
 Here is how much of TeX's memory you used:
  3262 strings out of 493304
  50015 string characters out of 6139871
- 149681 words of memory out of 5000000
+ 150681 words of memory out of 5000000
  6661 multiletter control sequences out of 15000+600000
  9911 words of font info for 30 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  46i,6n,51p,246b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/sh
-are/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/p
-l/plmi.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/pl/plr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/
-plssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb>
-Output written on sprawozdanie.pdf (3 pages, 69449 bytes).
+are/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/p
+l/plrm.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/pl/plmi7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl
+/plr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plssbx10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb>
+Output written on sprawozdanie.pdf (3 pages, 74151 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
